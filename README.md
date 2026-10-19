@@ -26,7 +26,7 @@ flowchart LR
 
 - Local build: passed in the development environment.
 - Mac author trial: milestones 1–4 passed on Python 3.10; updated dashboard appearance/interactions still require review.
-- CI workflow: prepared for Python 3.10 and 3.13, not yet executed on GitHub.
+- GitHub CI verified: [run 39223995892](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39223995892) passed on Python 3.10 and 3.13 at commit `c2ef384075f825f046df9c53cb41795bc9a2da62`, including Python validation, JavaScript filtering and evidence upload. Later commits require their own CI result.
 - Browser visual/interaction automation: not completed because browser executable was unavailable.
 
 ## Start (Mac / Python 3.10+)
@@ -79,9 +79,9 @@ The sensitivity table changes the alert threshold only. It does not claim a fore
 
 1. Review the business question, metric contract and displayed recommendation with the author.
 2. Review the implemented exception drill-down and daily trends using the same source tables.
-3. Add a documented resource/scenario model with explicit assumptions and historical comparison.
+3. Review the implemented capacity replay and stress scenarios; independent-period validation remains future work.
 4. Build a Power BI report if the local environment supports authoring; otherwise retain the working HTML and SQL evidence and do not claim Power BI implementation.
-5. Verify clean-machine run and prepare a short recruiter-facing case study before adding completion claims to the resume.
+5. Clean isolated builds and CSV/SQL reconciliation passed locally and in GitHub CI. Complete browser review and recruiter screenshots before publishing visual evidence.
 
 ## Milestone 2: exception drill-down and daily service
 

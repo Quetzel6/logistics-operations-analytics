@@ -1,0 +1,268 @@
+order_id,trip_id,due_date,delivered_date,ordered_units,shipped_units,issue,warehouse,route,on_time,otif,short_units,late_days,flags
+O00049,T0007,2026-09-21,,104,104,None,DC-A,Metro,False,False,0,28,Overdue open
+O00100,T0013,2026-09-22,,97,97,None,DC-A,Metro,False,False,0,27,Overdue open
+O00114,T0015,2026-09-22,,107,107,Dispatch exception,DC-B,Metro,False,False,0,27,Overdue open
+O00186,T0024,2026-09-24,,137,137,None,DC-C,Outer,False,False,0,25,Overdue open
+O00199,T0026,2026-09-25,,137,137,None,DC-A,Outer,False,False,0,24,Overdue open
+O00234,T0030,2026-09-25,,140,140,None,DC-C,Outer,False,False,0,24,Overdue open
+O00275,T0036,2026-09-26,,133,133,None,DC-C,Outer,False,False,0,23,Overdue open
+O00298,T0039,2026-09-26,,86,86,None,DC-B,Metro,False,False,0,23,Overdue open
+O00444,T0057,2026-09-29,,93,93,None,DC-B,Metro,False,False,0,20,Overdue open
+O00438,T0056,2026-09-30,,75,75,None,DC-A,Outer,False,False,0,19,Overdue open
+O00527,T0067,2026-10-01,,135,135,None,DC-A,Metro,False,False,0,18,Overdue open
+O00583,T0073,2026-10-02,,107,107,None,DC-A,Metro,False,False,0,17,Overdue open
+O00588,T0074,2026-10-03,,116,116,None,DC-A,Outer,False,False,0,16,Overdue open
+O00665,T0084,2026-10-04,,104,104,Dispatch exception,DC-C,Outer,False,False,0,15,Overdue open
+O00667,T0084,2026-10-04,,136,136,None,DC-C,Outer,False,False,0,15,Overdue open
+O00813,T0102,2026-10-07,,83,83,None,DC-C,Outer,False,False,0,12,Overdue open
+O00866,T0110,2026-10-09,,76,76,None,DC-A,Outer,False,False,0,10,Overdue open
+O00916,T0116,2026-10-10,,103,103,Dispatch exception,DC-A,Outer,False,False,0,9,Overdue open
+O01053,T0133,2026-10-12,,91,0,Capacity shortfall,DC-A,Metro,False,False,91,7,Overdue open; Short shipment
+O01067,T0135,2026-10-12,,136,136,None,DC-B,Metro,False,False,0,7,Overdue open
+O01057,T0134,2026-10-13,,88,88,None,DC-A,Outer,False,False,0,6,Overdue open
+O01187,T0150,2026-10-15,,122,122,None,DC-C,Outer,False,False,0,4,Overdue open
+O01188,T0150,2026-10-15,,93,93,None,DC-C,Outer,False,False,0,4,Overdue open
+O00041,T0006,2026-09-21,2026-09-24,105,105,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O00057,T0008,2026-09-22,2026-09-25,87,87,Dispatch exception,DC-A,Outer,False,False,0,3,Delivered late
+O00062,T0008,2026-09-22,2026-09-25,87,87,Dispatch exception,DC-A,Outer,False,False,0,3,Delivered late
+O00070,T0009,2026-09-21,2026-09-24,115,115,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00071,T0010,2026-09-22,2026-09-25,95,95,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00073,T0010,2026-09-22,2026-09-25,105,105,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00078,T0010,2026-09-22,2026-09-25,84,84,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00111,T0015,2026-09-22,2026-09-25,108,108,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00119,T0016,2026-09-23,2026-09-26,91,91,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00169,T0022,2026-09-24,2026-09-27,123,123,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00184,T0024,2026-09-24,2026-09-27,99,99,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O00203,T0026,2026-09-25,2026-09-28,137,137,Dispatch exception,DC-A,Outer,False,False,0,3,Delivered late
+O00255,T0033,2026-09-25,2026-09-28,127,127,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00266,T0034,2026-09-26,2026-09-29,83,83,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00282,T0036,2026-09-26,2026-09-29,112,78,Dispatch exception,DC-C,Outer,False,False,34,3,Delivered late; Short shipment
+O00308,T0040,2026-09-27,2026-09-30,133,133,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00356,T0046,2026-09-28,2026-10-01,126,126,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00357,T0046,2026-09-28,2026-10-01,78,78,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00369,T0047,2026-09-27,2026-09-30,90,70,Dispatch exception,DC-C,Metro,False,False,20,3,Delivered late; Short shipment
+O00371,T0048,2026-09-28,2026-10-01,120,120,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O00380,T0049,2026-09-28,2026-10-01,96,96,Dispatch exception,DC-A,Metro,False,False,0,3,Delivered late
+O00403,T0052,2026-09-29,2026-10-02,124,124,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00404,T0052,2026-09-29,2026-10-02,94,94,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00405,T0052,2026-09-29,2026-10-02,119,119,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00450,T0058,2026-09-30,2026-10-03,83,83,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00472,T0060,2026-09-30,2026-10-03,82,82,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O00502,T0064,2026-10-01,2026-10-04,95,95,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00508,T0065,2026-09-30,2026-10-03,78,78,Dispatch exception,DC-C,Metro,False,False,0,3,Delivered late
+O00530,T0067,2026-10-01,2026-10-04,126,126,Dispatch exception,DC-A,Metro,False,False,0,3,Delivered late
+O00531,T0067,2026-10-01,2026-10-04,111,111,Dispatch exception,DC-A,Metro,False,False,0,3,Delivered late
+O00551,T0070,2026-10-02,2026-10-05,101,101,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00563,T0071,2026-10-01,2026-10-04,112,112,Dispatch exception,DC-C,Metro,False,False,0,3,Delivered late
+O00570,T0072,2026-10-02,2026-10-05,92,92,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O00578,T0073,2026-10-02,2026-10-05,79,79,Dispatch exception,DC-A,Metro,False,False,0,3,Delivered late
+O00601,T0075,2026-10-02,2026-10-05,121,121,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00624,T0078,2026-10-03,2026-10-06,89,89,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O00650,T0082,2026-10-04,2026-10-07,111,111,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00651,T0082,2026-10-04,2026-10-07,114,114,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00652,T0082,2026-10-04,2026-10-07,134,134,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00655,T0083,2026-10-03,2026-10-06,93,93,Dispatch exception,DC-C,Metro,False,False,0,3,Delivered late
+O00668,T0084,2026-10-04,2026-10-07,127,127,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O00669,T0085,2026-10-04,2026-10-07,111,111,Dispatch exception,DC-A,Metro,False,False,0,3,Delivered late
+O00695,T0087,2026-10-04,2026-10-07,123,123,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00748,T0094,2026-10-06,2026-10-09,102,102,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00798,T0100,2026-10-07,2026-10-10,81,81,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00836,T0106,2026-10-08,2026-10-11,116,116,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00841,T0106,2026-10-08,2026-10-11,97,97,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00873,T0111,2026-10-08,2026-10-11,125,125,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00879,T0112,2026-10-09,2026-10-12,115,115,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00881,T0112,2026-10-09,2026-10-12,90,90,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00927,T0118,2026-10-10,2026-10-13,123,123,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00932,T0118,2026-10-10,2026-10-13,138,138,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O00952,T0121,2026-10-10,2026-10-13,129,129,Dispatch exception,DC-A,Metro,False,False,0,3,Delivered late
+O00966,T0123,2026-10-10,2026-10-13,113,113,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00970,T0123,2026-10-10,2026-10-13,129,129,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O00972,T0123,2026-10-10,2026-10-13,83,83,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O01010,T0129,2026-10-11,2026-10-14,88,88,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O01019,T0130,2026-10-12,2026-10-15,128,128,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01020,T0130,2026-10-12,2026-10-15,99,99,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01042,T0132,2026-10-12,2026-10-15,124,124,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O01070,T0135,2026-10-12,2026-10-15,140,140,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O01088,T0137,2026-10-12,2026-10-15,115,115,Dispatch exception,DC-C,Metro,False,False,0,3,Delivered late
+O01121,T0142,2026-10-14,2026-10-17,88,88,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01125,T0142,2026-10-14,2026-10-17,140,140,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01127,T0142,2026-10-14,2026-10-17,102,102,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01154,T0146,2026-10-15,2026-10-18,120,120,Dispatch exception,DC-A,Outer,False,False,0,3,Delivered late
+O01165,T0147,2026-10-14,2026-10-17,111,111,Dispatch exception,DC-B,Metro,False,False,0,3,Delivered late
+O01167,T0148,2026-10-15,2026-10-18,80,80,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01171,T0148,2026-10-15,2026-10-18,88,88,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01173,T0148,2026-10-15,2026-10-18,94,94,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01219,T0154,2026-10-16,2026-10-19,95,95,Dispatch exception,DC-B,Outer,False,False,0,3,Delivered late
+O01237,T0156,2026-10-16,2026-10-19,106,106,Dispatch exception,DC-C,Outer,False,False,0,3,Delivered late
+O01258,T0159,2026-10-16,,127,127,None,DC-B,Metro,False,False,0,3,Overdue open
+O00012,T0002,2026-09-21,2026-09-23,123,123,Dispatch exception,DC-A,Outer,False,False,0,2,Delivered late
+O00024,T0004,2026-09-21,2026-09-23,115,115,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00076,T0010,2026-09-22,2026-09-24,115,115,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00090,T0012,2026-09-22,2026-09-24,110,110,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O00143,T0019,2026-09-23,2026-09-25,102,102,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O00151,T0020,2026-09-24,2026-09-26,137,137,Dispatch exception,DC-A,Outer,False,False,0,2,Delivered late
+O00170,T0022,2026-09-24,2026-09-26,106,106,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00172,T0022,2026-09-24,2026-09-26,80,80,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00181,T0023,2026-09-23,2026-09-25,118,118,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00218,T0028,2026-09-25,2026-09-27,84,84,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00277,T0036,2026-09-26,2026-09-28,95,95,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O00306,T0040,2026-09-27,2026-09-29,79,79,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00314,T0041,2026-09-26,2026-09-28,120,120,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00317,T0041,2026-09-26,2026-09-28,77,77,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00325,T0042,2026-09-27,2026-09-29,116,116,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O00334,T0043,2026-09-27,2026-09-29,93,93,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O00350,T0046,2026-09-28,2026-09-30,122,122,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00353,T0046,2026-09-28,2026-09-30,109,109,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00400,T0052,2026-09-29,2026-10-01,95,95,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00410,T0053,2026-09-28,2026-09-30,121,121,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00426,T0055,2026-09-29,2026-10-01,107,107,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O00441,T0057,2026-09-29,2026-10-01,90,90,Dispatch exception,DC-B,Metro,False,False,0,2,Delivered late
+O00442,T0057,2026-09-29,2026-10-01,133,133,Dispatch exception,DC-B,Metro,False,False,0,2,Delivered late
+O00452,T0058,2026-09-30,2026-10-02,117,117,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00457,T0058,2026-09-30,2026-10-02,80,80,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00470,T0060,2026-09-30,2026-10-02,132,132,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O00504,T0064,2026-10-01,2026-10-03,110,110,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00526,T0067,2026-10-01,2026-10-03,120,120,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O00550,T0069,2026-10-01,2026-10-03,99,99,Dispatch exception,DC-B,Metro,False,False,0,2,Delivered late
+O00557,T0070,2026-10-02,2026-10-04,106,106,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00559,T0070,2026-10-02,2026-10-04,137,133,Dispatch exception,DC-B,Outer,False,False,4,2,Delivered late; Short shipment
+O00612,T0077,2026-10-02,2026-10-04,135,135,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00634,T0080,2026-10-04,2026-10-06,138,138,Dispatch exception,DC-A,Outer,False,False,0,2,Delivered late
+O00643,T0081,2026-10-03,2026-10-05,99,99,Dispatch exception,DC-B,Metro,False,False,0,2,Delivered late
+O00673,T0085,2026-10-04,2026-10-06,125,125,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O00703,T0088,2026-10-05,2026-10-07,124,124,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00741,T0093,2026-10-05,2026-10-07,89,89,Dispatch exception,DC-B,Metro,False,False,0,2,Delivered late
+O00744,T0094,2026-10-06,2026-10-08,134,134,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00802,T0100,2026-10-07,2026-10-09,110,110,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00806,T0101,2026-10-06,2026-10-08,87,87,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00837,T0106,2026-10-08,2026-10-10,83,83,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00842,T0106,2026-10-08,2026-10-10,76,76,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00882,T0112,2026-10-09,2026-10-11,80,80,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00885,T0112,2026-10-09,2026-10-11,97,97,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00899,T0114,2026-10-09,2026-10-11,136,136,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O00906,T0115,2026-10-09,2026-10-11,110,110,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O00930,T0118,2026-10-10,2026-10-12,79,79,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O00959,T0122,2026-10-11,2026-10-13,132,132,Dispatch exception,DC-A,Outer,False,False,0,2,Delivered late
+O00981,T0125,2026-10-10,2026-10-12,105,105,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00982,T0125,2026-10-10,2026-10-12,122,122,Dispatch exception,DC-C,Metro,False,False,0,2,Delivered late
+O00993,T0126,2026-10-11,2026-10-13,133,133,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O01023,T0130,2026-10-12,2026-10-14,98,98,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01066,T0135,2026-10-12,2026-10-14,95,95,Dispatch exception,DC-B,Metro,False,False,0,2,Delivered late
+O01076,T0136,2026-10-13,2026-10-15,96,96,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01078,T0136,2026-10-13,2026-10-15,118,118,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01079,T0136,2026-10-13,2026-10-15,133,133,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01100,T0139,2026-10-13,2026-10-15,132,132,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O01109,T0140,2026-10-14,2026-10-16,103,103,Dispatch exception,DC-A,Outer,False,False,0,2,Delivered late
+O01123,T0142,2026-10-14,2026-10-16,106,106,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01143,T0145,2026-10-14,2026-10-16,81,81,Dispatch exception,DC-A,Metro,False,False,0,2,Delivered late
+O01151,T0146,2026-10-15,2026-10-17,107,107,Dispatch exception,DC-A,Outer,False,False,0,2,Delivered late
+O01152,T0146,2026-10-15,2026-10-17,94,94,Dispatch exception,DC-A,Outer,False,False,0,2,Delivered late
+O01221,T0154,2026-10-16,2026-10-18,120,120,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01223,T0154,2026-10-16,2026-10-18,121,121,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01226,T0154,2026-10-16,2026-10-18,97,97,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01239,T0156,2026-10-16,2026-10-18,93,93,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O01247,T0158,2026-10-17,,124,124,None,DC-A,Outer,False,False,0,2,Overdue open
+O01269,T0160,2026-10-17,,95,95,Dispatch exception,DC-B,Outer,False,False,0,2,Overdue open
+O01271,T0160,2026-10-17,,81,81,Dispatch exception,DC-B,Outer,False,False,0,2,Overdue open
+O01274,T0160,2026-10-17,2026-10-19,83,83,Dispatch exception,DC-B,Outer,False,False,0,2,Delivered late
+O01282,T0162,2026-10-17,2026-10-19,95,95,Dispatch exception,DC-C,Outer,False,False,0,2,Delivered late
+O01327,T0167,2026-10-17,,94,94,None,DC-C,Metro,False,False,0,2,Overdue open
+O00023,T0004,2026-09-21,2026-09-22,126,126,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00025,T0004,2026-09-21,2026-09-22,133,133,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00027,T0004,2026-09-21,2026-09-22,126,126,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00051,T0007,2026-09-21,2026-09-22,117,117,Dispatch exception,DC-A,Metro,False,False,0,1,Delivered late
+O00072,T0010,2026-09-22,2026-09-23,98,98,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00079,T0010,2026-09-22,2026-09-23,87,87,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00121,T0016,2026-09-23,2026-09-24,75,75,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00125,T0016,2026-09-23,2026-09-24,117,117,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00133,T0018,2026-09-23,2026-09-24,134,134,Dispatch exception,DC-C,Outer,False,False,0,1,Delivered late
+O00168,T0022,2026-09-24,2026-09-25,114,114,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00205,T0026,2026-09-25,2026-09-26,113,113,Dispatch exception,DC-A,Outer,False,False,0,1,Delivered late
+O00223,T0029,2026-09-24,2026-09-25,107,107,Dispatch exception,DC-C,Metro,False,False,0,1,Delivered late
+O00260,T0033,2026-09-25,2026-09-26,133,133,Dispatch exception,DC-B,Metro,False,False,0,1,Delivered late
+O00269,T0035,2026-09-25,2026-09-26,78,78,Dispatch exception,DC-C,Metro,False,False,0,1,Delivered late
+O00333,T0043,2026-09-27,2026-09-28,131,131,Dispatch exception,DC-A,Metro,False,False,0,1,Delivered late
+O00402,T0052,2026-09-29,2026-09-30,117,117,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00449,T0058,2026-09-30,2026-10-01,122,122,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00456,T0058,2026-09-30,2026-10-01,79,79,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00475,T0061,2026-09-30,2026-10-01,131,131,Dispatch exception,DC-A,Metro,False,False,0,1,Delivered late
+O00554,T0070,2026-10-02,2026-10-03,123,123,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00592,T0074,2026-10-03,2026-10-04,105,105,Dispatch exception,DC-A,Outer,False,False,0,1,Delivered late
+O00649,T0082,2026-10-04,2026-10-05,101,101,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00677,T0085,2026-10-04,2026-10-05,135,135,Dispatch exception,DC-A,Metro,False,False,0,1,Delivered late
+O00698,T0088,2026-10-05,2026-10-06,124,124,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00700,T0088,2026-10-05,2026-10-06,88,88,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00701,T0088,2026-10-05,2026-10-06,140,140,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00740,T0093,2026-10-05,2026-10-06,115,115,Dispatch exception,DC-B,Metro,False,False,0,1,Delivered late
+O00750,T0094,2026-10-06,2026-10-07,98,98,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00799,T0100,2026-10-07,2026-10-08,133,133,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00810,T0102,2026-10-07,2026-10-08,124,124,Dispatch exception,DC-C,Outer,False,False,0,1,Delivered late
+O00830,T0105,2026-10-07,2026-10-08,83,83,Dispatch exception,DC-B,Metro,False,False,0,1,Delivered late
+O00838,T0106,2026-10-08,2026-10-09,105,105,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00878,T0112,2026-10-09,2026-10-10,88,88,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00886,T0112,2026-10-09,2026-10-10,106,106,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00887,T0112,2026-10-09,2026-10-10,92,92,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00890,T0113,2026-10-08,2026-10-09,84,84,Dispatch exception,DC-C,Metro,False,False,0,1,Delivered late
+O00919,T0116,2026-10-10,2026-10-11,116,116,Dispatch exception,DC-A,Outer,False,False,0,1,Delivered late
+O00942,T0120,2026-10-10,2026-10-11,88,88,Dispatch exception,DC-C,Outer,False,False,0,1,Delivered late
+O00974,T0124,2026-10-11,2026-10-12,128,128,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O00979,T0124,2026-10-11,2026-10-12,97,97,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01022,T0130,2026-10-12,2026-10-13,139,139,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01026,T0130,2026-10-12,2026-10-13,86,86,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01044,T0133,2026-10-12,2026-10-13,99,99,Dispatch exception,DC-A,Metro,False,False,0,1,Delivered late
+O01052,T0133,2026-10-12,2026-10-13,126,124,Dispatch exception,DC-A,Metro,False,False,2,1,Delivered late; Short shipment
+O01075,T0136,2026-10-13,2026-10-14,80,80,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01094,T0138,2026-10-13,2026-10-14,81,81,Dispatch exception,DC-C,Outer,False,False,0,1,Delivered late
+O01111,T0140,2026-10-14,2026-10-15,88,88,Dispatch exception,DC-A,Outer,False,False,0,1,Delivered late
+O01135,T0143,2026-10-13,2026-10-14,93,93,Dispatch exception,DC-C,Metro,False,False,0,1,Delivered late
+O01168,T0148,2026-10-15,2026-10-16,140,140,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01174,T0148,2026-10-15,2026-10-16,86,86,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01202,T0151,2026-10-15,2026-10-16,96,19,Dispatch exception,DC-A,Metro,False,False,77,1,Delivered late; Short shipment
+O01222,T0154,2026-10-16,2026-10-17,108,108,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01300,T0164,2026-10-18,2026-10-19,118,118,Dispatch exception,DC-A,Outer,False,False,0,1,Delivered late
+O01311,T0166,2026-10-18,,110,110,Dispatch exception,DC-B,Outer,False,False,0,1,Overdue open
+O01312,T0166,2026-10-18,,91,91,Dispatch exception,DC-B,Outer,False,False,0,1,Overdue open
+O01314,T0166,2026-10-18,,119,119,Dispatch exception,DC-B,Outer,False,False,0,1,Overdue open
+O01316,T0166,2026-10-18,,133,133,Dispatch exception,DC-B,Outer,False,False,0,1,Overdue open
+O01317,T0166,2026-10-18,2026-10-19,101,101,Dispatch exception,DC-B,Outer,False,False,0,1,Delivered late
+O01318,T0166,2026-10-18,,108,108,Dispatch exception,DC-B,Outer,False,False,0,1,Overdue open
+O01319,T0166,2026-10-18,,105,105,Dispatch exception,DC-B,Outer,False,False,0,1,Overdue open
+O01320,T0166,2026-10-18,,118,0,Dispatch exception,DC-B,Outer,False,False,118,1,Overdue open; Short shipment
+O00022,T0003,2026-09-20,2026-09-20,82,68,Capacity shortfall,DC-B,Metro,True,False,14,0,Short shipment
+O00040,T0005,2026-09-20,2026-09-20,89,34,Capacity shortfall,DC-C,Metro,True,False,55,0,Short shipment
+O00118,T0015,2026-09-22,2026-09-22,114,49,Capacity shortfall,DC-B,Metro,True,False,65,0,Short shipment
+O00141,T0018,2026-09-23,2026-09-23,111,40,Capacity shortfall,DC-C,Outer,True,False,71,0,Short shipment
+O00142,T0018,2026-09-23,2026-09-23,85,0,Capacity shortfall,DC-C,Outer,True,False,85,0,Short shipment
+O00158,T0020,2026-09-24,2026-09-24,123,83,Capacity shortfall,DC-A,Outer,True,False,40,0,Short shipment
+O00159,T0020,2026-09-24,2026-09-24,128,0,Capacity shortfall,DC-A,Outer,True,False,128,0,Short shipment
+O00182,T0023,2026-09-23,2026-09-23,102,38,Capacity shortfall,DC-C,Metro,True,False,64,0,Short shipment
+O00231,T0029,2026-09-24,2026-09-24,111,61,Capacity shortfall,DC-C,Metro,True,False,50,0,Short shipment
+O00240,T0030,2026-09-25,2026-09-25,105,51,Capacity shortfall,DC-C,Outer,True,False,54,0,Short shipment
+O00241,T0030,2026-09-25,2026-09-25,76,0,Capacity shortfall,DC-C,Outer,True,False,76,0,Short shipment
+O00283,T0036,2026-09-26,2026-09-26,76,0,Capacity shortfall,DC-C,Outer,True,False,76,0,Short shipment
+O00359,T0046,2026-09-28,2026-09-28,114,18,Capacity shortfall,DC-B,Outer,True,False,96,0,Short shipment
+O00423,T0054,2026-09-29,2026-09-29,131,117,Capacity shortfall,DC-C,Outer,True,False,14,0,Short shipment
+O00424,T0054,2026-09-29,2026-09-29,123,0,Capacity shortfall,DC-C,Outer,True,False,123,0,Short shipment
+O00467,T0059,2026-09-29,2026-09-29,98,13,Capacity shortfall,DC-C,Metro,True,False,85,0,Short shipment
+O00497,T0063,2026-09-30,2026-09-30,84,49,Capacity shortfall,DC-B,Metro,True,False,35,0,Short shipment
+O00515,T0065,2026-09-30,2026-09-30,101,48,Capacity shortfall,DC-C,Metro,True,False,53,0,Short shipment
+O00532,T0067,2026-10-01,2026-10-01,110,89,Capacity shortfall,DC-A,Metro,True,False,21,0,Short shipment
+O00541,T0068,2026-10-02,2026-10-02,113,58,Capacity shortfall,DC-A,Outer,True,False,55,0,Short shipment
+O00542,T0068,2026-10-02,2026-10-02,140,0,Capacity shortfall,DC-A,Outer,True,False,140,0,Short shipment
+O00577,T0072,2026-10-02,2026-10-02,125,75,Capacity shortfall,DC-C,Outer,True,False,50,0,Short shipment
+O00662,T0083,2026-10-03,2026-10-03,137,82,Capacity shortfall,DC-C,Metro,True,False,55,0,Short shipment
+O00678,T0085,2026-10-04,2026-10-04,85,61,Capacity shortfall,DC-A,Metro,True,False,24,0,Short shipment
+O00696,T0087,2026-10-04,2026-10-04,106,42,Capacity shortfall,DC-B,Metro,True,False,64,0,Short shipment
+O00733,T0092,2026-10-06,2026-10-06,103,51,Capacity shortfall,DC-A,Outer,True,False,52,0,Short shipment
+O00734,T0092,2026-10-06,2026-10-06,139,0,Capacity shortfall,DC-A,Outer,True,False,139,0,Short shipment
+O00762,T0095,2026-10-05,2026-10-05,81,67,Capacity shortfall,DC-C,Metro,True,False,14,0,Short shipment
+O00771,T0096,2026-10-06,2026-10-06,121,54,Capacity shortfall,DC-C,Outer,True,False,67,0,Short shipment
+O00988,T0125,2026-10-10,2026-10-10,137,63,Capacity shortfall,DC-C,Metro,True,False,74,0,Short shipment
+O01072,T0135,2026-10-12,2026-10-12,112,98,Capacity shortfall,DC-B,Metro,True,False,14,0,Short shipment
+O01098,T0138,2026-10-13,2026-10-13,103,15,Capacity shortfall,DC-C,Outer,True,False,88,0,Short shipment
+O01159,T0146,2026-10-15,2026-10-15,112,96,Capacity shortfall,DC-A,Outer,True,False,16,0,Short shipment
+O01160,T0146,2026-10-15,2026-10-15,135,0,Capacity shortfall,DC-A,Outer,True,False,135,0,Short shipment
+O01192,T0150,2026-10-15,2026-10-15,140,95,Capacity shortfall,DC-C,Outer,True,False,45,0,Short shipment
+O01227,T0154,2026-10-16,2026-10-16,84,80,Capacity shortfall,DC-B,Outer,True,False,4,0,Short shipment
+O01265,T0159,2026-10-16,2026-10-16,136,34,Capacity shortfall,DC-B,Metro,True,False,102,0,Short shipment
+O01339,T0168,2026-10-18,2026-10-18,132,90,Capacity shortfall,DC-C,Outer,True,False,42,0,Short shipment

@@ -1,0 +1,6742 @@
+{
+  "as_of": "2026-10-19",
+  "data_type": "synthetic",
+  "totals": {
+    "due_orders": 1339,
+    "on_time_orders": 1110,
+    "otif_orders": 1072,
+    "overdue_open": 35,
+    "ordered_units": 143995,
+    "shipped_units": 141264,
+    "on_time_rate": 0.8289768483943242,
+    "otif_rate": 0.8005974607916355,
+    "unit_fill_rate": 0.9810340636827668
+  },
+  "cohorts": [
+    {
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 209,
+      "on_time_orders": 183,
+      "otif_orders": 181,
+      "overdue_open": 5,
+      "ordered_units": 22589,
+      "shipped_units": 22374,
+      "on_time_rate": 0.8755980861244019,
+      "otif_rate": 0.8660287081339713,
+      "unit_fill_rate": 0.9904820930541414,
+      "trip_capacity_utilization": 0.7990714285714285
+    },
+    {
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 226,
+      "on_time_orders": 203,
+      "otif_orders": 195,
+      "overdue_open": 7,
+      "ordered_units": 24742,
+      "shipped_units": 24037,
+      "on_time_rate": 0.8982300884955752,
+      "otif_rate": 0.8628318584070797,
+      "unit_fill_rate": 0.9715059413143642,
+      "trip_capacity_utilization": 0.8584642857142857
+    },
+    {
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 226,
+      "on_time_orders": 200,
+      "otif_orders": 194,
+      "overdue_open": 5,
+      "ordered_units": 23944,
+      "shipped_units": 23650,
+      "on_time_rate": 0.8849557522123894,
+      "otif_rate": 0.8584070796460177,
+      "unit_fill_rate": 0.9877213498162379,
+      "trip_capacity_utilization": 0.8446428571428571
+    },
+    {
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 225,
+      "on_time_orders": 119,
+      "otif_orders": 117,
+      "overdue_open": 9,
+      "ordered_units": 23782,
+      "shipped_units": 23560,
+      "on_time_rate": 0.5288888888888889,
+      "otif_rate": 0.52,
+      "unit_fill_rate": 0.9906652089815827,
+      "trip_capacity_utilization": 0.8414285714285714
+    },
+    {
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 225,
+      "on_time_orders": 207,
+      "otif_orders": 199,
+      "overdue_open": 1,
+      "ordered_units": 24087,
+      "shipped_units": 23617,
+      "on_time_rate": 0.92,
+      "otif_rate": 0.8844444444444445,
+      "unit_fill_rate": 0.9804873998422385,
+      "trip_capacity_utilization": 0.8434642857142857
+    },
+    {
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 228,
+      "on_time_orders": 198,
+      "otif_orders": 186,
+      "overdue_open": 8,
+      "ordered_units": 24851,
+      "shipped_units": 24026,
+      "on_time_rate": 0.868421052631579,
+      "otif_rate": 0.8157894736842105,
+      "unit_fill_rate": 0.9668021407589232,
+      "trip_capacity_utilization": 0.8580714285714286
+    }
+  ],
+  "threshold_sensitivity": [
+    {
+      "otif_threshold": 0.8,
+      "flagged_cohorts": 1,
+      "due_orders_in_flagged_cohorts": 225
+    },
+    {
+      "otif_threshold": 0.85,
+      "flagged_cohorts": 2,
+      "due_orders_in_flagged_cohorts": 453
+    },
+    {
+      "otif_threshold": 0.9,
+      "flagged_cohorts": 6,
+      "due_orders_in_flagged_cohorts": 1339
+    },
+    {
+      "otif_threshold": 0.95,
+      "flagged_cohorts": 6,
+      "due_orders_in_flagged_cohorts": 1339
+    }
+  ],
+  "quality_gate": "passed",
+  "exceptions": [
+    {
+      "order_id": "O00049",
+      "trip_id": "T0007",
+      "due_date": "2026-09-21",
+      "delivered_date": null,
+      "ordered_units": 104,
+      "shipped_units": 104,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 28,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00100",
+      "trip_id": "T0013",
+      "due_date": "2026-09-22",
+      "delivered_date": null,
+      "ordered_units": 97,
+      "shipped_units": 97,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 27,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00114",
+      "trip_id": "T0015",
+      "due_date": "2026-09-22",
+      "delivered_date": null,
+      "ordered_units": 107,
+      "shipped_units": 107,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 27,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00186",
+      "trip_id": "T0024",
+      "due_date": "2026-09-24",
+      "delivered_date": null,
+      "ordered_units": 137,
+      "shipped_units": 137,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 25,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00199",
+      "trip_id": "T0026",
+      "due_date": "2026-09-25",
+      "delivered_date": null,
+      "ordered_units": 137,
+      "shipped_units": 137,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 24,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00234",
+      "trip_id": "T0030",
+      "due_date": "2026-09-25",
+      "delivered_date": null,
+      "ordered_units": 140,
+      "shipped_units": 140,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 24,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00275",
+      "trip_id": "T0036",
+      "due_date": "2026-09-26",
+      "delivered_date": null,
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 23,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00298",
+      "trip_id": "T0039",
+      "due_date": "2026-09-26",
+      "delivered_date": null,
+      "ordered_units": 86,
+      "shipped_units": 86,
+      "issue": "None",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 23,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00444",
+      "trip_id": "T0057",
+      "due_date": "2026-09-29",
+      "delivered_date": null,
+      "ordered_units": 93,
+      "shipped_units": 93,
+      "issue": "None",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 20,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00438",
+      "trip_id": "T0056",
+      "due_date": "2026-09-30",
+      "delivered_date": null,
+      "ordered_units": 75,
+      "shipped_units": 75,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 19,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00527",
+      "trip_id": "T0067",
+      "due_date": "2026-10-01",
+      "delivered_date": null,
+      "ordered_units": 135,
+      "shipped_units": 135,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 18,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00583",
+      "trip_id": "T0073",
+      "due_date": "2026-10-02",
+      "delivered_date": null,
+      "ordered_units": 107,
+      "shipped_units": 107,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 17,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00588",
+      "trip_id": "T0074",
+      "due_date": "2026-10-03",
+      "delivered_date": null,
+      "ordered_units": 116,
+      "shipped_units": 116,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 16,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00665",
+      "trip_id": "T0084",
+      "due_date": "2026-10-04",
+      "delivered_date": null,
+      "ordered_units": 104,
+      "shipped_units": 104,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 15,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00667",
+      "trip_id": "T0084",
+      "due_date": "2026-10-04",
+      "delivered_date": null,
+      "ordered_units": 136,
+      "shipped_units": 136,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 15,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00813",
+      "trip_id": "T0102",
+      "due_date": "2026-10-07",
+      "delivered_date": null,
+      "ordered_units": 83,
+      "shipped_units": 83,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 12,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00866",
+      "trip_id": "T0110",
+      "due_date": "2026-10-09",
+      "delivered_date": null,
+      "ordered_units": 76,
+      "shipped_units": 76,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 10,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00916",
+      "trip_id": "T0116",
+      "due_date": "2026-10-10",
+      "delivered_date": null,
+      "ordered_units": 103,
+      "shipped_units": 103,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 9,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01053",
+      "trip_id": "T0133",
+      "due_date": "2026-10-12",
+      "delivered_date": null,
+      "ordered_units": 91,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 91,
+      "late_days": 7,
+      "flags": [
+        "Overdue open",
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01067",
+      "trip_id": "T0135",
+      "due_date": "2026-10-12",
+      "delivered_date": null,
+      "ordered_units": 136,
+      "shipped_units": 136,
+      "issue": "None",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 7,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01057",
+      "trip_id": "T0134",
+      "due_date": "2026-10-13",
+      "delivered_date": null,
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 6,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01187",
+      "trip_id": "T0150",
+      "due_date": "2026-10-15",
+      "delivered_date": null,
+      "ordered_units": 122,
+      "shipped_units": 122,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 4,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01188",
+      "trip_id": "T0150",
+      "due_date": "2026-10-15",
+      "delivered_date": null,
+      "ordered_units": 93,
+      "shipped_units": 93,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 4,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00041",
+      "trip_id": "T0006",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 105,
+      "shipped_units": 105,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00057",
+      "trip_id": "T0008",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 87,
+      "shipped_units": 87,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00062",
+      "trip_id": "T0008",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 87,
+      "shipped_units": 87,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00070",
+      "trip_id": "T0009",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 115,
+      "shipped_units": 115,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00071",
+      "trip_id": "T0010",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00073",
+      "trip_id": "T0010",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 105,
+      "shipped_units": 105,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00078",
+      "trip_id": "T0010",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 84,
+      "shipped_units": 84,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00111",
+      "trip_id": "T0015",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 108,
+      "shipped_units": 108,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00119",
+      "trip_id": "T0016",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 91,
+      "shipped_units": 91,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00169",
+      "trip_id": "T0022",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-27",
+      "ordered_units": 123,
+      "shipped_units": 123,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00184",
+      "trip_id": "T0024",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-27",
+      "ordered_units": 99,
+      "shipped_units": 99,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00203",
+      "trip_id": "T0026",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-28",
+      "ordered_units": 137,
+      "shipped_units": 137,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00255",
+      "trip_id": "T0033",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-28",
+      "ordered_units": 127,
+      "shipped_units": 127,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00266",
+      "trip_id": "T0034",
+      "due_date": "2026-09-26",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 83,
+      "shipped_units": 83,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00282",
+      "trip_id": "T0036",
+      "due_date": "2026-09-26",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 112,
+      "shipped_units": 78,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 34,
+      "late_days": 3,
+      "flags": [
+        "Delivered late",
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00308",
+      "trip_id": "T0040",
+      "due_date": "2026-09-27",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00356",
+      "trip_id": "T0046",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 126,
+      "shipped_units": 126,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00357",
+      "trip_id": "T0046",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 78,
+      "shipped_units": 78,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00369",
+      "trip_id": "T0047",
+      "due_date": "2026-09-27",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 90,
+      "shipped_units": 70,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 20,
+      "late_days": 3,
+      "flags": [
+        "Delivered late",
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00371",
+      "trip_id": "T0048",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 120,
+      "shipped_units": 120,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00380",
+      "trip_id": "T0049",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 96,
+      "shipped_units": 96,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00403",
+      "trip_id": "T0052",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 124,
+      "shipped_units": 124,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00404",
+      "trip_id": "T0052",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 94,
+      "shipped_units": 94,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00405",
+      "trip_id": "T0052",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 119,
+      "shipped_units": 119,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00450",
+      "trip_id": "T0058",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 83,
+      "shipped_units": 83,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00472",
+      "trip_id": "T0060",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 82,
+      "shipped_units": 82,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00502",
+      "trip_id": "T0064",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00508",
+      "trip_id": "T0065",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 78,
+      "shipped_units": 78,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00530",
+      "trip_id": "T0067",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 126,
+      "shipped_units": 126,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00531",
+      "trip_id": "T0067",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 111,
+      "shipped_units": 111,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00551",
+      "trip_id": "T0070",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 101,
+      "shipped_units": 101,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00563",
+      "trip_id": "T0071",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 112,
+      "shipped_units": 112,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00570",
+      "trip_id": "T0072",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 92,
+      "shipped_units": 92,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00578",
+      "trip_id": "T0073",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 79,
+      "shipped_units": 79,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00601",
+      "trip_id": "T0075",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 121,
+      "shipped_units": 121,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00624",
+      "trip_id": "T0078",
+      "due_date": "2026-10-03",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 89,
+      "shipped_units": 89,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00650",
+      "trip_id": "T0082",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 111,
+      "shipped_units": 111,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00651",
+      "trip_id": "T0082",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 114,
+      "shipped_units": 114,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00652",
+      "trip_id": "T0082",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 134,
+      "shipped_units": 134,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00655",
+      "trip_id": "T0083",
+      "due_date": "2026-10-03",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 93,
+      "shipped_units": 93,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00668",
+      "trip_id": "T0084",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 127,
+      "shipped_units": 127,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00669",
+      "trip_id": "T0085",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 111,
+      "shipped_units": 111,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00695",
+      "trip_id": "T0087",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 123,
+      "shipped_units": 123,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00748",
+      "trip_id": "T0094",
+      "due_date": "2026-10-06",
+      "delivered_date": "2026-10-09",
+      "ordered_units": 102,
+      "shipped_units": 102,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00798",
+      "trip_id": "T0100",
+      "due_date": "2026-10-07",
+      "delivered_date": "2026-10-10",
+      "ordered_units": 81,
+      "shipped_units": 81,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00836",
+      "trip_id": "T0106",
+      "due_date": "2026-10-08",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 116,
+      "shipped_units": 116,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00841",
+      "trip_id": "T0106",
+      "due_date": "2026-10-08",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 97,
+      "shipped_units": 97,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00873",
+      "trip_id": "T0111",
+      "due_date": "2026-10-08",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 125,
+      "shipped_units": 125,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00879",
+      "trip_id": "T0112",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 115,
+      "shipped_units": 115,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00881",
+      "trip_id": "T0112",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 90,
+      "shipped_units": 90,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00927",
+      "trip_id": "T0118",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 123,
+      "shipped_units": 123,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00932",
+      "trip_id": "T0118",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 138,
+      "shipped_units": 138,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00952",
+      "trip_id": "T0121",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 129,
+      "shipped_units": 129,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00966",
+      "trip_id": "T0123",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 113,
+      "shipped_units": 113,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00970",
+      "trip_id": "T0123",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 129,
+      "shipped_units": 129,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00972",
+      "trip_id": "T0123",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 83,
+      "shipped_units": 83,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01010",
+      "trip_id": "T0129",
+      "due_date": "2026-10-11",
+      "delivered_date": "2026-10-14",
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01019",
+      "trip_id": "T0130",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 128,
+      "shipped_units": 128,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01020",
+      "trip_id": "T0130",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 99,
+      "shipped_units": 99,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01042",
+      "trip_id": "T0132",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 124,
+      "shipped_units": 124,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01070",
+      "trip_id": "T0135",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 140,
+      "shipped_units": 140,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01088",
+      "trip_id": "T0137",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 115,
+      "shipped_units": 115,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01121",
+      "trip_id": "T0142",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-17",
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01125",
+      "trip_id": "T0142",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-17",
+      "ordered_units": 140,
+      "shipped_units": 140,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01127",
+      "trip_id": "T0142",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-17",
+      "ordered_units": 102,
+      "shipped_units": 102,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01154",
+      "trip_id": "T0146",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 120,
+      "shipped_units": 120,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01165",
+      "trip_id": "T0147",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-17",
+      "ordered_units": 111,
+      "shipped_units": 111,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01167",
+      "trip_id": "T0148",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 80,
+      "shipped_units": 80,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01171",
+      "trip_id": "T0148",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01173",
+      "trip_id": "T0148",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 94,
+      "shipped_units": 94,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01219",
+      "trip_id": "T0154",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-19",
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01237",
+      "trip_id": "T0156",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-19",
+      "ordered_units": 106,
+      "shipped_units": 106,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01258",
+      "trip_id": "T0159",
+      "due_date": "2026-10-16",
+      "delivered_date": null,
+      "ordered_units": 127,
+      "shipped_units": 127,
+      "issue": "None",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 3,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00012",
+      "trip_id": "T0002",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-23",
+      "ordered_units": 123,
+      "shipped_units": 123,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00024",
+      "trip_id": "T0004",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-23",
+      "ordered_units": 115,
+      "shipped_units": 115,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00076",
+      "trip_id": "T0010",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 115,
+      "shipped_units": 115,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00090",
+      "trip_id": "T0012",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 110,
+      "shipped_units": 110,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00143",
+      "trip_id": "T0019",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 102,
+      "shipped_units": 102,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00151",
+      "trip_id": "T0020",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 137,
+      "shipped_units": 137,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00170",
+      "trip_id": "T0022",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 106,
+      "shipped_units": 106,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00172",
+      "trip_id": "T0022",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 80,
+      "shipped_units": 80,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00181",
+      "trip_id": "T0023",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 118,
+      "shipped_units": 118,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00218",
+      "trip_id": "T0028",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-27",
+      "ordered_units": 84,
+      "shipped_units": 84,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00277",
+      "trip_id": "T0036",
+      "due_date": "2026-09-26",
+      "delivered_date": "2026-09-28",
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00306",
+      "trip_id": "T0040",
+      "due_date": "2026-09-27",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 79,
+      "shipped_units": 79,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00314",
+      "trip_id": "T0041",
+      "due_date": "2026-09-26",
+      "delivered_date": "2026-09-28",
+      "ordered_units": 120,
+      "shipped_units": 120,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00317",
+      "trip_id": "T0041",
+      "due_date": "2026-09-26",
+      "delivered_date": "2026-09-28",
+      "ordered_units": 77,
+      "shipped_units": 77,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00325",
+      "trip_id": "T0042",
+      "due_date": "2026-09-27",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 116,
+      "shipped_units": 116,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00334",
+      "trip_id": "T0043",
+      "due_date": "2026-09-27",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 93,
+      "shipped_units": 93,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00350",
+      "trip_id": "T0046",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 122,
+      "shipped_units": 122,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00353",
+      "trip_id": "T0046",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 109,
+      "shipped_units": 109,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00400",
+      "trip_id": "T0052",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00410",
+      "trip_id": "T0053",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 121,
+      "shipped_units": 121,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00426",
+      "trip_id": "T0055",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 107,
+      "shipped_units": 107,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00441",
+      "trip_id": "T0057",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 90,
+      "shipped_units": 90,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00442",
+      "trip_id": "T0057",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00452",
+      "trip_id": "T0058",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 117,
+      "shipped_units": 117,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00457",
+      "trip_id": "T0058",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 80,
+      "shipped_units": 80,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00470",
+      "trip_id": "T0060",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 132,
+      "shipped_units": 132,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00504",
+      "trip_id": "T0064",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 110,
+      "shipped_units": 110,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00526",
+      "trip_id": "T0067",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 120,
+      "shipped_units": 120,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00550",
+      "trip_id": "T0069",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 99,
+      "shipped_units": 99,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00557",
+      "trip_id": "T0070",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 106,
+      "shipped_units": 106,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00559",
+      "trip_id": "T0070",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 137,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 4,
+      "late_days": 2,
+      "flags": [
+        "Delivered late",
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00612",
+      "trip_id": "T0077",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 135,
+      "shipped_units": 135,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00634",
+      "trip_id": "T0080",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 138,
+      "shipped_units": 138,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00643",
+      "trip_id": "T0081",
+      "due_date": "2026-10-03",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 99,
+      "shipped_units": 99,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00673",
+      "trip_id": "T0085",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 125,
+      "shipped_units": 125,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00703",
+      "trip_id": "T0088",
+      "due_date": "2026-10-05",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 124,
+      "shipped_units": 124,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00741",
+      "trip_id": "T0093",
+      "due_date": "2026-10-05",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 89,
+      "shipped_units": 89,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00744",
+      "trip_id": "T0094",
+      "due_date": "2026-10-06",
+      "delivered_date": "2026-10-08",
+      "ordered_units": 134,
+      "shipped_units": 134,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00802",
+      "trip_id": "T0100",
+      "due_date": "2026-10-07",
+      "delivered_date": "2026-10-09",
+      "ordered_units": 110,
+      "shipped_units": 110,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00806",
+      "trip_id": "T0101",
+      "due_date": "2026-10-06",
+      "delivered_date": "2026-10-08",
+      "ordered_units": 87,
+      "shipped_units": 87,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00837",
+      "trip_id": "T0106",
+      "due_date": "2026-10-08",
+      "delivered_date": "2026-10-10",
+      "ordered_units": 83,
+      "shipped_units": 83,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00842",
+      "trip_id": "T0106",
+      "due_date": "2026-10-08",
+      "delivered_date": "2026-10-10",
+      "ordered_units": 76,
+      "shipped_units": 76,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00882",
+      "trip_id": "T0112",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 80,
+      "shipped_units": 80,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00885",
+      "trip_id": "T0112",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 97,
+      "shipped_units": 97,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00899",
+      "trip_id": "T0114",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 136,
+      "shipped_units": 136,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00906",
+      "trip_id": "T0115",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 110,
+      "shipped_units": 110,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00930",
+      "trip_id": "T0118",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 79,
+      "shipped_units": 79,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00959",
+      "trip_id": "T0122",
+      "due_date": "2026-10-11",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 132,
+      "shipped_units": 132,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00981",
+      "trip_id": "T0125",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 105,
+      "shipped_units": 105,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00982",
+      "trip_id": "T0125",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 122,
+      "shipped_units": 122,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00993",
+      "trip_id": "T0126",
+      "due_date": "2026-10-11",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01023",
+      "trip_id": "T0130",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-14",
+      "ordered_units": 98,
+      "shipped_units": 98,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01066",
+      "trip_id": "T0135",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-14",
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01076",
+      "trip_id": "T0136",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 96,
+      "shipped_units": 96,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01078",
+      "trip_id": "T0136",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 118,
+      "shipped_units": 118,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01079",
+      "trip_id": "T0136",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01100",
+      "trip_id": "T0139",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 132,
+      "shipped_units": 132,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01109",
+      "trip_id": "T0140",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 103,
+      "shipped_units": 103,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01123",
+      "trip_id": "T0142",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 106,
+      "shipped_units": 106,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01143",
+      "trip_id": "T0145",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 81,
+      "shipped_units": 81,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01151",
+      "trip_id": "T0146",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-17",
+      "ordered_units": 107,
+      "shipped_units": 107,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01152",
+      "trip_id": "T0146",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-17",
+      "ordered_units": 94,
+      "shipped_units": 94,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01221",
+      "trip_id": "T0154",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 120,
+      "shipped_units": 120,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01223",
+      "trip_id": "T0154",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 121,
+      "shipped_units": 121,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01226",
+      "trip_id": "T0154",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 97,
+      "shipped_units": 97,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01239",
+      "trip_id": "T0156",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 93,
+      "shipped_units": 93,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01247",
+      "trip_id": "T0158",
+      "due_date": "2026-10-17",
+      "delivered_date": null,
+      "ordered_units": 124,
+      "shipped_units": 124,
+      "issue": "None",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01269",
+      "trip_id": "T0160",
+      "due_date": "2026-10-17",
+      "delivered_date": null,
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01271",
+      "trip_id": "T0160",
+      "due_date": "2026-10-17",
+      "delivered_date": null,
+      "ordered_units": 81,
+      "shipped_units": 81,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01274",
+      "trip_id": "T0160",
+      "due_date": "2026-10-17",
+      "delivered_date": "2026-10-19",
+      "ordered_units": 83,
+      "shipped_units": 83,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01282",
+      "trip_id": "T0162",
+      "due_date": "2026-10-17",
+      "delivered_date": "2026-10-19",
+      "ordered_units": 95,
+      "shipped_units": 95,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01327",
+      "trip_id": "T0167",
+      "due_date": "2026-10-17",
+      "delivered_date": null,
+      "ordered_units": 94,
+      "shipped_units": 94,
+      "issue": "None",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 2,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O00023",
+      "trip_id": "T0004",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-22",
+      "ordered_units": 126,
+      "shipped_units": 126,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00025",
+      "trip_id": "T0004",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-22",
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00027",
+      "trip_id": "T0004",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-22",
+      "ordered_units": 126,
+      "shipped_units": 126,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00051",
+      "trip_id": "T0007",
+      "due_date": "2026-09-21",
+      "delivered_date": "2026-09-22",
+      "ordered_units": 117,
+      "shipped_units": 117,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00072",
+      "trip_id": "T0010",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-23",
+      "ordered_units": 98,
+      "shipped_units": 98,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00079",
+      "trip_id": "T0010",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-23",
+      "ordered_units": 87,
+      "shipped_units": 87,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00121",
+      "trip_id": "T0016",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 75,
+      "shipped_units": 75,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00125",
+      "trip_id": "T0016",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 117,
+      "shipped_units": 117,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00133",
+      "trip_id": "T0018",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 134,
+      "shipped_units": 134,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00168",
+      "trip_id": "T0022",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 114,
+      "shipped_units": 114,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00205",
+      "trip_id": "T0026",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 113,
+      "shipped_units": 113,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00223",
+      "trip_id": "T0029",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 107,
+      "shipped_units": 107,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00260",
+      "trip_id": "T0033",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00269",
+      "trip_id": "T0035",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 78,
+      "shipped_units": 78,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00333",
+      "trip_id": "T0043",
+      "due_date": "2026-09-27",
+      "delivered_date": "2026-09-28",
+      "ordered_units": 131,
+      "shipped_units": 131,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00402",
+      "trip_id": "T0052",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 117,
+      "shipped_units": 117,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00449",
+      "trip_id": "T0058",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 122,
+      "shipped_units": 122,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00456",
+      "trip_id": "T0058",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 79,
+      "shipped_units": 79,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00475",
+      "trip_id": "T0061",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 131,
+      "shipped_units": 131,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00554",
+      "trip_id": "T0070",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 123,
+      "shipped_units": 123,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00592",
+      "trip_id": "T0074",
+      "due_date": "2026-10-03",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 105,
+      "shipped_units": 105,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00649",
+      "trip_id": "T0082",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 101,
+      "shipped_units": 101,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00677",
+      "trip_id": "T0085",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 135,
+      "shipped_units": 135,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00698",
+      "trip_id": "T0088",
+      "due_date": "2026-10-05",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 124,
+      "shipped_units": 124,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00700",
+      "trip_id": "T0088",
+      "due_date": "2026-10-05",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00701",
+      "trip_id": "T0088",
+      "due_date": "2026-10-05",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 140,
+      "shipped_units": 140,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00740",
+      "trip_id": "T0093",
+      "due_date": "2026-10-05",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 115,
+      "shipped_units": 115,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00750",
+      "trip_id": "T0094",
+      "due_date": "2026-10-06",
+      "delivered_date": "2026-10-07",
+      "ordered_units": 98,
+      "shipped_units": 98,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00799",
+      "trip_id": "T0100",
+      "due_date": "2026-10-07",
+      "delivered_date": "2026-10-08",
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00810",
+      "trip_id": "T0102",
+      "due_date": "2026-10-07",
+      "delivered_date": "2026-10-08",
+      "ordered_units": 124,
+      "shipped_units": 124,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00830",
+      "trip_id": "T0105",
+      "due_date": "2026-10-07",
+      "delivered_date": "2026-10-08",
+      "ordered_units": 83,
+      "shipped_units": 83,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00838",
+      "trip_id": "T0106",
+      "due_date": "2026-10-08",
+      "delivered_date": "2026-10-09",
+      "ordered_units": 105,
+      "shipped_units": 105,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00878",
+      "trip_id": "T0112",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-10",
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00886",
+      "trip_id": "T0112",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-10",
+      "ordered_units": 106,
+      "shipped_units": 106,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00887",
+      "trip_id": "T0112",
+      "due_date": "2026-10-09",
+      "delivered_date": "2026-10-10",
+      "ordered_units": 92,
+      "shipped_units": 92,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00890",
+      "trip_id": "T0113",
+      "due_date": "2026-10-08",
+      "delivered_date": "2026-10-09",
+      "ordered_units": 84,
+      "shipped_units": 84,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00919",
+      "trip_id": "T0116",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 116,
+      "shipped_units": 116,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00942",
+      "trip_id": "T0120",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-11",
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00974",
+      "trip_id": "T0124",
+      "due_date": "2026-10-11",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 128,
+      "shipped_units": 128,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O00979",
+      "trip_id": "T0124",
+      "due_date": "2026-10-11",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 97,
+      "shipped_units": 97,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01022",
+      "trip_id": "T0130",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 139,
+      "shipped_units": 139,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01026",
+      "trip_id": "T0130",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 86,
+      "shipped_units": 86,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01044",
+      "trip_id": "T0133",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 99,
+      "shipped_units": 99,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01052",
+      "trip_id": "T0133",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 126,
+      "shipped_units": 124,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 2,
+      "late_days": 1,
+      "flags": [
+        "Delivered late",
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01075",
+      "trip_id": "T0136",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-14",
+      "ordered_units": 80,
+      "shipped_units": 80,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01094",
+      "trip_id": "T0138",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-14",
+      "ordered_units": 81,
+      "shipped_units": 81,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01111",
+      "trip_id": "T0140",
+      "due_date": "2026-10-14",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 88,
+      "shipped_units": 88,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01135",
+      "trip_id": "T0143",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-14",
+      "ordered_units": 93,
+      "shipped_units": 93,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01168",
+      "trip_id": "T0148",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 140,
+      "shipped_units": 140,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01174",
+      "trip_id": "T0148",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 86,
+      "shipped_units": 86,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01202",
+      "trip_id": "T0151",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 96,
+      "shipped_units": 19,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": false,
+      "otif": false,
+      "short_units": 77,
+      "late_days": 1,
+      "flags": [
+        "Delivered late",
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01222",
+      "trip_id": "T0154",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-17",
+      "ordered_units": 108,
+      "shipped_units": 108,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01300",
+      "trip_id": "T0164",
+      "due_date": "2026-10-18",
+      "delivered_date": "2026-10-19",
+      "ordered_units": 118,
+      "shipped_units": 118,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01311",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": null,
+      "ordered_units": 110,
+      "shipped_units": 110,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01312",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": null,
+      "ordered_units": 91,
+      "shipped_units": 91,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01314",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": null,
+      "ordered_units": 119,
+      "shipped_units": 119,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01316",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": null,
+      "ordered_units": 133,
+      "shipped_units": 133,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01317",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": "2026-10-19",
+      "ordered_units": 101,
+      "shipped_units": 101,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Delivered late"
+      ]
+    },
+    {
+      "order_id": "O01318",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": null,
+      "ordered_units": 108,
+      "shipped_units": 108,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01319",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": null,
+      "ordered_units": 105,
+      "shipped_units": 105,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 0,
+      "late_days": 1,
+      "flags": [
+        "Overdue open"
+      ]
+    },
+    {
+      "order_id": "O01320",
+      "trip_id": "T0166",
+      "due_date": "2026-10-18",
+      "delivered_date": null,
+      "ordered_units": 118,
+      "shipped_units": 0,
+      "issue": "Dispatch exception",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": false,
+      "otif": false,
+      "short_units": 118,
+      "late_days": 1,
+      "flags": [
+        "Overdue open",
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00022",
+      "trip_id": "T0003",
+      "due_date": "2026-09-20",
+      "delivered_date": "2026-09-20",
+      "ordered_units": 82,
+      "shipped_units": 68,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 14,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00040",
+      "trip_id": "T0005",
+      "due_date": "2026-09-20",
+      "delivered_date": "2026-09-20",
+      "ordered_units": 89,
+      "shipped_units": 34,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 55,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00118",
+      "trip_id": "T0015",
+      "due_date": "2026-09-22",
+      "delivered_date": "2026-09-22",
+      "ordered_units": 114,
+      "shipped_units": 49,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 65,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00141",
+      "trip_id": "T0018",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-23",
+      "ordered_units": 111,
+      "shipped_units": 40,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 71,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00142",
+      "trip_id": "T0018",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-23",
+      "ordered_units": 85,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 85,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00158",
+      "trip_id": "T0020",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 123,
+      "shipped_units": 83,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 40,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00159",
+      "trip_id": "T0020",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 128,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 128,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00182",
+      "trip_id": "T0023",
+      "due_date": "2026-09-23",
+      "delivered_date": "2026-09-23",
+      "ordered_units": 102,
+      "shipped_units": 38,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 64,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00231",
+      "trip_id": "T0029",
+      "due_date": "2026-09-24",
+      "delivered_date": "2026-09-24",
+      "ordered_units": 111,
+      "shipped_units": 61,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 50,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00240",
+      "trip_id": "T0030",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 105,
+      "shipped_units": 51,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 54,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00241",
+      "trip_id": "T0030",
+      "due_date": "2026-09-25",
+      "delivered_date": "2026-09-25",
+      "ordered_units": 76,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 76,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00283",
+      "trip_id": "T0036",
+      "due_date": "2026-09-26",
+      "delivered_date": "2026-09-26",
+      "ordered_units": 76,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 76,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00359",
+      "trip_id": "T0046",
+      "due_date": "2026-09-28",
+      "delivered_date": "2026-09-28",
+      "ordered_units": 114,
+      "shipped_units": 18,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 96,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00423",
+      "trip_id": "T0054",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 131,
+      "shipped_units": 117,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 14,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00424",
+      "trip_id": "T0054",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 123,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 123,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00467",
+      "trip_id": "T0059",
+      "due_date": "2026-09-29",
+      "delivered_date": "2026-09-29",
+      "ordered_units": 98,
+      "shipped_units": 13,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 85,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00497",
+      "trip_id": "T0063",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 84,
+      "shipped_units": 49,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 35,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00515",
+      "trip_id": "T0065",
+      "due_date": "2026-09-30",
+      "delivered_date": "2026-09-30",
+      "ordered_units": 101,
+      "shipped_units": 48,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 53,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00532",
+      "trip_id": "T0067",
+      "due_date": "2026-10-01",
+      "delivered_date": "2026-10-01",
+      "ordered_units": 110,
+      "shipped_units": 89,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 21,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00541",
+      "trip_id": "T0068",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 113,
+      "shipped_units": 58,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 55,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00542",
+      "trip_id": "T0068",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 140,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 140,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00577",
+      "trip_id": "T0072",
+      "due_date": "2026-10-02",
+      "delivered_date": "2026-10-02",
+      "ordered_units": 125,
+      "shipped_units": 75,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 50,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00662",
+      "trip_id": "T0083",
+      "due_date": "2026-10-03",
+      "delivered_date": "2026-10-03",
+      "ordered_units": 137,
+      "shipped_units": 82,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 55,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00678",
+      "trip_id": "T0085",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 85,
+      "shipped_units": 61,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 24,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00696",
+      "trip_id": "T0087",
+      "due_date": "2026-10-04",
+      "delivered_date": "2026-10-04",
+      "ordered_units": 106,
+      "shipped_units": 42,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 64,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00733",
+      "trip_id": "T0092",
+      "due_date": "2026-10-06",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 103,
+      "shipped_units": 51,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 52,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00734",
+      "trip_id": "T0092",
+      "due_date": "2026-10-06",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 139,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 139,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00762",
+      "trip_id": "T0095",
+      "due_date": "2026-10-05",
+      "delivered_date": "2026-10-05",
+      "ordered_units": 81,
+      "shipped_units": 67,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 14,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00771",
+      "trip_id": "T0096",
+      "due_date": "2026-10-06",
+      "delivered_date": "2026-10-06",
+      "ordered_units": 121,
+      "shipped_units": 54,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 67,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O00988",
+      "trip_id": "T0125",
+      "due_date": "2026-10-10",
+      "delivered_date": "2026-10-10",
+      "ordered_units": 137,
+      "shipped_units": 63,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 74,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01072",
+      "trip_id": "T0135",
+      "due_date": "2026-10-12",
+      "delivered_date": "2026-10-12",
+      "ordered_units": 112,
+      "shipped_units": 98,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 14,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01098",
+      "trip_id": "T0138",
+      "due_date": "2026-10-13",
+      "delivered_date": "2026-10-13",
+      "ordered_units": 103,
+      "shipped_units": 15,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 88,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01159",
+      "trip_id": "T0146",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 112,
+      "shipped_units": 96,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 16,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01160",
+      "trip_id": "T0146",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 135,
+      "shipped_units": 0,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 135,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01192",
+      "trip_id": "T0150",
+      "due_date": "2026-10-15",
+      "delivered_date": "2026-10-15",
+      "ordered_units": 140,
+      "shipped_units": 95,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 45,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01227",
+      "trip_id": "T0154",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 84,
+      "shipped_units": 80,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 4,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01265",
+      "trip_id": "T0159",
+      "due_date": "2026-10-16",
+      "delivered_date": "2026-10-16",
+      "ordered_units": 136,
+      "shipped_units": 34,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "on_time": true,
+      "otif": false,
+      "short_units": 102,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    },
+    {
+      "order_id": "O01339",
+      "trip_id": "T0168",
+      "due_date": "2026-10-18",
+      "delivered_date": "2026-10-18",
+      "ordered_units": 132,
+      "shipped_units": 90,
+      "issue": "Capacity shortfall",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "on_time": true,
+      "otif": false,
+      "short_units": 42,
+      "late_days": 0,
+      "flags": [
+        "Short shipment"
+      ]
+    }
+  ],
+  "daily": [
+    {
+      "due_date": "2026-09-20",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-20",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-20",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-21",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-21",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-21",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-21",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-21",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-21",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-22",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-22",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-22",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-22",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-22",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 8,
+      "otif_orders": 7,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-22",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-23",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-23",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-23",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-23",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-23",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-23",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-24",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-24",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-24",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-24",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-24",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-24",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-25",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-25",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-25",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 7,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-25",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-25",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-25",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-26",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-26",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-26",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 7,
+      "otif_orders": 6,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-26",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-26",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-26",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-27",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-27",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-27",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-27",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-27",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-27",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-28",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-28",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 6,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-28",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-28",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-28",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-28",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-29",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-29",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 3,
+      "otif_orders": 3,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-29",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-29",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-29",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-29",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-30",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-09-30",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-30",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-30",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-30",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-09-30",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-01",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-01",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-01",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-01",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 5,
+      "otif_orders": 4,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-01",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-01",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-02",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-02",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-02",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-02",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-02",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-02",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-03",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-03",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-03",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-03",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-03",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-03",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-04",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-04",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 2,
+      "otif_orders": 2,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-04",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 3,
+      "otif_orders": 3,
+      "overdue_open": 2
+    },
+    {
+      "due_date": "2026-10-04",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 7,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-04",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-04",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-05",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-05",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 3,
+      "otif_orders": 3,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-05",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-05",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-05",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-05",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-06",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-06",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-06",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-06",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-06",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-06",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-07",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-07",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-07",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-07",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-07",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-07",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-08",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-08",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 2,
+      "otif_orders": 2,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-08",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-08",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-08",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-08",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-09",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-09",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 3,
+      "otif_orders": 3,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-09",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-09",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-09",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-09",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-10",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-10",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-10",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-10",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-10",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-10",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 7,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-11",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-11",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-11",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-11",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-11",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-11",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-12",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-12",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 8,
+      "on_time_orders": 3,
+      "otif_orders": 3,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-12",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-12",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-12",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 6,
+      "otif_orders": 5,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-12",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-13",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-13",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 3,
+      "otif_orders": 3,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-13",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-13",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-13",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-13",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-14",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-14",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 3,
+      "otif_orders": 3,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-14",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-14",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-14",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 5,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-14",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 8,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-15",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 7,
+      "otif_orders": 5,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-15",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-15",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 7,
+      "otif_orders": 6,
+      "overdue_open": 2
+    },
+    {
+      "due_date": "2026-10-15",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-15",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-15",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-16",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-16",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 5,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-16",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 6,
+      "on_time_orders": 4,
+      "otif_orders": 4,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-16",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-16",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 10,
+      "on_time_orders": 9,
+      "otif_orders": 8,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-16",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 6,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-17",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-17",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 9,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 2
+    },
+    {
+      "due_date": "2026-10-17",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-17",
+      "warehouse": "DC-A",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 9,
+      "otif_orders": 9,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-17",
+      "warehouse": "DC-B",
+      "route": "Metro",
+      "due_orders": 7,
+      "on_time_orders": 7,
+      "otif_orders": 7,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-17",
+      "warehouse": "DC-C",
+      "route": "Metro",
+      "due_orders": 9,
+      "on_time_orders": 8,
+      "otif_orders": 8,
+      "overdue_open": 1
+    },
+    {
+      "due_date": "2026-10-18",
+      "warehouse": "DC-A",
+      "route": "Outer",
+      "due_orders": 7,
+      "on_time_orders": 6,
+      "otif_orders": 6,
+      "overdue_open": 0
+    },
+    {
+      "due_date": "2026-10-18",
+      "warehouse": "DC-B",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 2,
+      "otif_orders": 2,
+      "overdue_open": 7
+    },
+    {
+      "due_date": "2026-10-18",
+      "warehouse": "DC-C",
+      "route": "Outer",
+      "due_orders": 10,
+      "on_time_orders": 10,
+      "otif_orders": 9,
+      "overdue_open": 0
+    }
+  ],
+  "capacity_scenarios": [
+    {
+      "baseline_capacity_units": 168000,
+      "added_capacity_units": 0,
+      "due_short_units": 2731,
+      "recoverable_units_upper_bound": 0,
+      "remaining_short_units": 2731,
+      "unused_added_capacity_units": 0,
+      "scope": "All network",
+      "capacity_increment_pct": 0,
+      "incremental_recoverable_units": 0
+    },
+    {
+      "baseline_capacity_units": 168000,
+      "added_capacity_units": 16800,
+      "due_short_units": 2731,
+      "recoverable_units_upper_bound": 2273,
+      "remaining_short_units": 458,
+      "unused_added_capacity_units": 14527,
+      "scope": "All network",
+      "capacity_increment_pct": 10,
+      "incremental_recoverable_units": 2273
+    },
+    {
+      "baseline_capacity_units": 168000,
+      "added_capacity_units": 33600,
+      "due_short_units": 2731,
+      "recoverable_units_upper_bound": 2731,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 30869,
+      "scope": "All network",
+      "capacity_increment_pct": 20,
+      "incremental_recoverable_units": 2731
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 0,
+      "due_short_units": 215,
+      "recoverable_units_upper_bound": 0,
+      "remaining_short_units": 215,
+      "unused_added_capacity_units": 0,
+      "scope": "DC-A / Metro",
+      "capacity_increment_pct": 0,
+      "incremental_recoverable_units": 0
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 2800,
+      "due_short_units": 215,
+      "recoverable_units_upper_bound": 215,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 2585,
+      "scope": "DC-A / Metro",
+      "capacity_increment_pct": 10,
+      "incremental_recoverable_units": 215
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 5600,
+      "due_short_units": 215,
+      "recoverable_units_upper_bound": 215,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 5385,
+      "scope": "DC-A / Metro",
+      "capacity_increment_pct": 20,
+      "incremental_recoverable_units": 215
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 0,
+      "due_short_units": 705,
+      "recoverable_units_upper_bound": 0,
+      "remaining_short_units": 705,
+      "unused_added_capacity_units": 0,
+      "scope": "DC-A / Outer",
+      "capacity_increment_pct": 0,
+      "incremental_recoverable_units": 0
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 2800,
+      "due_short_units": 705,
+      "recoverable_units_upper_bound": 400,
+      "remaining_short_units": 305,
+      "unused_added_capacity_units": 2400,
+      "scope": "DC-A / Outer",
+      "capacity_increment_pct": 10,
+      "incremental_recoverable_units": 400
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 5600,
+      "due_short_units": 705,
+      "recoverable_units_upper_bound": 705,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 4895,
+      "scope": "DC-A / Outer",
+      "capacity_increment_pct": 20,
+      "incremental_recoverable_units": 705
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 0,
+      "due_short_units": 294,
+      "recoverable_units_upper_bound": 0,
+      "remaining_short_units": 294,
+      "unused_added_capacity_units": 0,
+      "scope": "DC-B / Metro",
+      "capacity_increment_pct": 0,
+      "incremental_recoverable_units": 0
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 2800,
+      "due_short_units": 294,
+      "recoverable_units_upper_bound": 292,
+      "remaining_short_units": 2,
+      "unused_added_capacity_units": 2508,
+      "scope": "DC-B / Metro",
+      "capacity_increment_pct": 10,
+      "incremental_recoverable_units": 292
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 5600,
+      "due_short_units": 294,
+      "recoverable_units_upper_bound": 294,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 5306,
+      "scope": "DC-B / Metro",
+      "capacity_increment_pct": 20,
+      "incremental_recoverable_units": 294
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 0,
+      "due_short_units": 222,
+      "recoverable_units_upper_bound": 0,
+      "remaining_short_units": 222,
+      "unused_added_capacity_units": 0,
+      "scope": "DC-B / Outer",
+      "capacity_increment_pct": 0,
+      "incremental_recoverable_units": 0
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 2800,
+      "due_short_units": 222,
+      "recoverable_units_upper_bound": 204,
+      "remaining_short_units": 18,
+      "unused_added_capacity_units": 2596,
+      "scope": "DC-B / Outer",
+      "capacity_increment_pct": 10,
+      "incremental_recoverable_units": 204
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 5600,
+      "due_short_units": 222,
+      "recoverable_units_upper_bound": 222,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 5378,
+      "scope": "DC-B / Outer",
+      "capacity_increment_pct": 20,
+      "incremental_recoverable_units": 222
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 0,
+      "due_short_units": 470,
+      "recoverable_units_upper_bound": 0,
+      "remaining_short_units": 470,
+      "unused_added_capacity_units": 0,
+      "scope": "DC-C / Metro",
+      "capacity_increment_pct": 0,
+      "incremental_recoverable_units": 0
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 2800,
+      "due_short_units": 470,
+      "recoverable_units_upper_bound": 470,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 2330,
+      "scope": "DC-C / Metro",
+      "capacity_increment_pct": 10,
+      "incremental_recoverable_units": 470
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 5600,
+      "due_short_units": 470,
+      "recoverable_units_upper_bound": 470,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 5130,
+      "scope": "DC-C / Metro",
+      "capacity_increment_pct": 20,
+      "incremental_recoverable_units": 470
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 0,
+      "due_short_units": 825,
+      "recoverable_units_upper_bound": 0,
+      "remaining_short_units": 825,
+      "unused_added_capacity_units": 0,
+      "scope": "DC-C / Outer",
+      "capacity_increment_pct": 0,
+      "incremental_recoverable_units": 0
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 2800,
+      "due_short_units": 825,
+      "recoverable_units_upper_bound": 692,
+      "remaining_short_units": 133,
+      "unused_added_capacity_units": 2108,
+      "scope": "DC-C / Outer",
+      "capacity_increment_pct": 10,
+      "incremental_recoverable_units": 692
+    },
+    {
+      "baseline_capacity_units": 28000,
+      "added_capacity_units": 5600,
+      "due_short_units": 825,
+      "recoverable_units_upper_bound": 825,
+      "remaining_short_units": 0,
+      "unused_added_capacity_units": 4775,
+      "scope": "DC-C / Outer",
+      "capacity_increment_pct": 20,
+      "incremental_recoverable_units": 825
+    }
+  ],
+  "capacity_stress": [
+    {
+      "demand_growth_pct": 0,
+      "capacity_increment_pct": 0,
+      "modeled_demand_units": 143995,
+      "capacity_shortfall_units": 2731
+    },
+    {
+      "demand_growth_pct": 0,
+      "capacity_increment_pct": 10,
+      "modeled_demand_units": 143995,
+      "capacity_shortfall_units": 458
+    },
+    {
+      "demand_growth_pct": 0,
+      "capacity_increment_pct": 20,
+      "modeled_demand_units": 143995,
+      "capacity_shortfall_units": 0
+    },
+    {
+      "demand_growth_pct": 10,
+      "capacity_increment_pct": 0,
+      "modeled_demand_units": 158317,
+      "capacity_shortfall_units": 8017
+    },
+    {
+      "demand_growth_pct": 10,
+      "capacity_increment_pct": 10,
+      "modeled_demand_units": 158317,
+      "capacity_shortfall_units": 2990
+    },
+    {
+      "demand_growth_pct": 10,
+      "capacity_increment_pct": 20,
+      "modeled_demand_units": 158317,
+      "capacity_shortfall_units": 607
+    },
+    {
+      "demand_growth_pct": 20,
+      "capacity_increment_pct": 0,
+      "modeled_demand_units": 172721,
+      "capacity_shortfall_units": 15768
+    },
+    {
+      "demand_growth_pct": 20,
+      "capacity_increment_pct": 10,
+      "modeled_demand_units": 172721,
+      "capacity_shortfall_units": 8157
+    },
+    {
+      "demand_growth_pct": 20,
+      "capacity_increment_pct": 20,
+      "modeled_demand_units": 172721,
+      "capacity_shortfall_units": 3264
+    }
+  ]
+}

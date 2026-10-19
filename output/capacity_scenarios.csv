@@ -1,0 +1,22 @@
+baseline_capacity_units,added_capacity_units,due_short_units,recoverable_units_upper_bound,remaining_short_units,unused_added_capacity_units,scope,capacity_increment_pct,incremental_recoverable_units
+168000,0,2731,0,2731,0,All network,0,0
+168000,16800,2731,2273,458,14527,All network,10,2273
+168000,33600,2731,2731,0,30869,All network,20,2731
+28000,0,215,0,215,0,DC-A / Metro,0,0
+28000,2800,215,215,0,2585,DC-A / Metro,10,215
+28000,5600,215,215,0,5385,DC-A / Metro,20,215
+28000,0,705,0,705,0,DC-A / Outer,0,0
+28000,2800,705,400,305,2400,DC-A / Outer,10,400
+28000,5600,705,705,0,4895,DC-A / Outer,20,705
+28000,0,294,0,294,0,DC-B / Metro,0,0
+28000,2800,294,292,2,2508,DC-B / Metro,10,292
+28000,5600,294,294,0,5306,DC-B / Metro,20,294
+28000,0,222,0,222,0,DC-B / Outer,0,0
+28000,2800,222,204,18,2596,DC-B / Outer,10,204
+28000,5600,222,222,0,5378,DC-B / Outer,20,222
+28000,0,470,0,470,0,DC-C / Metro,0,0
+28000,2800,470,470,0,2330,DC-C / Metro,10,470
+28000,5600,470,470,0,5130,DC-C / Metro,20,470
+28000,0,825,0,825,0,DC-C / Outer,0,0
+28000,2800,825,692,133,2108,DC-C / Outer,10,692
+28000,5600,825,825,0,4775,DC-C / Outer,20,825

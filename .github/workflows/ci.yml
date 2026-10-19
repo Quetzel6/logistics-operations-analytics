@@ -1,0 +1,35 @@
+name: Logistics validation
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build synthetic evidence
+        run: python project.py
+      - name: Test and verify reproducibility
+        run: python verify_release.py
+      - name: Check JavaScript filter logic
+        run: node tests/test_dashboard.cjs
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: logistics-evidence-python-${{ matrix.python }}
+          path: |
+            output/report.json
+            output/release_verification.json
+            output/decision_brief.md
+            output/dashboard.html

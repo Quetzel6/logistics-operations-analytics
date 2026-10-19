@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checks": [
+    "Python tests",
+    "two isolated clean builds",
+    "byte-identical report artifacts",
+    "raw CSV to SQL KPI reconciliation",
+    "scenario scope reconciliation"
+  ],
+  "artifact_sha256": {
+    "orders.csv": "adf23b0455230fc4afbf2bd64a25afa05b95050060bc56c3445c331c62fe9c58",
+    "trips.csv": "8b8369ddaab7e8a5d43029c359a16e43d41d4b41f0f12cbfb507b477b3487d8c",
+    "report.json": "98e1a1277d7f625249592fa4fb5ffb728bfb77ba3f2d8d206859ebbfa25ebe8a",
+    "daily.csv": "85c84c84d5e6e39ccb9ef9151c2255b0ebcf401b505eadb9c79b67813cce3b0c",
+    "exceptions.csv": "8acbd35782449414db77093ea41652086837ea5558a70edb1322b5db340c6547",
+    "capacity_scenarios.csv": "b471a40689e0d321f503f679183e9b8c6241061fcc8b54d7d3e1562cc27c97dc",
+    "capacity_stress.csv": "ffdeb11e9237e7baa3cb73f00c7837a18b808fb866870cf3b16295c9a21bf05b",
+    "dashboard.html": "a04b14095949c3e628955d18d1eead661eb5977c7788049c0faaedebc91a5972",
+    "decision_brief.md": "5e35fb3a84b175ae3e1043ec910deb7905812988a13082a111fafa8620a94d81"
+  }
+}

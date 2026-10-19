@@ -199,12 +199,12 @@ def main():
         report=analyze(conn)
     for name,header,data in [('trips',['trip_id','warehouse','route','dispatch_date','capacity_units'],trips),('orders',['order_id','trip_id','due_date','delivered_date','ordered_units','shipped_units','issue'],orders)]:
         with (args.output/(name+'.csv')).open('w',newline='') as f:
-            writer=csv.writer(f);writer.writerow(header);writer.writerows(data)
+            writer=csv.writer(f,lineterminator="\n");writer.writerow(header);writer.writerows(data)
     for name in ('exceptions','daily','capacity_scenarios','capacity_stress'):
         data=report[name]
         with (args.output/(name+'.csv')).open('w',newline='') as f:
             if data:
-                writer=csv.DictWriter(f,fieldnames=list(data[0]))
+                writer=csv.DictWriter(f,fieldnames=list(data[0]),lineterminator="\n")
                 writer.writeheader()
                 writer.writerows({k:('; '.join(v) if isinstance(v,list) else v) for k,v in row.items()} for row in data)
     (args.output/'decision_brief.md').write_text(markdown(report))

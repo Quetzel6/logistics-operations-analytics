@@ -10,7 +10,8 @@ See **M4_GUIDE_TH.md** for Mac steps, **CASE_STUDY.md** for the business case, a
 - Recent-window evidence selection now reserves note space and retains a recorded exception in the window.
 - Eight-case offline review packet with explicit rubric, reviewer/rationale and source hash. **Author reviewed all eight and reported no issues; criterion-level scoring not submitted.**
 - Disposable PostgreSQL 16 Docker benchmark prepared. **Author Mac execution passed; see AUTHOR_VERIFICATION_M4.json and the case-study update.**
-- M4 author Mac: 50 tests and eight authored baseline cases passed. No model/API calls. Remote CI for M4 remains pending.
+- M4 author Mac: 50 tests and eight authored baseline cases passed. No model/API calls.
+- GitHub CI: [Python 3.10/3.13, review-packet generation, pipeline replay and PostgreSQL passed](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39406441683) at commit `296a85a57dcf88d2e924b8e19fb02420d53d2430`. [Existing logistics checks also passed](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39406441707). These linked results verify that commit; later changes have separate runs.
 
 The sections below preserve earlier milestone history.
 

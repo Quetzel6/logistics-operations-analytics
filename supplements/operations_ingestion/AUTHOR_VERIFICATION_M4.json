@@ -1,0 +1,65 @@
+{
+  "recorded_date": "2026-10-20",
+  "evidence_source": "User-submitted terminal output and explicit conversation confirmation; not rerun by assistant on Mac.",
+  "mac_verification": {
+    "python": "3.10.11",
+    "platform": "Darwin",
+    "unit_tests_passed": 50,
+    "baseline_authored_cases_passed": 8,
+    "baseline_case_count": 8,
+    "live_completed_cases": 0
+  },
+  "postgres": {
+    "status": "passed_local",
+    "platform": "Darwin",
+    "postgres_version": "16.15 aarch64-unknown-linux-musl",
+    "image_id": "sha256:ef738a34a8651d11b2bace81c55c7e2187f786b484add6c83070884340074368",
+    "orders": 50000,
+    "events": 200000,
+    "notes": 1000,
+    "quantity_total": 2525000,
+    "before_execution_ms": [
+      5.765,
+      5.71,
+      5.472,
+      5.458,
+      5.16,
+      5.236,
+      5.231
+    ],
+    "after_execution_ms": [
+      0.043,
+      0.043,
+      0.045,
+      0.052,
+      0.054,
+      0.048,
+      0.057
+    ],
+    "before_median_ms": 5.458,
+    "after_median_ms": 0.048,
+    "before_plan": "Limit > Gather Merge > Sort > parallel-aware Seq Scan",
+    "after_plan": "Limit > Index Scan using event_order_recent",
+    "before_root_shared_hit_blocks": 1711,
+    "after_root_shared_hit_blocks": 10,
+    "shared_read_blocks_both_arms": 0,
+    "result_rows_both_arms": 4,
+    "result_sha256_both_arms": "5d9111703ba7e0e00a7183a81055858ddb82045418be1a5861283d57a8b9c916",
+    "results_match_expected": true,
+    "constraint_rejections": 3,
+    "container_removed": true,
+    "limits": "Single selective query, synthetic data, warm cache, before then after, seven samples each. Not production, warehouse scale or SQLite migration.",
+    "record_type": "Transcription of key fields from full JSON pasted in conversation; full original remains on user Mac."
+  },
+  "human_review": {
+    "reviewer": "Vikhom Manpiriya (project owner)",
+    "reviewed_scenarios": 8,
+    "feedback": "User explicitly confirmed reviewing all scenarios and reported no issues.",
+    "assessment_type": "Qualitative project-owner feedback via conversation; not independent review.",
+    "criterion_level_ratings_submitted": false,
+    "measured_review_duration": null,
+    "measured_business_time_savings": null,
+    "limits": "Do not treat as eight independently scored passes or model-accuracy measurement."
+  },
+  "remote_api_calls_this_milestone": 0
+}

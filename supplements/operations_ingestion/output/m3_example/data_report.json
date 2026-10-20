@@ -1,0 +1,50 @@
+{
+  "order_count": 3,
+  "quantity_total": 225,
+  "event_count": 3,
+  "note_count": 2,
+  "orders": [
+    {
+      "order_id": "O001",
+      "due_date": "2026-10-20",
+      "quantity": 100,
+      "events": 2,
+      "notes": 1
+    },
+    {
+      "order_id": "O002",
+      "due_date": "2026-10-21",
+      "quantity": 75,
+      "events": 1,
+      "notes": 1
+    },
+    {
+      "order_id": "O003",
+      "due_date": "2026-10-21",
+      "quantity": 50,
+      "events": 0,
+      "notes": 0
+    }
+  ],
+  "brief_sample": [
+    {
+      "order_id": "O001",
+      "record_status": "exception_recorded",
+      "warnings": []
+    },
+    {
+      "order_id": "O002",
+      "record_status": "dispatch_recorded",
+      "warnings": []
+    },
+    {
+      "order_id": "O003",
+      "record_status": "no_events",
+      "warnings": [
+        "no_notes",
+        "no_events"
+      ]
+    }
+  ],
+  "briefing_scope": "first 25 order IDs only; deterministic baseline, not GenAI"
+}

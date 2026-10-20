@@ -1,0 +1,64 @@
+name: Operations ingestion supplement
+on:
+  push:
+    paths: ['supplements/operations_ingestion/**', '.github/workflows/operations-ingestion.yml']
+  pull_request:
+    paths: ['supplements/operations_ingestion/**', '.github/workflows/operations-ingestion.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.13']
+    defaults:
+      run:
+        working-directory: supplements/operations_ingestion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Verify tests and isolated ingestion acceptance
+        run: python verify.py
+      - name: Verify authored baseline regression cases
+        run: python evaluate_assistant.py
+      - name: Generate human review packet without fabricating ratings
+        run: |
+          python review_packet.py generate --directory output/ci-review
+          python review_packet.py score --directory output/ci-review
+      - name: Run pipeline and replay against the same database
+        run: |
+          python pipeline.py --bundle fixtures --output output/pipeline-demo
+          python pipeline.py --bundle fixtures --output output/pipeline-demo
+      - uses: actions/upload-artifact@v4
+        with:
+          name: operations-ingestion-python-${{ matrix.python }}
+          path: |
+            supplements/operations_ingestion/output/verification.json
+            supplements/operations_ingestion/output/assistant_evaluation_baseline.json
+            supplements/operations_ingestion/output/pipeline-demo/runs/
+            supplements/operations_ingestion/output/ci-review/
+
+  postgres-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: supplements/operations_ingestion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Pull disposable PostgreSQL image
+        run: docker pull postgres:16-alpine
+      - name: Verify PostgreSQL constraints, query results and plans
+        run: python postgres_benchmark.py --output output/ci-postgres
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: operations-postgres-benchmark
+          path: supplements/operations_ingestion/output/ci-postgres/

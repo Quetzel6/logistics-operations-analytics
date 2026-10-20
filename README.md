@@ -1,6 +1,12 @@
 # Logistics Operations Analytics
 
-Synthetic portfolio prototype for logistics business analysis. **Not affiliated with CP ALL, Shopee or SPX. No employer data.**
+A reproducible portfolio project for delivery performance, exception investigation and transport-capacity analysis. It combines Python, SQL/SQLite and an offline dashboard to support operational decisions.
+
+All data are synthetic. This is an independent personal project; it uses no employer or customer data.
+
+## Mixed-source data engineering supplement
+
+[Operations ingestion and evidence review](supplements/operations_ingestion/README.md) adds CSV/JSONL/text ingestion, transactional SQLite loading, exact reconciliation and replay checks. M4 improves recent-event selection and includes an offline human-review packet plus a disposable PostgreSQL query experiment. The author supplied Mac results for 50 tests, eight authored baseline cases and the PostgreSQL benchmark, and confirmed reviewing all eight additional scenarios with no issues reported. [Case study](supplements/operations_ingestion/CASE_STUDY.md) | [Data model](supplements/operations_ingestion/DATA_MODEL.md) | [Evidence summary](supplements/operations_ingestion/AUTHOR_VERIFICATION_M4.json). Model execution remains unverified and paused; orchestration is custom Python, not Airflow. CI independently checks Python 3.10/3.13 and PostgreSQL without API keys.
 
 ## Portfolio at a glance
 

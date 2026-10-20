@@ -1,0 +1,81 @@
+{
+  "run_id": "20261020T073007Z_9d459e70",
+  "status": "passed_local",
+  "started_utc": "2026-10-20T07:30:07.279810+00:00",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "api_calls": 0,
+  "orchestrator": "custom local sequential runner; not Airflow",
+  "input_label": "caller-supplied; bundled fixtures are synthetic",
+  "stages": [
+    {
+      "name": "ingest",
+      "status": "passed",
+      "started_utc": "2026-10-20T07:30:07.279910+00:00",
+      "result": {
+        "contract": "operations-bundle-v1",
+        "run_id": "84a3e9442d09403b98a2e4e20b76da18",
+        "data_class": "caller-supplied; bundled fixtures are synthetic",
+        "status": "duplicate",
+        "issues": [],
+        "inserted": {},
+        "unchanged": {},
+        "original_run_id": "aa7fef24c27a4b06afc15b725dfd8729",
+        "fingerprint": "bc1ea299c0203c3038522d27c1e1df45e428d9717e3911e4c2f6b07c008ee1ed"
+      },
+      "finished_utc": "2026-10-20T07:30:07.281375+00:00",
+      "duration_ms": 1.47
+    },
+    {
+      "name": "reconcile",
+      "status": "passed",
+      "started_utc": "2026-10-20T07:30:07.281511+00:00",
+      "result": {
+        "fingerprint": "bc1ea299c0203c3038522d27c1e1df45e428d9717e3911e4c2f6b07c008ee1ed",
+        "matched_bundle_rows": {
+          "orders": 3,
+          "events": 3,
+          "notes": 2
+        },
+        "database_rows": {
+          "orders": 3,
+          "events": 3,
+          "notes": 2
+        },
+        "validation": "exact input-bundle rows, integrity and foreign keys; not real-world correctness"
+      },
+      "finished_utc": "2026-10-20T07:30:07.282318+00:00",
+      "duration_ms": 0.81
+    },
+    {
+      "name": "replay_check",
+      "status": "passed",
+      "started_utc": "2026-10-20T07:30:07.282495+00:00",
+      "result": {
+        "status": "duplicate",
+        "business_rows_unchanged": true,
+        "audit_entry_added": true
+      },
+      "finished_utc": "2026-10-20T07:30:07.284684+00:00",
+      "duration_ms": 2.2
+    },
+    {
+      "name": "report",
+      "status": "passed",
+      "started_utc": "2026-10-20T07:30:07.284879+00:00",
+      "result": {
+        "order_count": 3,
+        "quantity_total": 225,
+        "report": "report.html"
+      },
+      "finished_utc": "2026-10-20T07:30:07.286138+00:00",
+      "duration_ms": 1.27
+    }
+  ],
+  "source_sha256": {
+    "pipeline.py": "034f73bd1c7fa35f7b9713d52905a05424ef7355b20c7d332424e3d8e035b689",
+    "ingest.py": "986bbb19f00096b3bc09c699e6a33d65e0dde2588349869cb675e44324c3a1fd",
+    "assistant.py": "4918c9695d970969e67dd3a6d24294ee90cdad10ad5983122269e286c25f15d3"
+  },
+  "finished_utc": "2026-10-20T07:30:07.286327+00:00"
+}

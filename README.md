@@ -4,7 +4,7 @@ Synthetic portfolio prototype for logistics business analysis. **Not affiliated 
 
 ## Mixed-source data engineering supplement
 
-[Operations ingestion and offline pipeline](supplements/operations_ingestion/README.md) adds CSV/JSONL/text ingestion, transactional SQLite loading, exact reconciliation, replay checks and per-stage JSON/HTML evidence. The author reported 43 tests and all four pipeline stages passed on Mac/Python 3.10.11 on 20 October 2026. This is local sequential orchestration, not Airflow. [Run guide and evidence boundaries](supplements/operations_ingestion/PIPELINE_GUIDE.md). GenAI execution remains unverified; API calls are paused. Remote CI for this supplement must be checked separately.
+[Operations ingestion and evidence review](supplements/operations_ingestion/README.md) adds CSV/JSONL/text ingestion, transactional SQLite loading, exact reconciliation and replay checks. M4 improves recent-event selection and includes an offline human-review packet plus a disposable PostgreSQL query experiment. The author supplied Mac results for 50 tests, eight authored baseline cases and the PostgreSQL benchmark, and confirmed reviewing all eight additional scenarios with no issues reported. [Case study](supplements/operations_ingestion/CASE_STUDY.md) | [Data model](supplements/operations_ingestion/DATA_MODEL.md) | [Evidence summary](supplements/operations_ingestion/AUTHOR_VERIFICATION_M4.json). Model execution remains unverified and paused; orchestration is custom Python, not Airflow. CI independently checks Python 3.10/3.13 and PostgreSQL without API keys.
 
 ## Portfolio at a glance
 

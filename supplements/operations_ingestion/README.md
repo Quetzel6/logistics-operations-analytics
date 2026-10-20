@@ -1,6 +1,18 @@
-# Operations ingestion lab — milestone 1
+# Operations ingestion and evidence review lab
 
 Working supplement staged for the existing analytics portfolio, not an employer system or factory connector. All bundled fixtures are synthetic. This stays separate from the FMCG loader, which replaces its project schemas and expects a complete generated snapshot rather than incremental files.
+
+## Current release: M4 (2026-10-20)
+
+See **M4_GUIDE_TH.md** for Mac steps, **CASE_STUDY.md** for the business case, and **DATA_MODEL.md** for grain/keys and the PostgreSQL experiment.
+
+- Linux Python 3.12: 50 tests passed; eight baseline regression cases passed; pipeline repeat passed.
+- Recent-window evidence selection now reserves note space and retains a recorded exception in the window.
+- Eight-case offline review packet with explicit rubric, reviewer/rationale and source hash. **Author reviewed all eight and reported no issues; criterion-level scoring not submitted.**
+- Disposable PostgreSQL 16 Docker benchmark prepared. **Author Mac execution passed; see AUTHOR_VERIFICATION_M4.json and the case-study update.**
+- M4 author Mac: 50 tests and eight authored baseline cases passed. No model/API calls. Remote CI for M4 remains pending.
+
+The sections below preserve earlier milestone history.
 
 ## Implemented
 
@@ -50,7 +62,7 @@ Whole-bundle validation precedes loading; foreign-key/conflict failures roll bac
 
 **Yusen:** traceable facts/events/text for a future evidence-grounded operations assistant. This ingestion milestone does not demonstrate prompt engineering, model inference or agentic AI.
 
-See PIPELINE_GUIDE.md for current run instructions and evidence boundaries.
+See ROLE_ALIGNMENT.md for the next milestones and application boundaries.
 
 ## Milestone 2: evidence briefing
 
@@ -59,7 +71,3 @@ See **ASSISTANT_GUIDE.md** for the read-only order briefing, source matching, ab
 ## Milestone 3: offline pipeline
 
 See **PIPELINE_GUIDE.md**. Run `python3 pipeline.py --bundle fixtures --output output/pipeline-demo` for ingest → exact reconciliation → replay check → JSON/HTML reporting. This release has **43 tests** in development. No API credits or credentials are needed. It is custom local orchestration, not Airflow. Earlier milestone counts remain historical; Mac/remote/model evidence boundaries are stated in the guide.
-
-## Author verification
-
-On 20 October 2026 the author reported 43 tests passed on Mac/Python 3.10.11 and all four M3 pipeline stages passed. The earlier M2 baseline evaluation passed 8/8 authored cases. See AUTHOR_VERIFICATION.md. CI for this new supplement remains a separate check.

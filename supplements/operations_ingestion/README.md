@@ -56,11 +56,11 @@ Raw notes remain unstructured evidence, not commands or verified causes. Origina
 
 Whole-bundle validation precedes loading; foreign-key/conflict failures roll back business writes. A rejection audit is then written separately. Exact replay adds only an audit entry. IDs/timestamps vary across runs. Changed entity content requires a future versioned-correction policy. No streaming, CDC, retry scheduler, warehouse-scale benchmark, S3 or Airflow claim. Data rejection exits 1; storage failure exits 2.
 
-## Fit
+## Capabilities and applications
 
-**Fabrinet:** mixed-format ingestion, validation, transactionality, deduplication, schemas and documentation. Not actual FITS/tester integration or professional DE tenure.
+**Data engineering:** mixed-format ingestion, validation, transactionality, deduplication, schemas and documentation. Not actual FITS/tester integration or professional DE tenure.
 
-**Yusen:** traceable facts/events/text for a future evidence-grounded operations assistant. This ingestion milestone does not demonstrate prompt engineering, model inference or agentic AI.
+**Operations decision support:** traceable facts/events/text for a future evidence-grounded operations assistant. This ingestion milestone does not demonstrate prompt engineering, model inference or agentic AI.
 
 See ROLE_ALIGNMENT.md for the next milestones and application boundaries.
 

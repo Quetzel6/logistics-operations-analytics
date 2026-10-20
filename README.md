@@ -1,6 +1,8 @@
 # Logistics Operations Analytics
 
-Synthetic portfolio prototype for logistics business analysis. **Not affiliated with CP ALL, Shopee or SPX. No employer data.**
+A reproducible portfolio project for delivery performance, exception investigation and transport-capacity analysis. It combines Python, SQL/SQLite and an offline dashboard to support operational decisions.
+
+All data are synthetic. This is an independent personal project; it uses no employer or customer data.
 
 ## Mixed-source data engineering supplement
 

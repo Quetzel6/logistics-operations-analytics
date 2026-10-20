@@ -73,11 +73,11 @@ python3 postgres_benchmark.py --output output/mac-m4-postgres
 
 หาก cleanup ไม่สำเร็จ ให้ตรวจ container ที่มีชื่อ operations-pg-lab-* และ label portfolio.lab=operations-m4 ก่อนลบเฉพาะตัวที่สคริปต์นี้สร้าง ห้ามใช้ docker system prune
 
-## ผลงานที่จะนำไปใช้สมัคร
+## ทักษะและการประยุกต์ใช้งาน
 
-Fabrinet: สัญญาข้อมูล, grain/keys, validation, rollback/replay, reconciliation และ PostgreSQL query plan ที่รันผ่านจริง
+Data engineering: สัญญาข้อมูล, grain/keys, validation, rollback/replay, reconciliation และ PostgreSQL query plan ที่รันผ่านจริง
 
-Yusen: ตัวอย่าง exception review, หลักฐานอ้างอิง, คำเตือนข้อมูลขาด/ประวัติไม่ครบ, abstention และ rubric ที่คนตรวจจริง
+Operations decision support: ตัวอย่าง exception review, หลักฐานอ้างอิง, คำเตือนข้อมูลขาด/ประวัติไม่ครบ, abstention และ rubric ที่คนตรวจจริง
 
 ไม่อ้างว่าเป็น Agentic AI, LLM inference สำเร็จ, Airflow, data lake, production deployment, manufacturing connector หรือผลงานลดต้นทุนจริง และไม่ใช้โปรเจกต์แทนปีประสบการณ์ทำงาน
 

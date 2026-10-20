@@ -57,7 +57,7 @@ At most six cases call the model (unknown order and unverified cause abstain bef
 
 May describe: implemented a read-only evidence-retrieval baseline, citation/quote validation, abstention logic and an optional GenAI adapter with authored evaluation cases.
 
-Do not describe actual GenAI quality/results, an agent, business savings, production deployment or Yusen adoption until separately implemented and evidenced. This milestone's baseline results are not evidence of model performance.
+Do not describe actual GenAI quality/results, an agent, business savings, production deployment or organizational adoption until separately implemented and evidenced. This milestone's baseline results are not evidence of model performance.
 
 ## API reference used
 

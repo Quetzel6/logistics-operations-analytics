@@ -43,6 +43,6 @@ Events/notes are counted with separate aggregates so joins cannot multiply order
 
 ## Portfolio use
 
-This adds mixed-format ingestion, explicit data contracts, local orchestration, source-to-storage reconciliation, idempotency and failure reporting to the DE portfolio. It supplies readable evidence for Yusen's business-use-case design without pretending the deterministic baseline is AI.
+This adds mixed-format ingestion, explicit data contracts, local orchestration, source-to-storage reconciliation, idempotency and failure reporting to the DE portfolio. It supplies readable evidence for operations decision-support design without pretending the deterministic baseline is AI.
 
-Next separate workstream: validate actual OCR preprocessing/recognition experiments using held-out source documents. Neither custom pipeline orchestration nor an optional API adapter by itself meets every Fabrinet/Yusen requirement.
+Next separate workstream: validate actual OCR preprocessing/recognition experiments using held-out source documents. Custom pipeline orchestration and an optional API adapter demonstrate a bounded set of engineering capabilities; broader deployment and model evaluation require separate evidence.

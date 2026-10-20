@@ -1,0 +1,17 @@
+{
+  "status": "passed_local",
+  "python": "3.12.14",
+  "execution_platform": "Linux",
+  "scope": "verified on this execution host using temporary SQLite; no PostgreSQL, cloud, remote CI or model execution in this run",
+  "first_run_status": "committed",
+  "second_run_status": "duplicate",
+  "row_counts": {
+    "orders": 3,
+    "events": 3,
+    "notes": 2,
+    "runs": 2
+  },
+  "order_quantity_total": 225,
+  "integrity_check": "ok",
+  "foreign_key_violations": 0
+}

@@ -1,0 +1,1 @@
+SYNTHETIC DEMO: Receiving slot unavailable. Operations review requested; cause is unverified. Confirm a new receiving window before changing the delivery commitment.

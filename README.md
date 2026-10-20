@@ -2,6 +2,10 @@
 
 Synthetic portfolio prototype for logistics business analysis. **Not affiliated with CP ALL, Shopee or SPX. No employer data.**
 
+## Mixed-source data engineering supplement
+
+[Operations ingestion and offline pipeline](supplements/operations_ingestion/README.md) adds CSV/JSONL/text ingestion, transactional SQLite loading, exact reconciliation, replay checks and per-stage JSON/HTML evidence. The author reported 43 tests and all four pipeline stages passed on Mac/Python 3.10.11 on 20 October 2026. This is local sequential orchestration, not Airflow. [Run guide and evidence boundaries](supplements/operations_ingestion/PIPELINE_GUIDE.md). GenAI execution remains unverified; API calls are paused. Remote CI for this supplement must be checked separately.
+
 ## Portfolio at a glance
 
 **Question:** Should an operations team investigate delivery exceptions or add transport capacity first?

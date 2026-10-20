@@ -1,0 +1,1 @@
+{"contract":"operations-bundle-v1","orders":"orders.csv","events":"events.jsonl","notes":[{"note_id":"N001","order_id":"O001","path":"notes/N001.txt"},{"note_id":"N002","order_id":"O002","path":"notes/N002.txt"}]}

@@ -63,7 +63,7 @@ Whole-bundle validation precedes loading; foreign-key/conflict failures roll bac
 
 **Operations decision support:** traceable facts/events/text for a future evidence-grounded operations assistant. This ingestion milestone does not demonstrate prompt engineering, model inference or agentic AI.
 
-See ROLE_ALIGNMENT.md for the next milestones and application boundaries.
+See [CASE_STUDY.md](CASE_STUDY.md) for the business use case and application boundaries, and [M4_GUIDE_TH.md](M4_GUIDE_TH.md) for the current run guide.
 
 ## Milestone 2: evidence briefing
 

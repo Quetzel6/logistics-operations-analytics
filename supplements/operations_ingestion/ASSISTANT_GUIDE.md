@@ -4,7 +4,7 @@
 
 A deterministic retrieval baseline and optional OpenAI Responses adapter now build an order briefing from the milestone-1 database. The application retrieves one explicit order and its events/notes, keeps database access read-only, and exposes source IDs. This is a bounded decision-support prototype, not an autonomous agent.
 
-**Verified:** 30 total unit tests (14 ingestion + 16 assistant) and 8 authored baseline regression cases in the development environment. **Not verified:** real provider execution, model quality, remote CI, Mac author run, productivity gains or deployment.
+The original milestone-2 check covered 30 tests and eight authored baseline cases. Later local/Mac and CI verification is recorded in [the current project overview](../../README.md) and [M4 evidence](AUTHOR_VERIFICATION_M4.json). Real provider execution, model quality, productivity gains and deployment remain unverified. Baseline regression passes must not be reported as model evaluation.
 
 ## Offline demo on Mac
 

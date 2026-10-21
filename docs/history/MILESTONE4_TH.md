@@ -5,7 +5,7 @@
 ## รันบน Mac
 
 ```bash
-cd "/Users/sierra6/Documents/logistics-operations-analytics"
+cd ~/"Documents/logistics-operations-analytics"
 python3 project.py
 python3 verify_release.py
 open output/dashboard.html

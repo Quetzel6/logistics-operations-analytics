@@ -62,3 +62,43 @@ jobs:
         with:
           name: operations-postgres-benchmark
           path: supplements/operations_ingestion/output/ci-postgres/
+
+  postgres-ingestion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.10', '3.13']
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: operations_ci
+          POSTGRES_PASSWORD: disposable_ci_only
+          POSTGRES_DB: operations_test_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U operations_ci -d operations_test_ci"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 12
+    env:
+      OPERATIONS_TEST_DSN: postgresql://operations_ci:disposable_ci_only@127.0.0.1:5432/operations_test_ci
+    defaults:
+      run:
+        working-directory: supplements/operations_ingestion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install PostgreSQL driver
+        run: python -m pip install -r requirements-postgres.txt
+      - name: Verify real ingestion, rollback, concurrent replay and reporting
+        run: python postgres_acceptance.py --output output/ci-postgres-ingestion
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: operations-postgres-ingestion-python-${{ matrix.python }}
+          path: supplements/operations_ingestion/output/ci-postgres-ingestion/

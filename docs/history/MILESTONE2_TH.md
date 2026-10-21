@@ -6,7 +6,7 @@
 แตกไฟล์ ZIP นี้ทับโฟลเดอร์เดิมใน Documents ได้ เพราะเก็บเส้นทาง logistics-operations-analytics เหมือนเวอร์ชันแรก ข้อมูลทั้งหมดเป็นข้อมูลสังเคราะห์ที่สร้างซ้ำได้
 
 ```bash
-cd "/Users/sierra6/Documents/logistics-operations-analytics"
+cd ~/"Documents/logistics-operations-analytics"
 python3 -m unittest discover -s tests -q
 python3 project.py
 open output/dashboard.html

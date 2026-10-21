@@ -34,7 +34,7 @@ flowchart LR
 
 - Local build: passed in the development environment.
 - Mac author trial: milestones 1–4 passed on Python 3.10; later terminal checks were reported by the owner; this does not constitute automated browser verification.
-- GitHub CI verified: [run 39223995892](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39223995892) passed on Python 3.10 and 3.13 at commit `c2ef384075f825f046df9c53cb41795bc9a2da62`, including Python validation, JavaScript filtering and evidence upload. Later commits require their own CI result.
+- GitHub CI verified: [run 39544750271](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39544750271) passed on Python 3.10 and 3.13 at commit `65c2d8d06b023ad86ebbd4928955eb065f3dff79`, including Python validation, JavaScript filtering and evidence upload. Later commits require their own CI result.
 - Browser visual/interaction automation: not completed because browser executable was unavailable.
 
 ## Start (Mac / Python 3.10+)

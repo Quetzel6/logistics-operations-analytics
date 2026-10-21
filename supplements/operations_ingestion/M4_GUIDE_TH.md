@@ -17,7 +17,7 @@
 แตก ZIP ไปยัง Documents/Operations_M4 แล้วเปิด Terminal:
 
 ```bash
-cd "/Users/sierra6/Documents/Operations_M4/operations-ingestion-lab"
+cd ~/"Documents/Operations_M4/operations-ingestion-lab"
 python3 verify.py
 python3 evaluate_assistant.py
 python3 pipeline.py --bundle fixtures --output output/mac-m4-pipeline

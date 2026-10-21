@@ -64,3 +64,9 @@ The 50 original offline tests passed on the development Linux host. The new sour
 ## First real CI result
 
 [CI run 39534839501](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39534839501) passed on commit `165397a28ae71aae3cbdf1c12c7f83f995bf02ed`: all 16 real PostgreSQL integration tests and the repeated pipeline passed on Python 3.10 and 3.13. The original 50 offline tests, baseline regressions, M4 PostgreSQL benchmark and existing logistics validation also passed. These are GitHub Linux results, not author Mac execution. The Docker acceptance wrapper is checked separately after this result.
+
+## Author Mac acceptance: 21 October 2026
+
+The author supplied a passing M5 run on Darwin/Python 3.10.11, PostgreSQL 16.15 and psycopg 3.3.6: 16 real integration tests, no skips, first load committed, second duplicate, 3 orders/3 events/2 notes and 225 units. The disposable container was removed. See [AUTHOR_VERIFICATION_M5.json](AUTHOR_VERIFICATION_M5.json). This does not establish production readiness or throughput.
+
+[CI run 39535030229](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39535030229) also passed at `d28e3ed9be6ce0218afcc6c7cab4511251549e69`, including the Docker wrapper and cleanup, both Python-version integration jobs, the original offline checks and benchmark. These are separate environments and evidence sources.

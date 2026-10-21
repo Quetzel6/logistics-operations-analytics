@@ -4,7 +4,7 @@ Working supplement staged for the existing analytics portfolio, not an employer 
 
 ## PostgreSQL backend extension (M5)
 
-See [POSTGRES_GUIDE.md](POSTGRES_GUIDE.md) for the new contract-validated PostgreSQL loader and four-stage pipeline, dedicated Docker acceptance, transactional rollback, concurrent replay tests and evidence boundaries. Real CI/Mac validation of this extension is tracked separately from M4. The default SQLite workflow remains available without a driver installation.
+See [POSTGRES_GUIDE.md](POSTGRES_GUIDE.md) for the new contract-validated PostgreSQL loader and four-stage pipeline, dedicated Docker acceptance, transactional rollback, concurrent replay tests and evidence boundaries. [Real CI acceptance](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39535030229) passed on Python 3.10/3.13, including all 16 PostgreSQL integration cases and the disposable Docker wrapper. [Author Mac acceptance](AUTHOR_VERIFICATION_M5.json) also passed: 16 tests, no skips, committed then duplicate, 225 units and successful cleanup. The default SQLite workflow remains available without a driver installation.
 
 ## Current release: M4 (2026-10-20)
 

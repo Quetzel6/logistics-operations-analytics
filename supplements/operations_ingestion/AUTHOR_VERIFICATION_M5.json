@@ -1,0 +1,27 @@
+{
+  "evidence_source": "Author-supplied terminal output, 21 October 2026; transcribed without credentials or local account paths.",
+  "status": "passed_local",
+  "backend": "postgresql",
+  "python": "3.10.11",
+  "platform": "Darwin",
+  "postgres_version": "PostgreSQL 16.15 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+  "api_calls": 0,
+  "scope": "Actual integration on author's Mac; dedicated test schema reset by tests. No cloud, model or production verification.",
+  "integration_tests": 16,
+  "tests_success": true,
+  "skipped_detected": false,
+  "psycopg_version": "3.3.6",
+  "first_run_status": "committed",
+  "second_run_status": "duplicate",
+  "row_counts": {
+    "orders": 3,
+    "events": 3,
+    "notes": 2
+  },
+  "order_quantity_total": 225,
+  "first_report": "demo/runs/20261021T030505Z_488e80e1/report.html",
+  "second_report": "demo/runs/20261021T030505Z_616fe316/report.html",
+  "docker_image_id": "sha256:ef738a34a8651d11b2bace81c55c7e2187f786b484add6c83070884340074368",
+  "container_removed": true,
+  "verification_limit": "Author evidence is not independent observation of their computer. CI verifies separate GitHub Linux environments."
+}

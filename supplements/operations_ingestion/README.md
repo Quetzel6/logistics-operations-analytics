@@ -2,6 +2,10 @@
 
 Working supplement staged for the existing analytics portfolio, not an employer system or factory connector. All bundled fixtures are synthetic. This stays separate from the FMCG loader, which replaces its project schemas and expects a complete generated snapshot rather than incremental files.
 
+## PostgreSQL backend extension (M5)
+
+See [POSTGRES_GUIDE.md](POSTGRES_GUIDE.md) for the new contract-validated PostgreSQL loader and four-stage pipeline, dedicated Docker acceptance, transactional rollback, concurrent replay tests and evidence boundaries. [Real CI acceptance](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39535030229) passed on Python 3.10/3.13, including all 16 PostgreSQL integration cases and the disposable Docker wrapper. [Author Mac acceptance](AUTHOR_VERIFICATION_M5.json) also passed: 16 tests, no skips, committed then duplicate, 225 units and successful cleanup. The default SQLite workflow remains available without a driver installation.
+
 ## Current release: M4 (2026-10-20)
 
 See **M4_GUIDE_TH.md** for Mac steps, **CASE_STUDY.md** for the business case, and **DATA_MODEL.md** for grain/keys and the PostgreSQL experiment.

@@ -8,6 +8,8 @@ All data are synthetic. This is an independent personal project; it uses no empl
 
 [Operations ingestion and evidence review](supplements/operations_ingestion/README.md) adds CSV/JSONL/text ingestion, transactional SQLite loading, exact reconciliation and replay checks. M4 improves recent-event selection and includes an offline human-review packet plus a disposable PostgreSQL query experiment. The author supplied Mac results for 50 tests, eight authored baseline cases and the PostgreSQL benchmark, and confirmed reviewing all eight additional scenarios with no issues reported. [Case study](supplements/operations_ingestion/CASE_STUDY.md) | [Data model](supplements/operations_ingestion/DATA_MODEL.md) | [Evidence summary](supplements/operations_ingestion/AUTHOR_VERIFICATION_M4.json). Model execution remains unverified and paused; orchestration is custom Python, not Airflow. CI independently checks Python 3.10/3.13 and PostgreSQL without API keys.
 
+The [PostgreSQL operations pipeline](supplements/operations_ingestion/POSTGRES_GUIDE.md) extends that contract to typed PostgreSQL storage, transactional loading, exact source reconciliation and repeated reporting. Sixteen real integration tests passed in CI on Python 3.10/3.13 and on the author's Mac. [Mac evidence](supplements/operations_ingestion/AUTHOR_VERIFICATION_M5.json).
+
 ## Portfolio at a glance
 
 **Question:** Should an operations team investigate delivery exceptions or add transport capacity first?

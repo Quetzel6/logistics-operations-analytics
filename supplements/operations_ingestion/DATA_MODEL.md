@@ -33,3 +33,7 @@ Execution Time excludes Docker/connection overhead. Always measuring before then
 ## Privacy and security boundaries
 
 Fixtures are synthetic. Free-text notes are untrusted and may contain personal data if real sources are substituted. Do not use real employer/customer documents in this public lab. No PII detector, encryption, retention automation or GDPR certification is implemented. The benchmark publishes no host port and uses a unique disposable container; it does not configure production database roles or migrate cloud infrastructure.
+
+## M5 PostgreSQL ingestion extension
+
+M5 adds [a PostgreSQL backend and pipeline](POSTGRES_GUIDE.md) for the same validated CSV/JSONL/text bundle. This is now real source ingestion into PostgreSQL, distinct from the earlier synthetic M4 benchmark. Dates and timestamps are typed, notes retain their original validated text/hash, and business rows reference their ingestion run. Sixteen integration cases cover transactional rollback, retry, replay, content conflicts, foreign keys, exact reconciliation and cooperating concurrent writers. CI and author Mac acceptance passed; see [author evidence](AUTHOR_VERIFICATION_M5.json). There is no dimensional warehouse, production workload benchmark, database migration or PostgreSQL assistant implementation in this extension.

@@ -18,7 +18,7 @@ The [PostgreSQL operations pipeline](supplements/operations_ingestion/POSTGRES_G
 
 **Finding for seed 42:** DC-B / Outer is the service-investigation priority. DC-C / Outer has the highest modeled shortage recovery per added capacity unit at +10%. These are different decisions; neither proves a real root cause or an operational benefit.
 
-**Read first:** [Decision brief](output/decision_brief.md) · [Metric contract](#metric-contract) · [Presentation guide (Thai)](PRESENTATION_GUIDE_TH.md) · [Resume evidence](RESUME_AND_INTERVIEW.md)
+**Read first:** [Decision brief](output/decision_brief.md) · [Metric contract](#metric-contract) · [Presentation guide (Thai)](docs/guides/PRESENTATION_GUIDE_TH.md)
 
 Download/clone the repository and open `output/dashboard.html` locally. GitHub file preview shows HTML source, not a live hosted app. No server, dependencies or login are required for the offline dashboard.
 
@@ -33,7 +33,7 @@ flowchart LR
 ### Verification status
 
 - Local build: passed in the development environment.
-- Mac author trial: milestones 1–4 passed on Python 3.10; updated dashboard appearance/interactions still require review.
+- Mac author trial: milestones 1–4 passed on Python 3.10; later terminal checks were reported by the owner; this does not constitute automated browser verification.
 - GitHub CI verified: [run 39223995892](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39223995892) passed on Python 3.10 and 3.13 at commit `c2ef384075f825f046df9c53cb41795bc9a2da62`, including Python validation, JavaScript filtering and evidence upload. Later commits require their own CI result.
 - Browser visual/interaction automation: not completed because browser executable was unavailable.
 
@@ -83,9 +83,9 @@ Utilization covers dispatched trips while delivery KPIs cover due orders. Their 
 
 The sensitivity table changes the alert threshold only. It does not claim a forecast or quantify the effect of adding vehicles. Costs, vehicle dimensions, labor and actual inventory are absent; adding more vehicles cannot be recommended from this dataset alone.
 
-## Next acceptance steps
+## Remaining validation and extensions
 
-1. Review the business question, metric contract and displayed recommendation with the author.
+1. Validate the metric contract and recommendations against independent operational data before any business use.
 2. Review the implemented exception drill-down and daily trends using the same source tables.
 3. Review the implemented capacity replay and stress scenarios; independent-period validation remains future work.
 4. Build a Power BI report if the local environment supports authoring; otherwise retain the working HTML and SQL evidence and do not claim Power BI implementation.
@@ -126,10 +126,10 @@ python3 verify_release.py
 
 This runs 14 Python tests, builds twice into isolated temp directories, compares generated artifact bytes, independently recalculates due/on-time/OTIF counts from raw CSV and checks scenario scope sums. It writes output/release_verification.json with artifact SHA-256 digests. It does not verify browser appearance, Python on every operating system or operational effectiveness. JavaScript filtering is checked separately with `node tests/test_dashboard.cjs` when Node is available.
 
-Do not claim production deployment or employer adoption. All data and the dispatch delay pattern are synthetic. This version is ready for author review and a GitHub portfolio handoff, not an operational rollout.
+Do not claim production deployment or employer adoption. All data and the dispatch delay pattern are synthetic. The scope is a synthetic portfolio prototype; no operational rollout is claimed.
 
 ## Milestone 5: presentation and understanding
 
 Dashboard tabs: Overview / Exceptions / Scenarios / Definitions. Overview adds a common-scale 0–100% OTIF bar comparison. Exceptions adds a daily OTIF line chart that uses warehouse/route filters while retaining all selected due orders in the denominator. Exact tables remain available; charts do not change KPI calculations. No CDN or server is required.
 
-Read PRESENTATION_GUIDE_TH.md for a 3–5 minute walkthrough, code map and eight understanding exercises. This release passed Python/reproducibility checks and JS filter/syntax checks. Automated browser visual/interaction verification could not run in the build environment because the browser binary was unavailable; verify appearance and tabs on the author's Mac before recruiter screenshots.
+Read docs/guides/PRESENTATION_GUIDE_TH.md for a 3–5 minute walkthrough, code map and eight understanding exercises. This release passed Python/reproducibility checks and JS filter/syntax checks. Automated browser visual/interaction verification could not run in the build environment because the browser binary was unavailable; verify appearance and tabs on the author's Mac before recruiter screenshots.

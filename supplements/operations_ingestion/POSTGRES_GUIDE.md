@@ -60,3 +60,7 @@ Set credentials privately in your shell environment; do not commit them. The loa
 ## Verification status at implementation
 
 The 50 original offline tests passed on the development Linux host. The new source compiles with psycopg 3.3.6 installed. This host has no Docker/PostgreSQL server; real PostgreSQL verification must come from the new CI job or author Mac acceptance. A passing M4 benchmark does not verify this new backend. CI and Mac results will be recorded only after actual runs.
+
+## First real CI result
+
+[CI run 39534839501](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39534839501) passed on commit `165397a28ae71aae3cbdf1c12c7f83f995bf02ed`: all 16 real PostgreSQL integration tests and the repeated pipeline passed on Python 3.10 and 3.13. The original 50 offline tests, baseline regressions, M4 PostgreSQL benchmark and existing logistics validation also passed. These are GitHub Linux results, not author Mac execution. The Docker acceptance wrapper is checked separately after this result.

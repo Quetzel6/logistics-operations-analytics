@@ -57,11 +57,17 @@ jobs:
         run: docker pull postgres:16-alpine
       - name: Verify PostgreSQL constraints, query results and plans
         run: python postgres_benchmark.py --output output/ci-postgres
+      - name: Verify Docker acceptance runner and cleanup
+        run: |
+          python -m pip install -r requirements-postgres.txt
+          python verify_postgres.py --output output/ci-postgres-docker-runner
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: operations-postgres-benchmark
-          path: supplements/operations_ingestion/output/ci-postgres/
+          path: |
+            supplements/operations_ingestion/output/ci-postgres/
+            supplements/operations_ingestion/output/ci-postgres-docker-runner/
 
   postgres-ingestion:
     runs-on: ubuntu-latest

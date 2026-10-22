@@ -22,8 +22,13 @@ answerable questions to 3/3 but reducing model abstention checks to 3/4. See the
 new prompt, and separately reported cases. That experiment passed 7/8 original
 and 4/8 newer cases, including four rejected contradictory abstentions and one
 false abstention. The [two-stage successor](RAG_STAGED_GUIDE.md) separates the
-answerability decision from ID selection; its live results are pending.
-Linux verification passes 92 software tests with mock inference.
+answerability decision from ID selection. Its Mac run passed 13/16 checks: 5/8
+answerable questions, 7/7 model abstentions and one application gate. Invalid
+outputs fell to zero, but three available answers were missed. All 16 cases are
+development cases, not held-out accuracy. The [fixed-prompt context diagnostic](RAG_CONTEXT_DIAGNOSTIC.md)
+compares full and reference-assisted reduced context for those three failures;
+live diagnostic results are pending. Linux verification passes 99 software tests
+with mock inference.
 Earlier milestone statements below describe their historical release scope.
 
 ## PostgreSQL backend extension (M5)

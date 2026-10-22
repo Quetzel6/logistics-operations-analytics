@@ -72,11 +72,24 @@ including 12 tests for stage routing, exact source text, invalid/duplicate IDs,
 malformed decisions, incomplete responses, stage failures, no retries, read-only
 behavior and honest mock reporting. CLI JSON/HTML creation, failed-check exit and
 no-overwrite behavior were also checked without model calls. These checks establish
-software behavior, not model quality. Live Mac results are pending.
+software behavior, not model quality. These 92 tests describe this milestone;
+the subsequent diagnostic adds seven software tests.
 
-Evaluate whether contradictory abstentions disappear under the new contract and
-whether the available quantity is selected correctly. Retain any false decisions
-as failures. If decision errors persist, compare model capability under a fixed
-protocol rather than repeatedly modifying rules to fit individual questions.
-Independent new-case evaluation and criterion-level human review remain necessary
-before making broader quality claims. This is a portfolio prototype.
+The preserved [Mac report](evidence/local_rag_staged_mac/report.json) records
+13/16 reference checks, 20 generation requests and an unchanged database.
+Answerable questions passed 5/8; model-abstention questions passed 7/7; the
+unknown-order application gate passed 1/1. Invalid outputs fell from four to zero,
+but answerable checks fell from 7/8 to 5/8 compared with ID-selection v2.
+Three first-stage false abstentions remain despite retrieval of the required source.
+
+The report SHA-256 is
+`74ea129d8f2f5abc459f906e4662fcaabdeaa1dbaecac05b045bc2095a7598a8`.
+All nine recorded source hashes match commit
+`7ad144ba1639ba8e6241db1e6836ea0ffe6fcdb2`.
+This owner-supplied artifact is not independent machine attestation; human review
+remains pending. All 16 cases have now been observed and are development cases.
+
+Prompt iteration is paused. The next step is a
+[controlled context diagnostic](RAG_CONTEXT_DIAGNOSTIC.md), preserving this result
+and comparing full versus reduced inputs with the same decision prompt and model.
+It is selected-failure analysis, not a replacement quality score.

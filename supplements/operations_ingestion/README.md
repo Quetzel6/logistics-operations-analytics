@@ -4,6 +4,8 @@ Working supplement staged for the existing analytics portfolio, not an employer 
 
 ## Local LLM evidence-selection extension
 
+For new experiments use the [durable synthetic runner](RAG_DURABLE_GUIDE.md), which saves each request/response and completed observation before the final report. The [PR #5 audit](evidence/pr5_audit_35468f2/REPORT_TH.md) and reproduction files are preserved here. Original evaluators and raw Mac reports remain unchanged.
+
 See [the local inference guide](LOCAL_RAG_GUIDE.md), [development evidence and
 negative results](LOCAL_RAG_EVIDENCE.md), and [diagnostic protocol](DIAGNOSTICS.md).
 The v3 author-run Mac transcript shows three expected development outcomes,

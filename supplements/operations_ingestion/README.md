@@ -19,8 +19,11 @@ ID-selection successor](RAG_IDS_GUIDE.md) for failures and reproduction steps.
 The ID-selection successor passed 7/8 on the same development cases, improving
 answerable questions to 3/3 but reducing model abstention checks to 3/4. See the
 [direct-support experiment](RAG_IDS_V2_GUIDE.md) for the preserved regression,
-new prompt, and separately reported new cases. Its live results are pending.
-Linux verification passes 80 software tests with mock inference.
+new prompt, and separately reported cases. That experiment passed 7/8 original
+and 4/8 newer cases, including four rejected contradictory abstentions and one
+false abstention. The [two-stage successor](RAG_STAGED_GUIDE.md) separates the
+answerability decision from ID selection; its live results are pending.
+Linux verification passes 92 software tests with mock inference.
 Earlier milestone statements below describe their historical release scope.
 
 ## PostgreSQL backend extension (M5)

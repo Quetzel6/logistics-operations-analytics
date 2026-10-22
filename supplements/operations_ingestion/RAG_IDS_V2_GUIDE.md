@@ -56,7 +56,9 @@ The runner makes up to 15 generation requests for 16 cases. One unknown order is
 rejected before inference. Outputs cannot overwrite an earlier directory. A
 nonzero exit can indicate failed reference checks; retain and inspect the report.
 No paid API is used. Retain `ollama list` with the run to identify installed models.
-Linux verification passes 80 software tests with mocks; v2 model results are pending.
+At this milestone Linux verification passed 80 software tests with mocks. The
+first Mac v2 run subsequently passed 7/8 original and 4/8 newer cases. See the
+[two-stage successor and preserved evidence](RAG_STAGED_GUIDE.md) for failures.
 
 ## Two separately reported cohorts
 

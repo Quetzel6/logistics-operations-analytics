@@ -39,8 +39,9 @@ open output/rag-ids-mac-01/report.html
 
 Retain `report.json`, including failures, and `ollama list` output. The output
 directory must be new. A nonzero exit can mean reference-check failures; inspect
-the saved report before rerunning. No paid API is used. Live model results for this
-version are pending. Linux verification passes 76 software tests with mock inference.
+the saved report before rerunning. No paid API is used. The first live Mac run passed 7/8, with a new confirmed-cause abstention failure.
+See [the next experiment and preserved evidence](RAG_IDS_V2_GUIDE.md). At this
+milestone Linux verification passed 76 software tests with mock inference.
 
 These eight cases are now a development regression set: their failures informed
 this change. They are not held-out quality evidence. Further evaluation needs new

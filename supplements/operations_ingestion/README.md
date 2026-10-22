@@ -16,8 +16,11 @@ checks, retained failures, and a human-readable HTML report. The first Mac run
 passed 6/8 reference checks: 1/3 answerable questions, 4/4 model abstention questions,
 and one pre-inference unknown-order rejection. See [raw evidence and the
 ID-selection successor](RAG_IDS_GUIDE.md) for failures and reproduction steps.
-The successor copies original text after validating model-selected IDs; live
-results are pending. Linux verification passes 76 software tests with mock inference.
+The ID-selection successor passed 7/8 on the same development cases, improving
+answerable questions to 3/3 but reducing model abstention checks to 3/4. See the
+[direct-support experiment](RAG_IDS_V2_GUIDE.md) for the preserved regression,
+new prompt, and separately reported new cases. Its live results are pending.
+Linux verification passes 80 software tests with mock inference.
 Earlier milestone statements below describe their historical release scope.
 
 ## PostgreSQL backend extension (M5)

@@ -2,6 +2,38 @@
 
 Working supplement staged for the existing analytics portfolio, not an employer system or factory connector. All bundled fixtures are synthetic. This stays separate from the FMCG loader, which replaces its project schemas and expects a complete generated snapshot rather than incremental files.
 
+## Local LLM evidence-selection extension
+
+See [the local inference guide](LOCAL_RAG_GUIDE.md), [development evidence and
+negative results](LOCAL_RAG_EVIDENCE.md), and [diagnostic protocol](DIAGNOSTICS.md).
+The v3 author-run Mac transcript shows three expected development outcomes,
+including two real Ollama calls and one pre-inference unknown-order rejection.
+The extension adds in-memory embedding ranking and strict citation validation.
+CI uses mocks; these are not general model-quality or retrieval-benefit results.
+The [additional evaluation protocol](RAG_CHALLENGE.md) adds eight synthetic cases,
+including 11 candidates competing for six retrieval slots, reference-evidence
+checks, retained failures, and a human-readable HTML report. The first Mac run
+passed 6/8 reference checks: 1/3 answerable questions, 4/4 model abstention questions,
+and one pre-inference unknown-order rejection. See [raw evidence and the
+ID-selection successor](RAG_IDS_GUIDE.md) for failures and reproduction steps.
+The ID-selection successor passed 7/8 on the same development cases, improving
+answerable questions to 3/3 but reducing model abstention checks to 3/4. See the
+[direct-support experiment](RAG_IDS_V2_GUIDE.md) for the preserved regression,
+new prompt, and separately reported cases. That experiment passed 7/8 original
+and 4/8 newer cases, including four rejected contradictory abstentions and one
+false abstention. The [two-stage successor](RAG_STAGED_GUIDE.md) separates the
+answerability decision from ID selection. Its Mac run passed 13/16 checks: 5/8
+answerable questions, 7/7 model abstentions and one application gate. Invalid
+outputs fell to zero, but three available answers were missed. All 16 cases are
+development cases, not held-out accuracy. The [fixed-prompt context diagnostic](RAG_CONTEXT_DIAGNOSTIC.md)
+compares full and reference-assisted reduced context for those three failures;
+the Mac diagnostic found a supported decision in 4/4 reduced-context quantity
+trials versus 0/4 full-context trials, while the other two failures persisted.
+These decision-only observations do not replace the 13/16 baseline.
+Linux verification passes 99 software tests
+with mock inference.
+Earlier milestone statements below describe their historical release scope.
+
 ## PostgreSQL backend extension (M5)
 
 See [POSTGRES_GUIDE.md](POSTGRES_GUIDE.md) for the new contract-validated PostgreSQL loader and four-stage pipeline, dedicated Docker acceptance, transactional rollback, concurrent replay tests and evidence boundaries. [Real CI acceptance](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39535030229) passed on Python 3.10/3.13, including all 16 PostgreSQL integration cases and the disposable Docker wrapper. [Author Mac acceptance](AUTHOR_VERIFICATION_M5.json) also passed: 16 tests, no skips, committed then duplicate, 225 units and successful cleanup. The default SQLite workflow remains available without a driver installation.

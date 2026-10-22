@@ -27,7 +27,10 @@ answerable questions, 7/7 model abstentions and one application gate. Invalid
 outputs fell to zero, but three available answers were missed. All 16 cases are
 development cases, not held-out accuracy. The [fixed-prompt context diagnostic](RAG_CONTEXT_DIAGNOSTIC.md)
 compares full and reference-assisted reduced context for those three failures;
-live diagnostic results are pending. Linux verification passes 99 software tests
+the Mac diagnostic found a supported decision in 4/4 reduced-context quantity
+trials versus 0/4 full-context trials, while the other two failures persisted.
+These decision-only observations do not replace the 13/16 baseline.
+Linux verification passes 99 software tests
 with mock inference.
 Earlier milestone statements below describe their historical release scope.
 

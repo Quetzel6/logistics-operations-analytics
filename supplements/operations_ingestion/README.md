@@ -2,6 +2,16 @@
 
 Working supplement staged for the existing analytics portfolio, not an employer system or factory connector. All bundled fixtures are synthetic. This stays separate from the FMCG loader, which replaces its project schemas and expects a complete generated snapshot rather than incremental files.
 
+## Local LLM evidence-selection extension
+
+See [the local inference guide](LOCAL_RAG_GUIDE.md), [development evidence and
+negative results](LOCAL_RAG_EVIDENCE.md), and [diagnostic protocol](DIAGNOSTICS.md).
+The v3 author-run Mac transcript shows three expected development outcomes,
+including two real Ollama calls and one pre-inference unknown-order rejection.
+The extension adds in-memory embedding ranking and strict citation validation.
+CI uses mocks; these are not general model-quality or retrieval-benefit results.
+Earlier milestone statements below describe their historical release scope.
+
 ## PostgreSQL backend extension (M5)
 
 See [POSTGRES_GUIDE.md](POSTGRES_GUIDE.md) for the new contract-validated PostgreSQL loader and four-stage pipeline, dedicated Docker acceptance, transactional rollback, concurrent replay tests and evidence boundaries. [Real CI acceptance](https://github.com/Quetzel6/logistics-operations-analytics/actions/runs/39535030229) passed on Python 3.10/3.13, including all 16 PostgreSQL integration cases and the disposable Docker wrapper. [Author Mac acceptance](AUTHOR_VERIFICATION_M5.json) also passed: 16 tests, no skips, committed then duplicate, 225 units and successful cleanup. The default SQLite workflow remains available without a driver installation.

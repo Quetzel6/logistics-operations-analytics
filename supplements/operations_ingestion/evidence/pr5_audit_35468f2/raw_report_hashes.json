@@ -1,0 +1,7 @@
+{
+  "supplements/operations_ingestion/evidence/local_rag_context_mac/report.json": "43c05ae1ef2b4d891fc26772f5fcec4853a394c2f7a8e37e11a506971b21087f",
+  "supplements/operations_ingestion/evidence/local_rag_ids_v1_mac/report.json": "9311e2c01a4595efd9e869ff96e033bde7d5338df0ecaaaa98fe4b934eed492b",
+  "supplements/operations_ingestion/evidence/local_rag_ids_v2_mac/report.json": "444bfe6684fc40f553f5b81f08c352da9f556886304c47ced5e0e220acb30813",
+  "supplements/operations_ingestion/evidence/local_rag_staged_mac/report.json": "74ea129d8f2f5abc459f906e4662fcaabdeaa1dbaecac05b045bc2095a7598a8",
+  "supplements/operations_ingestion/evidence/local_rag_v3_mac_challenge/report.json": "393669b03251ef0225020bcebf3abc8cdab4c43b9db067ea7e89af9d087df5c0"
+}

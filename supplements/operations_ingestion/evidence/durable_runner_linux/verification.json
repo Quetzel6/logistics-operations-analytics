@@ -1,0 +1,14 @@
+{
+  "execution": "software_tests_only",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "tests_passed": 114,
+  "sqlite_acceptance": "passed",
+  "frozen_report_bytes_unchanged": 5,
+  "recorded_historical_source_hashes_match": true,
+  "ollama_cli_available": false,
+  "ollama_readiness": "loopback 11434 connection refused",
+  "live_model_generations": 0,
+  "human_review": "pending",
+  "note": "Includes simulated HTTP and process interruption tests; no model-quality claim"
+}

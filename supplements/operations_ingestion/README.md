@@ -12,9 +12,12 @@ The extension adds in-memory embedding ranking and strict citation validation.
 CI uses mocks; these are not general model-quality or retrieval-benefit results.
 The [additional evaluation protocol](RAG_CHALLENGE.md) adds eight synthetic cases,
 including 11 candidates competing for six retrieval slots, reference-evidence
-checks, retained failures, and a human-readable HTML report. Local model results
-for this new protocol are pending; 68 software tests pass in the Linux development
-environment, including six tests for the evaluation harness.
+checks, retained failures, and a human-readable HTML report. The first Mac run
+passed 6/8 reference checks: 1/3 answerable questions, 4/4 model abstention questions,
+and one pre-inference unknown-order rejection. See [raw evidence and the
+ID-selection successor](RAG_IDS_GUIDE.md) for failures and reproduction steps.
+The successor copies original text after validating model-selected IDs; live
+results are pending. Linux verification passes 76 software tests with mock inference.
 Earlier milestone statements below describe their historical release scope.
 
 ## PostgreSQL backend extension (M5)

@@ -5,8 +5,9 @@ while distinguishing missing evidence from a confirmed operational outcome?
 
 This is an additional authored synthetic evaluation, not a production benchmark.
 Eight questions share four orders; observations are correlated. The earlier three
-cases were used during prompt debugging. These new cases have not yet been run
-against the local model at publication. No success rate is claimed in advance.
+cases were used during prompt debugging. The first Mac run subsequently passed 6/8 reference checks, including one
+pre-inference rejection. See [the evidence and failure analysis](RAG_IDS_GUIDE.md).
+These cases now serve as development regression cases for the ID-selection successor.
 
 ## Protocol
 

@@ -10,6 +10,11 @@ The v3 author-run Mac transcript shows three expected development outcomes,
 including two real Ollama calls and one pre-inference unknown-order rejection.
 The extension adds in-memory embedding ranking and strict citation validation.
 CI uses mocks; these are not general model-quality or retrieval-benefit results.
+The [additional evaluation protocol](RAG_CHALLENGE.md) adds eight synthetic cases,
+including 11 candidates competing for six retrieval slots, reference-evidence
+checks, retained failures, and a human-readable HTML report. Local model results
+for this new protocol are pending; 68 software tests pass in the Linux development
+environment, including six tests for the evaluation harness.
 Earlier milestone statements below describe their historical release scope.
 
 ## PostgreSQL backend extension (M5)

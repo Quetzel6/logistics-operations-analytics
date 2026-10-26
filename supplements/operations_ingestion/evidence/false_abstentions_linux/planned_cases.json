@@ -1,0 +1,78 @@
+[
+  {
+    "case": "receiving_window",
+    "question": "What receiving window is recorded in the note?",
+    "records": [
+      {
+        "evidence_id": "order:C101",
+        "text": "Order C101; due_date=2026-11-01; quantity=137.",
+        "kind": "order"
+      },
+      {
+        "evidence_id": "note:ROUTINE",
+        "text": "SYNTHETIC: Pallet labels checked; no receiving window recorded here.\n",
+        "kind": "untrusted_note"
+      },
+      {
+        "evidence_id": "note:TARGET",
+        "text": "SYNTHETIC: Receiving window: 2026-11-01 09:00-11:00 UTC. Cause of delay is unverified.\n",
+        "kind": "untrusted_note"
+      },
+      {
+        "evidence_id": "event:D7",
+        "text": "Event D7; timestamp_utc=2026-10-17T08:00:00+00:00; event_type=dispatched.",
+        "kind": "event"
+      },
+      {
+        "evidence_id": "event:D0",
+        "text": "Event D0; timestamp_utc=2026-10-10T08:00:00+00:00; event_type=dispatched.",
+        "kind": "event"
+      },
+      {
+        "evidence_id": "event:D1",
+        "text": "Event D1; timestamp_utc=2026-10-11T08:00:00+00:00; event_type=dispatched.",
+        "kind": "event"
+      }
+    ],
+    "expected_decision": "supported",
+    "group": "positive"
+  },
+  {
+    "case": "quantity_with_cause_context",
+    "question": "How many units are recorded for this order?",
+    "records": [
+      {
+        "evidence_id": "order:T201",
+        "text": "Order T201; due_date=2026-12-03; quantity=246.",
+        "kind": "order"
+      },
+      {
+        "evidence_id": "note:CONFIRMED",
+        "text": "SYNTHETIC investigation record: Confirmed root cause was conveyor motor failure. Investigation signed on 2026-11-20.\n",
+        "kind": "untrusted_note"
+      },
+      {
+        "evidence_id": "event:TE1",
+        "text": "Event TE1; timestamp_utc=2026-11-11T08:00:00+00:00; event_type=dispatched.",
+        "kind": "event"
+      },
+      {
+        "evidence_id": "event:TE7",
+        "text": "Event TE7; timestamp_utc=2026-11-17T08:00:00+00:00; event_type=dispatched.",
+        "kind": "event"
+      },
+      {
+        "evidence_id": "event:TE4",
+        "text": "Event TE4; timestamp_utc=2026-11-14T08:00:00+00:00; event_type=dispatched.",
+        "kind": "event"
+      },
+      {
+        "evidence_id": "event:TE5",
+        "text": "Event TE5; timestamp_utc=2026-11-15T08:00:00+00:00; event_type=dispatched.",
+        "kind": "event"
+      }
+    ],
+    "expected_decision": "supported",
+    "group": "positive"
+  }
+]

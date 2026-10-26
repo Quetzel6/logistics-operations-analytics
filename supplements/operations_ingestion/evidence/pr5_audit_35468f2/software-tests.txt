@@ -1,0 +1,7 @@
+Command: python -m unittest discover -s tests -q
+Working directory: /workspace/audit-pr5-35468f2/supplements/operations_ingestion
+Runtime: Linux, Python 3.12.14
+Observed exit code: 0
+Ran 99 tests in 0.426s
+OK
+No Ollama execution. This record summarizes captured tool output; it is not a Mac model report.

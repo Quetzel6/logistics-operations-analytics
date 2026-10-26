@@ -1,0 +1,31 @@
+{
+  "target_commit": "35468f2d34d17363f5b1476dd030318052010a45",
+  "reports": {
+    "local_rag_context_mac": {
+      "sha256": "43c05ae1ef2b4d891fc26772f5fcec4853a394c2f7a8e37e11a506971b21087f",
+      "source_hash_mismatches": []
+    },
+    "local_rag_ids_v1_mac": {
+      "sha256": "9311e2c01a4595efd9e869ff96e033bde7d5338df0ecaaaa98fe4b934eed492b",
+      "source_hash_mismatches": []
+    },
+    "local_rag_ids_v2_mac": {
+      "sha256": "444bfe6684fc40f553f5b81f08c352da9f556886304c47ced5e0e220acb30813",
+      "source_hash_mismatches": []
+    },
+    "local_rag_staged_mac": {
+      "sha256": "74ea129d8f2f5abc459f906e4662fcaabdeaa1dbaecac05b045bc2095a7598a8",
+      "source_hash_mismatches": []
+    },
+    "local_rag_v3_mac_challenge": {
+      "sha256": "393669b03251ef0225020bcebf3abc8cdab4c43b9db067ea7e89af9d087df5c0",
+      "source_hash_mismatches": []
+    }
+  },
+  "baseline_rescored": "13/16; 20 generation attempts",
+  "fixtures_and_fingerprints_match": true,
+  "diagnostic_trials_verified": 24,
+  "payload_classification": "reconstructed, not historical HTTP capture",
+  "interruption_leaves_empty_output_directory_reproduced": true,
+  "live_model_calls": 0
+}

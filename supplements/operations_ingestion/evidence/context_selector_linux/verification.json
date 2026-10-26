@@ -1,0 +1,29 @@
+{
+  "execution": "software_tests_only",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "tests_passed": 152,
+  "sqlite_acceptance": "passed",
+  "actual_short_capture_metadata_validated_offline": true,
+  "baseline_file_sha256": {
+    "events.jsonl": "a752b0cf2735fb286e4a70da5cdc99056fcd3af249dd54786966f6fb07ee0424",
+    "status.json": "b9d127f4e6207aeed1c9465e54ee656151e62f3963745b5545adfedd12ce7871",
+    "report.json": "4f458eb60fd0b0b81f3e27bbc6e740eec27103c2802a1f434782ceef4394700c",
+    "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+    "runtime_after.json": "fe335802647b504e258958f7c115adea9d29d68969aa016d5ff3a826e04ec621",
+    "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+  },
+  "short_system_sha256": "ac3028d3a70a6bd57f5b454beb5e254e0a18594db49ff175d7ee7aba1c420097",
+  "selection_prompt_sha256": "0c37eed2c85509a86b2b3c422c0def03ec5ed02d9b30493fcff6c39bd3163142",
+  "selector_sha256": "5de0f0842fa1baa74794d7c50f65a5a9c6a2ae1c58fd08e26058f9ad6f22cd1f",
+  "historical_raw_reports_unchanged": 5,
+  "paired_cases_per_arm": 16,
+  "expected_arm_observations": 32,
+  "embedding_limit": 15,
+  "decision_limit": 30,
+  "selection_limit": 30,
+  "generation_limit": 60,
+  "live_generations_by_cloud_assistant": 0,
+  "live_mac_comparison": "pending",
+  "note": "All-supported simulated provider exercises worst-case 60 generations; no model-quality claim"
+}

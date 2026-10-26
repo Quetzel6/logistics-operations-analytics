@@ -1,0 +1,33 @@
+[
+  {
+    "case": "receiving_window",
+    "question": "What receiving window is recorded in the note?",
+    "records": [
+      {
+        "evidence_id": "order:C101",
+        "text": "Order C101; due_date=2026-11-01; quantity=137.",
+        "kind": "order"
+      },
+      {
+        "evidence_id": "note:TARGET",
+        "text": "SYNTHETIC: Receiving window: 2026-11-01 09:00-11:00 UTC. Cause of delay is unverified.\n",
+        "kind": "untrusted_note"
+      }
+    ],
+    "expected_decision": "supported",
+    "group": "positive"
+  },
+  {
+    "case": "quantity_with_cause_context",
+    "question": "How many units are recorded for this order?",
+    "records": [
+      {
+        "evidence_id": "order:T201",
+        "text": "Order T201; due_date=2026-12-03; quantity=246.",
+        "kind": "order"
+      }
+    ],
+    "expected_decision": "supported",
+    "group": "positive"
+  }
+]

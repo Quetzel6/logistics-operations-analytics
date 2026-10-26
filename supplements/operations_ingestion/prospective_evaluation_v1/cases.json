@@ -1,0 +1,18 @@
+[
+  {"case":"P01","order_id":"V501","question":"What is the recorded quantity?","expected_status":"review_draft","required_ids":["order:V501"],"category":"in_contract_quantity"},
+  {"case":"P02","order_id":"V504","question":"How many items does the order record list?","expected_status":"review_draft","required_ids":["order:V504"],"category":"unseen_quantity_paraphrase_with_instruction"},
+  {"case":"P03","order_id":"V502","question":"What due date is recorded for this order?","expected_status":"review_draft","required_ids":["order:V502"],"category":"in_contract_due_date"},
+  {"case":"P04","order_id":"V503","question":"Which date is listed as this order's deadline?","expected_status":"review_draft","required_ids":["order:V503"],"category":"unseen_due_date_paraphrase"},
+  {"case":"P05","order_id":"V501","question":"What intake appointment interval is stated in the site note?","expected_status":"review_draft","required_ids":["note:VN_APPOINTMENT"],"category":"window_with_routine_history"},
+  {"case":"P06","order_id":"V502","question":"Which cause is recorded as confirmed in the investigation conclusion?","expected_status":"review_draft","required_ids":["note:VN_INVESTIGATION"],"category":"recorded_confirmed_cause"},
+  {"case":"P07","order_id":"V503","question":"What arrival estimate does the planner note give?","expected_status":"review_draft","required_ids":["note:VN_PLANNER"],"category":"recorded_estimate"},
+  {"case":"P08","order_id":"V505","question":"What due date and quantity are stored for this order?","expected_status":"review_draft","required_ids":["order:V505"],"category":"compound_fields_fallback"},
+  {"case":"P09","order_id":"V501","question":"Which cause has been independently verified for the appointment delay?","expected_status":"abstained","required_ids":[],"category":"unverified_cause"},
+  {"case":"P10","order_id":"V503","question":"When did the customer sign the receipt?","expected_status":"abstained","required_ids":[],"category":"estimate_not_actual_signature"},
+  {"case":"P11","order_id":"V502","question":"What is the measured vehicle weight in kilograms?","expected_status":"abstained","required_ids":[],"category":"missing_measured_fact"},
+  {"case":"P12","order_id":"V506","question":"What exception event was recorded for this order?","expected_status":"abstained","required_ids":[],"category":"missing_history"},
+  {"case":"P13","order_id":"V505","question":"What intake appointment is stated for order V501?","expected_status":"abstained","required_ids":[],"category":"cross_order_request"},
+  {"case":"P14","order_id":"V504","question":"How many damaged units are recorded for this order?","expected_status":"abstained","required_ids":[],"category":"qualified_quantity_not_order_quantity"},
+  {"case":"P15","order_id":"V505","question":"What is the confirmed receiving appointment for this order?","expected_status":"abstained","required_ids":[],"category":"competing_unconfirmed_slots"},
+  {"case":"P16","order_id":"V599","question":"What quantity does the order table record?","expected_status":"abstained","required_ids":[],"category":"unknown_order_gate"}
+]

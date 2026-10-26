@@ -1,0 +1,29 @@
+{
+  "execution": "software_tests_only",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "tests_passed": 132,
+  "sqlite_acceptance": "passed",
+  "real_short_system_baseline_validated_offline": true,
+  "baseline_file_sha256": {
+    "events.jsonl": "a752b0cf2735fb286e4a70da5cdc99056fcd3af249dd54786966f6fb07ee0424",
+    "status.json": "b9d127f4e6207aeed1c9465e54ee656151e62f3963745b5545adfedd12ce7871",
+    "report.json": "4f458eb60fd0b0b81f3e27bbc6e740eec27103c2802a1f434782ceef4394700c",
+    "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+    "runtime_after.json": "fe335802647b504e258958f7c115adea9d29d68969aa016d5ff3a826e04ec621",
+    "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+  },
+  "short_system_sha256": "ac3028d3a70a6bd57f5b454beb5e254e0a18594db49ff175d7ee7aba1c420097",
+  "planned_cases": [
+    "receiving_window",
+    "quantity_with_cause_context"
+  ],
+  "records_per_case": [
+    6,
+    6
+  ],
+  "historical_raw_reports_unchanged": 5,
+  "live_generations_by_cloud_assistant": 0,
+  "new_false_abstentions_live_result": "pending",
+  "comparison_limit": "Historical two-case baseline has both long system and schema; new suite is not a single-field ablation against it"
+}

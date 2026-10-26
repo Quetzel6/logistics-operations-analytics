@@ -1,0 +1,162 @@
+[
+  {
+    "unit_id": "review-001",
+    "case": "receiving_window",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-002",
+    "case": "receiving_window",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-003",
+    "case": "quantity",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-004",
+    "case": "quantity",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-005",
+    "case": "unconfirmed_cause",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-006",
+    "case": "unconfirmed_cause",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-007",
+    "case": "dispatch_only",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-008",
+    "case": "dispatch_only",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-009",
+    "case": "missing_history",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-010",
+    "case": "missing_history",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-011",
+    "case": "foreign_order",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-012",
+    "case": "foreign_order",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-013",
+    "case": "instruction_note",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-014",
+    "case": "instruction_note",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-015",
+    "case": "unknown_order",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-016",
+    "case": "unknown_order",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-017",
+    "case": "recorded_confirmed_cause",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-018",
+    "case": "recorded_confirmed_cause",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-019",
+    "case": "quantity_with_cause_context",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-020",
+    "case": "quantity_with_cause_context",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-021",
+    "case": "known_window_unknown_cause",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-022",
+    "case": "known_window_unknown_cause",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-023",
+    "case": "cause_still_unknown",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-024",
+    "case": "cause_still_unknown",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-025",
+    "case": "recorded_estimate",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-026",
+    "case": "recorded_estimate",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-027",
+    "case": "estimate_not_acceptance",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-028",
+    "case": "estimate_not_acceptance",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-029",
+    "case": "due_date_with_instruction",
+    "arm": "B"
+  },
+  {
+    "unit_id": "review-030",
+    "case": "due_date_with_instruction",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-031",
+    "case": "missing_weight",
+    "arm": "C"
+  },
+  {
+    "unit_id": "review-032",
+    "case": "missing_weight",
+    "arm": "B"
+  }
+]

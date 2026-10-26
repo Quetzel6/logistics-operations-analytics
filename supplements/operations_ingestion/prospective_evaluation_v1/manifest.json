@@ -1,0 +1,35 @@
+{
+  "protocol": "prospective-field-context-v1",
+  "created_utc": "2026-10-26T06:48:30.444692+00:00",
+  "candidate_freeze_commit": "b9714367510bdd5f3175b2f3c2642d87364e6a3d",
+  "selector_policy": "field-aware-context-v1",
+  "frozen_runtime_sha256": {
+    "context_selector.py": "5de0f0842fa1baa74794d7c50f65a5a9c6a2ae1c58fd08e26058f9ad6f22cd1f",
+    "rag_context_runtime.py": "ba1849ed8e9548ac69a622cffd0ccd36c4b746c1e68ce84f616101bea3119538",
+    "rag_short_contract.py": "992f229c7d132eed81f841c114a66119bcc45d712631a0d4cde4028235ceedad",
+    "assistant.py": "ee0b8edde68abf3dc2b97d7fc53cb5344dcc327f71e13d58642c6652cbd0d505",
+    "local_rag.py": "8e23bd297a2eb840f313f48b955ed971aa038d3de2b5400a716175b8b2fef164",
+    "local_rag_ids.py": "c386229625d68d93aa0af22537a813584f9bd9890e2d31821ebf8e6ee796ebc3",
+    "local_rag_staged.py": "585b28a6b18bc946683a3e546d8cd16c153bff0226b30d5ba5d3ae3710e921ec"
+  },
+  "data_sha256": {
+    "bundle.json": "be555043d9d127c5a852250617012dfb112bc0f6f177caf6555cc4838c687e4b",
+    "cases.json": "ba202e612ce03c35659b0882020ded7223c90d89d8713c3c00b079ebf652ab98"
+  },
+  "model_version": "0.40.7",
+  "model_digests": {
+    "qwen2.5:3b": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "nomic-embed-text:v1.5": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f"
+  },
+  "decision_options": {
+    "temperature": 0,
+    "num_predict": 1600
+  },
+  "planned_cases": 16,
+  "answerable": 8,
+  "model_abstention_cases": 7,
+  "application_gate_cases": 1,
+  "model_results_seen": false,
+  "authorship": "Same assistant after development results; frozen prospective set, not independently authored or secret held-out benchmark",
+  "human_reference_review": "pending"
+}

@@ -1,0 +1,39 @@
+{
+  "execution": "software_and_offline_replay_only",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "tests_passed": 162,
+  "sqlite_acceptance": "passed",
+  "candidate_runtime_matches_freeze_commit": "b9714367510bdd5f3175b2f3c2642d87364e6a3d",
+  "historical_raw_reports_unchanged": 5,
+  "live_model_calls": 0,
+  "review_packet": {
+    "passed": 0,
+    "failed": 0,
+    "pending": 32,
+    "reviewer": null,
+    "reviewer_kind": null,
+    "review_status": "pending",
+    "human_review_status": "pending",
+    "scope": "Self-reported rubric judgments; not automatic truth or independent benchmark"
+  },
+  "prospective_dataset": {
+    "status": "software_validation_passed",
+    "cases": 16,
+    "answerable": 8,
+    "model_abstention_cases": 7,
+    "application_gate_cases": 1,
+    "fixture_fingerprint": "4aec8f0f7d6bdaeea307d9d0fefa51d22d2c17a8c77ab985fad2fd0b41c9677a",
+    "model_calls": 0,
+    "candidate_freeze_commit": "b9714367510bdd5f3175b2f3c2642d87364e6a3d",
+    "human_reference_review": "pending",
+    "first_model_run": "not_performed_by_this_tool",
+    "scope": "Developer-authored prospective generalization set; not independently authored or a secret held-out benchmark"
+  },
+  "replayed_captured_inference_requests": 54,
+  "replayed_arms": {
+    "B": 11,
+    "C": 14
+  },
+  "note": "Replay is not a new independent observation. Human ratings and prospective model results remain pending."
+}

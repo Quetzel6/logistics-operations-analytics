@@ -5,6 +5,7 @@ from unittest.mock import patch
 
 from assistant import BriefError
 from diagnose_rag_abstention import execute
+from diagnose_rag_context import load_cases
 from diagnose_rag_format import execute as experiment, SHORT_DECISION_PROMPT
 from inspect_rag_run import inspect
 import test_rag_format as fixture_module
@@ -98,3 +99,40 @@ class AbstentionControlTests(unittest.TestCase):
         with self.assertRaises(FileExistsError):
             self.invoke()
         self.assertEqual(self.fixture.calls, [])
+
+    def test_two_false_abstentions_use_exact_full_historical_contexts(self):
+        original, _ = load_cases()
+        indexed = {r['case']: r for r in original['cases']}
+        report = execute(self.output, self.baseline, True, self.fixture.factory,
+                         suite='false-abstentions')
+        self.assertEqual(report['protocol'], 'short-system-false-abstentions-v1')
+        self.assertEqual(report['generation_requests'], 2)
+        self.assertEqual(report['positive_control']['correct_supported'], 2)
+        self.assertEqual(report['negative_controls']['count'], 0)
+        requests = [p for e, p in self.fixture.calls if e == 'generate']
+        self.assertEqual(len(requests), 2)
+        for payload, name in zip(requests, ('receiving_window', 'quantity_with_cause_context')):
+            row = indexed[name]
+            sources = {r['evidence_id']: r for r in row['candidate_evidence']}
+            expected_records = [sources[eid] for eid in row['diagnostics']['retrieved_ids']]
+            self.assertEqual(json.loads(payload['prompt']), {'question': row['question'], 'records': expected_records})
+            self.assertEqual(len(expected_records), 6)
+            self.assertEqual(payload['system'], SHORT_DECISION_PROMPT)
+            self.assertEqual(set(payload), {'model', 'system', 'prompt', 'options', 'stream'})
+            self.assertEqual(payload['options'], {'temperature': 0, 'num_predict': 1600})
+        self.assertFalse(any(e == 'embed' for e, _ in self.fixture.calls))
+        self.assertEqual(self.before, {p.name: p.read_bytes() for p in self.baseline.iterdir()})
+
+    def test_false_abstentions_are_not_scored_as_successful_abstentions(self):
+        self.fixture.generation['response'] = '{"decision":"insufficient"}'
+        report = execute(self.output, self.baseline, True, self.fixture.factory,
+                         suite='false-abstentions')
+        self.assertEqual(report['positive_control']['false_abstention'], 2)
+        self.assertEqual(report['positive_control']['correct_supported'], 0)
+        self.assertTrue(all(not r['decision_matches_reference'] for r in report['trials']))
+
+    def test_invalid_suite_stops_before_calls(self):
+        with self.assertRaisesRegex(ValueError, 'invalid_suite'):
+            execute(self.output, self.baseline, True, self.fixture.factory, suite='unknown')
+        self.assertEqual(self.fixture.calls, [])
+        self.assertFalse(self.output.exists())

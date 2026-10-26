@@ -1,4 +1,4 @@
-"""Frozen short-prompt decision-only controls: seven negatives and one positive."""
+"""Frozen short-prompt decision diagnostics using historical retrieved records."""
 import argparse
 from collections import Counter
 import hashlib
@@ -14,8 +14,24 @@ from evaluate_rag_challenge import digest
 from local_rag_staged import DECISION_SCHEMA, generate
 
 
-def plan(baseline):
+def plan(baseline, suite='abstention-controls'):
+    if suite not in ('abstention-controls', 'false-abstentions'):
+        raise ValueError('invalid_suite')
     original, _ = load_cases()  # Verifies frozen original report and source hashes.
+    if suite == 'false-abstentions':
+        indexed = {row['case']: row for row in original['cases']}
+        selected = []
+        for name in ('receiving_window', 'quantity_with_cause_context'):
+            row = indexed[name]
+            sources = {e['evidence_id']: e for e in row['candidate_evidence']}
+            records = [sources[eid] for eid in row['diagnostics']['retrieved_ids']]
+            if (row['expected_status'] != 'review_draft' or not row['required_ids'] or
+                    row['diagnostics']['accepted_decision'] != 'insufficient' or
+                    not set(row['required_ids']) <= {r['evidence_id'] for r in records}):
+                raise ValueError('false_abstention_reference_changed')
+            selected.append(dict(case=name, question=row['question'], records=records,
+                                 expected_decision='supported', group='positive'))
+        return selected
     cases = []
     for row in original['cases']:
         if row['expected_status'] != 'abstained' or not row['diagnostics']['generation_request_started']:
@@ -36,16 +52,20 @@ def plan(baseline):
     return cases
 
 
-def execute(directory, baseline_capture, allow_local=False, transport_factory=None):
+def execute(directory, baseline_capture, allow_local=False, transport_factory=None,
+            suite='abstention-controls'):
     if not allow_local:
         raise BriefError('local_inference_disabled')
     baseline = load_capture(baseline_capture, 'abstention-controls')
-    cases = plan(baseline)
+    cases = plan(baseline, suite)
+    protocol = ('short-system-abstention-controls-v1' if suite == 'abstention-controls'
+                else 'short-system-false-abstentions-v1')
     model = baseline['payload']['model']
     execution = 'live_local' if transport_factory is None else 'mock_only'
-    with EvidenceRun(directory, 'short-system-abstention-controls-v1', execution, 8) as journal:
+    with EvidenceRun(directory, protocol, execution, len(cases)) as journal:
         journal.event('experiment_config', baseline_file_sha256=baseline['file_sha256'],
-                      original_staged_report_sha256=SOURCE_SHA, generation_limit=8,
+                      original_staged_report_sha256=SOURCE_SHA, generation_limit=len(cases),
+                      suite=suite,
                       short_system_sha256=hashlib.sha256(SHORT_DECISION_PROMPT.encode()).hexdigest(),
                       case_plan=cases,
                       source_sha256={p.name: digest(p) for p in Path(__file__).parent.glob('*.py')})
@@ -89,10 +109,10 @@ def execute(directory, baseline_capture, allow_local=False, transport_factory=No
         negative = Counter(r['outcome'] for r in rows if r['group'] == 'negative')
         positive = Counter(r['outcome'] for r in rows if r['group'] == 'positive')
         report = dict(protocol=journal.state['protocol'], execution=execution, trials=rows,
-                      generation_requests=8, embedding_requests=0, selection_requests=0,
-                      negative_controls=dict(count=7, correct_insufficient=negative['insufficient'],
+                      suite=suite, generation_requests=len(rows), embedding_requests=0, selection_requests=0,
+                      negative_controls=dict(count=sum(r['group'] == 'negative' for r in rows), correct_insufficient=negative['insufficient'],
                           false_support=negative['supported'], failed=negative['failed']),
-                      positive_control=dict(count=1, correct_supported=positive['supported'],
+                      positive_control=dict(count=sum(r['group'] == 'positive' for r in rows), correct_supported=positive['supported'],
                           false_abstention=positive['insufficient'], failed=positive['failed']),
                       baseline_file_sha256=baseline['file_sha256'], model_identity_unchanged=unchanged,
                       human_review='pending', scope='Decision-only on observed development cases with preserved historical retrieved records; no new retrieval, ID selection or end-to-end score')
@@ -104,18 +124,20 @@ def execute(directory, baseline_capture, allow_local=False, transport_factory=No
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--suite', choices=('abstention-controls', 'false-abstentions'),
+                        default='abstention-controls')
     parser.add_argument('--baseline-capture', required=True, type=Path)
     parser.add_argument('--output', required=True, type=Path)
     parser.add_argument('--allow-local', action='store_true')
     args = parser.parse_args()
     if not args.allow_local:
-        parser.error('--allow-local is required; eight decision calls, no retries')
+        parser.error('--allow-local is required; fixed decision batch, no retries')
     previous = signal.getsignal(signal.SIGTERM)
     def terminate(signum, frame):
         raise KeyboardInterrupt('SIGTERM')
     signal.signal(signal.SIGTERM, terminate)
     try:
-        report = execute(args.output, args.baseline_capture, True)
+        report = execute(args.output, args.baseline_capture, True, suite=args.suite)
     except KeyboardInterrupt:
         return 130
     except (BriefError, ValueError, OSError, KeyError, TypeError) as error:

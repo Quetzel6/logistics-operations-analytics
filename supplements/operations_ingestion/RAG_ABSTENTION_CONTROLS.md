@@ -76,3 +76,51 @@ Software tests exercise always-supported and always-insufficient providers,
 malformed outputs, exact frozen prompt/options, no reference-label fields in
 requests, exactly eight calls, runtime mismatch, interruption and old-directory
 preservation. These tests use simulated HTTP, not real model judgments.
+
+## Next: the two other historical false abstentions
+
+The owner-supplied eight-case capture returned insufficient for all seven
+negative cases and supported for the reduced due-date positive. Offline review
+verified raw HTTP replies, unchanged short prompt/options/model identity, and the
+historical negative record lists. This is encouraging development evidence, not
+an end-to-end improvement or a held-out accuracy result.
+
+The `false-abstentions` suite uses that same short system and no format to test:
+
+| Case | Historical input | Expected decision |
+|---|---|---|
+| receiving_window | All six retrieved records, including note:TARGET | supported |
+| quantity_with_cause_context | All six retrieved records, including order:T201 | supported |
+
+It sends each original question and the exact original retrieved records in the
+same order, **without context reduction**, a new embedding call or reference
+labels in requests. The order is receiving_window then quantity. There are exactly
+two decision calls, no selection and no retry. The short-system capture continues
+to supply the frozen prompt/request configuration and runtime identity baseline.
+
+```bash
+git pull --ff-only
+python3 verify.py
+python3 diagnose_rag_abstention.py \
+  --suite false-abstentions \
+  --baseline-capture evidence/due_date_short_system_mac_01 \
+  --allow-local \
+  --output evidence/short_system_false_abstentions_mac_01
+python3 inspect_rag_run.py --directory evidence/short_system_false_abstentions_mac_01
+zip -r evidence/short_system_false_abstentions_mac_01_handoff.zip \
+  evidence/short_system_false_abstentions_mac_01
+```
+
+Run once on the same fix branch, from operations_ingestion, after software tests
+pass. Preserve all prior directories. Runtime mismatch, interruption and parse
+failures follow the same durable-storage behavior as the eight-case suite.
+The report's historical key `positive_control` counts both positive cases (count=2);
+negative_controls has count=0. A valid insufficient is a false abstention for these
+two references, not a successful abstention. No prompt change is made mid-batch.
+
+This checks whether the **short-prompt/no-format configuration** handles these
+cases with full retrieved context. The historical staged baseline used the long
+prompt with schema, so a difference for these cases alone would not isolate
+prompt from schema effects. Only the earlier due-date comparisons changed one
+field at a time. Regardless of outcome, the historical 13/16 reference-check
+result remains unchanged until a separately versioned full evaluation is run.

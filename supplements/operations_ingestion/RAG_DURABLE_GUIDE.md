@@ -75,6 +75,9 @@ This reference-assisted input is a diagnostic, not deployable retrieval or a new
 end-to-end score. Inspect its capture before changing a single factor such as
 structured-output format in another versioned experiment.
 
+After inspecting that capture, the [one-call format diagnostic](RAG_FORMAT_DIAGNOSTIC.md)
+can remove only format while validating runtime identity against the original run.
+
 Optional subsequent runs use the same durable storage:
 
 ```bash

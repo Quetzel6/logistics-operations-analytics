@@ -1,0 +1,19 @@
+{
+  "execution": "software_tests_only",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "tests_passed": 120,
+  "sqlite_acceptance": "passed",
+  "uploaded_baseline_validated_offline": true,
+  "uploaded_zip_sha256": "72860d52831aa493dcc8b54a4216cb61acfb1388414999dd5d852a65a1086557",
+  "baseline_file_sha256": {
+    "events.jsonl": "8f2b3ad17289126eef08815ea605ea2778e2058e2c920a5151e0a9b417e47d65",
+    "status.json": "42d37ba9947c8e5716af50c752739e5ebe561bfa8d16f613ed443f7b7cde7657",
+    "report.json": "97dc9cf7bfd7f333d8388a71562c6ce56ecdc701f6e21c2d70518ff0a3592974",
+    "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+    "runtime_after.json": "ef10f052f973d85904b98137c8eb080b157630aac42fac10cf6c9493ab54fdfc",
+    "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+  },
+  "live_generations_by_cloud_assistant": 0,
+  "new_no_format_live_result": "pending"
+}

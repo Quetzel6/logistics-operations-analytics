@@ -110,3 +110,7 @@ in this case. Shortening changes both length and wording: a single observation
 does not identify a particular sentence, prove a general improvement, or replace
 the 13/16 historical reference checks. If insufficient persists, that also does
 not by itself establish that the model is too small. Preserve all three runs.
+
+Before adopting the short prompt, use the fixed
+[abstention controls](RAG_ABSTENTION_CONTROLS.md) to check seven negative cases
+and the reduced due-date positive control, without retuning the prompt.

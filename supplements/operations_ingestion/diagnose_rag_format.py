@@ -20,7 +20,7 @@ Human review follows.
 
 
 def load_capture(directory, experiment='format'):
-    if experiment not in ('format', 'short-system'):
+    if experiment not in ('format', 'short-system', 'abstention-controls'):
         raise ValueError('invalid_experiment')
     directory = Path(directory)
     names = ('events.jsonl', 'status.json', 'report.json', 'runtime.json',
@@ -37,7 +37,9 @@ def load_capture(directory, experiment='format'):
     report = json.loads(raw['report.json'])
     if (json.loads(raw['status.json'])['state'] != 'completed' or
             events[-1].get('state') != 'completed' or
-            report['protocol'] != ('durable-due-date-v1' if experiment == 'format' else 'decision-format-ablation-v1') or
+            report['protocol'] != {'format': 'durable-due-date-v1',
+                'short-system': 'decision-format-ablation-v1',
+                'abstention-controls': 'decision-system-ablation-v1'}[experiment] or
             report['execution'] != 'live_local' or report['generation_requests'] != 1 or
             report.get('model_identity_unchanged') is not True):
         raise ValueError('baseline_must_be_completed_live_due_date')
@@ -59,8 +61,10 @@ def load_capture(directory, experiment='format'):
                     system=DECISION_PROMPT,
                     prompt=json.dumps({'question': case['question'], 'records': case['contexts']['reduced']}, ensure_ascii=False),
                     options={'temperature': 0, 'num_predict': 1600})
-    if experiment == 'short-system':
+    if experiment in ('short-system', 'abstention-controls'):
         del expected['format']
+    if experiment == 'abstention-controls':
+        expected['system'] = SHORT_DECISION_PROMPT
     if payload != expected:
         raise ValueError('baseline_request_does_not_match_frozen_due_date')
     if report['trials'][0]['diagnostics']['decision']['raw_generation'] != response.get('response'):
@@ -70,9 +74,23 @@ def load_capture(directory, experiment='format'):
                 file_sha256={name: hashlib.sha256(data).hexdigest() for name, data in raw.items()})
 
 
+def check_runtime(runtime, original_runtime, model):
+    if runtime['version'] != original_runtime['version']:
+        raise ValueError('runtime_version_differs_from_baseline')
+    current, previous = runtime['models'][model], original_runtime['models'][model]
+    if current['digest'] != previous['digest']:
+        raise ValueError('model_digest_differs_from_baseline')
+    for key in ('template', 'system', 'parameters', 'model_info', 'details', 'template_source'):
+        if current['show'].get(key) != previous['show'].get(key):
+            raise ValueError('model_configuration_differs_from_baseline:' + key)
+    return current
+
+
 def execute(directory, baseline_capture, allow_local=False, transport_factory=None, experiment='format'):
     if not allow_local:
         raise BriefError('local_inference_disabled')
+    if experiment not in ('format', 'short-system'):
+        raise ValueError('invalid_experiment')
     baseline = load_capture(baseline_capture, experiment)
     protocol = 'decision-format-ablation-v1' if experiment == 'format' else 'decision-system-ablation-v1'
     changed_fields = ['format: removed'] if experiment == 'format' else ['system: shortened']
@@ -84,17 +102,8 @@ def execute(directory, baseline_capture, allow_local=False, transport_factory=No
                       source_sha256={p.name: digest(p) for p in Path(__file__).parent.glob('*.py')})
         transport = CapturedTransport(journal) if transport_factory is None else transport_factory(journal)
         runtime = transport.metadata([model])
-        original_runtime = baseline['runtime']
         # Model identity alone does not control template changes or runtime version.
-        for name in ('version',):
-            if runtime[name] != original_runtime[name]:
-                raise ValueError('runtime_version_differs_from_baseline')
-        current, previous = runtime['models'][model], original_runtime['models'][model]
-        if current['digest'] != previous['digest']:
-            raise ValueError('model_digest_differs_from_baseline')
-        for key in ('template', 'system', 'parameters', 'model_info', 'details', 'template_source'):
-            if current['show'].get(key) != previous['show'].get(key):
-                raise ValueError('model_configuration_differs_from_baseline:' + key)
+        current = check_runtime(runtime, baseline['runtime'], model)
         journal.scope = dict(case='due_date_with_instruction', arm=(
             'reduced_without_format' if experiment == 'format' else 'reduced_without_format_short_system'))
         def change_one_field(endpoint, payload):

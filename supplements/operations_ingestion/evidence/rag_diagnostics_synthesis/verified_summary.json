@@ -1,0 +1,200 @@
+{
+  "verification": "passed",
+  "captures": {
+    "schema": {
+      "archive": "due_date_capture_mac_01_hand0ff.zip",
+      "archive_sha256": "72860d52831aa493dcc8b54a4216cb61acfb1388414999dd5d852a65a1086557",
+      "file_sha256": {
+        "events.jsonl": "8f2b3ad17289126eef08815ea605ea2778e2058e2c920a5151e0a9b417e47d65",
+        "status.json": "42d37ba9947c8e5716af50c752739e5ebe561bfa8d16f613ed443f7b7cde7657",
+        "report.json": "97dc9cf7bfd7f333d8388a71562c6ce56ecdc701f6e21c2d70518ff0a3592974",
+        "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+        "runtime_after.json": "ef10f052f973d85904b98137c8eb080b157630aac42fac10cf6c9493ab54fdfc",
+        "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+      },
+      "protocol": "durable-due-date-v1",
+      "started_utc": "2026-10-26T02:10:01.723785+00:00",
+      "decisions": [
+        {
+          "case": "due_date_with_instruction",
+          "decision": "insufficient",
+          "record_count": 1,
+          "prompt_eval_count": 265
+        }
+      ]
+    },
+    "no_format": {
+      "archive": "due_date_no_format_mac_01_handoff.zip",
+      "archive_sha256": "aa4e2335c5f3e49e147cdf1d115c54851617b3a120654b9ee523a9ccbeca84d1",
+      "file_sha256": {
+        "events.jsonl": "f7b4659d63fc4beba493f332748f76844ca5645e130929d484d4dc2bc23ee214",
+        "status.json": "4ed46730f3707fd52d477f36f3f135dbe92f2904698dd6ea88f1e744c11c8e2a",
+        "report.json": "4501a221dafa31e702db301dcec95888a7f29954d21a5abc84b7cb8ab8e774f4",
+        "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+        "runtime_after.json": "d177d6332d4b630aa2eada8103fb4a0b888fde131147285a78b7a26a8ca45ab9",
+        "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+      },
+      "protocol": "decision-format-ablation-v1",
+      "started_utc": "2026-10-26T02:36:46.800746+00:00",
+      "decisions": [
+        {
+          "case": "due_date_with_instruction",
+          "decision": "insufficient",
+          "record_count": 1,
+          "prompt_eval_count": 265
+        }
+      ]
+    },
+    "short_system": {
+      "archive": "due_date_short_system_mac_01_handoff.zip",
+      "archive_sha256": "0ff9a55c05c62fa8ae876aea0be70ee5452d7fd7d23ec703865d7c3aa7fee6fd",
+      "file_sha256": {
+        "events.jsonl": "a752b0cf2735fb286e4a70da5cdc99056fcd3af249dd54786966f6fb07ee0424",
+        "status.json": "b9d127f4e6207aeed1c9465e54ee656151e62f3963745b5545adfedd12ce7871",
+        "report.json": "4f458eb60fd0b0b81f3e27bbc6e740eec27103c2802a1f434782ceef4394700c",
+        "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+        "runtime_after.json": "fe335802647b504e258958f7c115adea9d29d68969aa016d5ff3a826e04ec621",
+        "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+      },
+      "protocol": "decision-system-ablation-v1",
+      "started_utc": "2026-10-26T02:46:33.257624+00:00",
+      "decisions": [
+        {
+          "case": "due_date_with_instruction",
+          "decision": "supported",
+          "record_count": 1,
+          "prompt_eval_count": 135
+        }
+      ]
+    },
+    "negative_controls": {
+      "archive": "short_system_abstention_mac_01_handoff.zip",
+      "archive_sha256": "83ed1ba13bfe5af2fbe5c37ac909830837895425040480f8b4fa0d125b2e575e",
+      "file_sha256": {
+        "events.jsonl": "9e5921cb1008bb7966860cc9a07cce0d947268fca003c2fcb18a3b74297b9d3d",
+        "status.json": "78516fc954562927d71bd796b9961982f4ddba9240fda9174ca61befd47c1556",
+        "report.json": "6ea783c325535b9697243d5f9d7c605ff3a9fe2328cab42586e34ccbad1609b1",
+        "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+        "runtime_after.json": "bf052b3c1e7c98b3d1c0008262606231e4b5ad73f3209ecb5897022818830c3b",
+        "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+      },
+      "protocol": "short-system-abstention-controls-v1",
+      "started_utc": "2026-10-26T03:16:57.842753+00:00",
+      "decisions": [
+        {
+          "case": "unconfirmed_cause",
+          "decision": "insufficient",
+          "record_count": 6,
+          "prompt_eval_count": 425
+        },
+        {
+          "case": "dispatch_only",
+          "decision": "insufficient",
+          "record_count": 2,
+          "prompt_eval_count": 196
+        },
+        {
+          "case": "missing_history",
+          "decision": "insufficient",
+          "record_count": 1,
+          "prompt_eval_count": 133
+        },
+        {
+          "case": "foreign_order",
+          "decision": "insufficient",
+          "record_count": 1,
+          "prompt_eval_count": 140
+        },
+        {
+          "case": "cause_still_unknown",
+          "decision": "insufficient",
+          "record_count": 2,
+          "prompt_eval_count": 203
+        },
+        {
+          "case": "estimate_not_acceptance",
+          "decision": "insufficient",
+          "record_count": 2,
+          "prompt_eval_count": 199
+        },
+        {
+          "case": "missing_weight",
+          "decision": "insufficient",
+          "record_count": 2,
+          "prompt_eval_count": 195
+        },
+        {
+          "case": "due_date_reduced_positive_control",
+          "decision": "supported",
+          "record_count": 1,
+          "prompt_eval_count": 135
+        }
+      ]
+    },
+    "full_context": {
+      "archive": "short_system_false_abstentions_mac_01_handoff.zip",
+      "archive_sha256": "966058b2c20b5300d0a1d6c96baa312d9416ed2a49a7041dc331530f90e1b211",
+      "file_sha256": {
+        "events.jsonl": "fd026c9b069a62695b00390df94d6d1c11a596cf2b849d8a200c3097a63b6ff2",
+        "status.json": "eee8c714fa6d8aff93ef16860a82ef30e995cd1955d82b1d36dc4e0bbfd53a56",
+        "report.json": "45a7bb861459d99bfc975b7f35da2756311818c56f8bc87123ecf5367ed38497",
+        "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+        "runtime_after.json": "a5ed707e9204916dd2eea4d0e13aec87cddd76183d5841a6ef8a0e9913d91895",
+        "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+      },
+      "protocol": "short-system-false-abstentions-v1",
+      "started_utc": "2026-10-26T03:52:03.567243+00:00",
+      "decisions": [
+        {
+          "case": "receiving_window",
+          "decision": "insufficient",
+          "record_count": 6,
+          "prompt_eval_count": 423
+        },
+        {
+          "case": "quantity_with_cause_context",
+          "decision": "insufficient",
+          "record_count": 6,
+          "prompt_eval_count": 436
+        }
+      ]
+    },
+    "reduced_context": {
+      "archive": "short_system_reduced_mac_01_handoff.zip",
+      "archive_sha256": "66ce6b65fc5b975aed875dcfbfe062fdd7a151ff1de0e27fb523e40b5c71bfe2",
+      "file_sha256": {
+        "events.jsonl": "1005a87b26d21ade6027fc9d0b7763c8e7dae6715b82965fe1f3c7ab4af87e23",
+        "status.json": "85145d147b7a11e7e0db192f33cc54034626429c0abb4dce3c80a90ea46f9d19",
+        "report.json": "32b045255475b139104da8f8567abc6e1395e47cd34666e8db50061c5648205e",
+        "runtime.json": "0bf170ff52c02507f9065c3b186357420357c2aa5676820d4c134ae0d645902f",
+        "runtime_after.json": "c1cca2c1b99759e1c723b24d0fdc88e2240a7bb1b0f1fc01636469f493cb52cf",
+        "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+      },
+      "protocol": "short-system-reduced-false-abstentions-v1",
+      "started_utc": "2026-10-26T04:03:00.604329+00:00",
+      "decisions": [
+        {
+          "case": "receiving_window",
+          "decision": "supported",
+          "record_count": 2,
+          "prompt_eval_count": 204
+        },
+        {
+          "case": "quantity_with_cause_context",
+          "decision": "supported",
+          "record_count": 1,
+          "prompt_eval_count": 138
+        }
+      ]
+    }
+  },
+  "runtime_version": {
+    "version": "0.40.7"
+  },
+  "model_digests": {
+    "qwen2.5:3b": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+  },
+  "verified_live_decisions": 15,
+  "live_calls_by_this_verifier": 0,
+  "scope": "Offline integrity and controlled-request comparisons; not independent runtime attestation, held-out accuracy or end-to-end scoring"
+}

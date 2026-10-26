@@ -1,5 +1,7 @@
 """Synthetic HTTP fixtures; no Ollama execution or quality claims."""
 import json
+import base64
+import hashlib
 import unittest
 from unittest.mock import patch
 
@@ -136,3 +138,56 @@ class AbstentionControlTests(unittest.TestCase):
             execute(self.output, self.baseline, True, self.fixture.factory, suite='unknown')
         self.assertEqual(self.fixture.calls, [])
         self.assertFalse(self.output.exists())
+
+    def full_capture(self):
+        full = self.fixture.root / 'full-context'
+        self.fixture.generation['response'] = '{"decision":"insufficient"}'
+        with patch('diagnose_rag_abstention.CapturedTransport', side_effect=self.fixture.factory):
+            execute(full, self.baseline, True, suite='false-abstentions')
+        self.fixture.calls.clear()
+        self.fixture.generation['response'] = '{"decision":"supported"}'
+        return full
+
+    def test_reduced_contexts_change_only_records_in_captured_full_requests(self):
+        full = self.full_capture()
+        original = {p.name: p.read_bytes() for p in full.iterdir()}
+        report = execute(self.output, self.baseline, True, self.fixture.factory,
+                         suite='reduced-false-abstentions', full_context_capture=full)
+        self.assertEqual(report['protocol'], 'short-system-reduced-false-abstentions-v1')
+        self.assertEqual(report['generation_requests'], 2)
+        self.assertTrue(report['reference_assisted_context_reduction'])
+        self.assertEqual(report['positive_control']['correct_supported'], 2)
+        payloads = [p for e, p in self.fixture.calls if e == 'generate']
+        self.assertEqual(len(payloads), 2)
+        ids = [[r['evidence_id'] for r in json.loads(p['prompt'])['records']] for p in payloads]
+        self.assertEqual(ids, [['order:C101', 'note:TARGET'], ['order:T201']])
+        for payload in payloads:
+            self.assertEqual(set(payload), {'model', 'system', 'prompt', 'options', 'stream'})
+            self.assertEqual(payload['system'], SHORT_DECISION_PROMPT)
+            self.assertEqual(payload['options'], {'temperature': 0, 'num_predict': 1600})
+        self.assertEqual(original, {p.name: p.read_bytes() for p in full.iterdir()})
+        self.assertEqual(self.before, {p.name: p.read_bytes() for p in self.baseline.iterdir()})
+
+    def test_reduced_suite_requires_full_capture_before_provider_calls(self):
+        with self.assertRaisesRegex(ValueError, 'full_context_capture_required'):
+            execute(self.output, self.baseline, True, self.fixture.factory,
+                    suite='reduced-false-abstentions')
+        self.assertFalse(self.output.exists())
+        self.assertEqual(self.fixture.calls, [])
+
+    def test_changed_full_capture_options_rejected_before_provider_calls(self):
+        full = self.full_capture()
+        p = full / 'events.jsonl'
+        rows = [json.loads(line) for line in p.read_text().splitlines()]
+        event = next(e for e in rows if e['event'] == 'http_request_prepared' and e['url'].endswith('/generate'))
+        payload = json.loads(base64.b64decode(event['body_base64']))
+        payload['options']['temperature'] = 0.5
+        raw = json.dumps(payload).encode()
+        event['body_base64'] = base64.b64encode(raw).decode()
+        event['body_sha256'] = hashlib.sha256(raw).hexdigest()
+        p.write_text(''.join(json.dumps(row) + '\n' for row in rows))
+        with self.assertRaisesRegex(ValueError, 'full_capture_request_mismatch'):
+            execute(self.output, self.baseline, True, self.fixture.factory,
+                    suite='reduced-false-abstentions', full_context_capture=full)
+        self.assertFalse(self.output.exists())
+        self.assertEqual(self.fixture.calls, [])

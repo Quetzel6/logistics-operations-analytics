@@ -124,3 +124,59 @@ prompt with schema, so a difference for these cases alone would not isolate
 prompt from schema effects. Only the earlier due-date comparisons changed one
 field at a time. Regardless of outcome, the historical 13/16 reference-check
 result remains unchanged until a separately versioned full evaluation is run.
+
+## Records-only reduction under the same short prompt
+
+The owner supplied a completed full-context capture where both cases again
+returned insufficient with HTTP 200 and done=true/stop. Offline review verified
+the exact six records per case, unchanged short prompt/options and matching
+runtime identity. Therefore shortening the prompt alone is not an observed fix
+for these two full-context inputs.
+
+The `reduced-false-abstentions` suite now changes only the nested records list
+relative to each **actual captured short-system full-context request**. It requires
+both that full-context capture and the same short-system due-date capture used
+as its baseline. Hashes establish the baseline chain; preflight validates runtime
+version, digest and model configuration before any generation. The full capture's
+HTTP body hashes and report/response agreement are checked as well.
+
+| Case | Full records | Reduced records retained unchanged |
+|---|---:|---|
+| receiving_window | 6 | order:C101 and note:TARGET (2) |
+| quantity_with_cause_context | 6 | order:T201 (1) |
+
+These are the original reference-assisted reduced contexts from
+diagnose_rag_context.py, not newly selected or edited source texts. All retained
+records and their order are preserved. Question, system, model, stream, options
+and the absence of format must match the full requests; each comparison is
+journaled before dispatch. Expected labels remain outside requests. There are
+exactly two generation calls, no embeddings, selection, retry or mid-run tuning.
+
+From operations_ingestion on the existing fix branch:
+
+```bash
+git pull --ff-only
+python3 verify.py
+python3 diagnose_rag_abstention.py \
+  --suite reduced-false-abstentions \
+  --baseline-capture evidence/due_date_short_system_mac_01 \
+  --full-context-capture evidence/short_system_false_abstentions_mac_01 \
+  --allow-local \
+  --output evidence/short_system_reduced_mac_01
+python3 inspect_rag_run.py --directory evidence/short_system_reduced_mac_01
+zip -r evidence/short_system_reduced_mac_01_handoff.zip \
+  evidence/short_system_reduced_mac_01
+```
+
+Run once after software checks pass. Keep both baseline directories and every
+older run. Missing/mismatched full capture stops before provider calls. A valid
+insufficient is recorded as false abstention for these references; exit 1 may
+reflect that outcome rather than a transport error. Preserve and inspect raw
+outputs instead of repairing or retrying them.
+
+This isolates a records-list change within the recorded request fields under a
+fixed short prompt. An observed change would support context sensitivity for
+that case, without identifying a particular distractor or length mechanism.
+Trials occur on separate occasions and not all effective runtime defaults are
+observable. The reduction uses reference IDs, so it is diagnostic, not a proposed
+deployable retriever. No outcome changes the historical 13/16 reference checks.

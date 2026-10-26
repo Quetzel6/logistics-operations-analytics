@@ -8,7 +8,7 @@ from unittest.mock import Mock, patch
 
 from assistant import BriefError
 from durable_rag import CapturedTransport
-from diagnose_rag_format import execute, load_capture
+from diagnose_rag_format import execute, load_capture, SHORT_DECISION_PROMPT
 from inspect_rag_run import inspect
 import run_rag_durable
 
@@ -111,3 +111,38 @@ class FormatDiagnosticTests(unittest.TestCase):
             self.invoke()
         self.assertEqual(inspect(self.output)['state'], 'interrupted')
         self.assertEqual(len([p for e, p in self.calls if e == 'generate']), 1)
+
+    def no_format_baseline(self):
+        # Simulated client path labeled live only within this temporary fixture.
+        with patch('diagnose_rag_format.CapturedTransport', side_effect=self.factory):
+            execute(self.output, self.baseline, True)
+        self.baseline = self.output
+        self.output = self.root / 'short-system'
+        self.calls.clear()
+
+    def test_short_system_changes_only_system_from_no_format_capture(self):
+        self.no_format_baseline()
+        before = {p.name: p.read_bytes() for p in self.baseline.iterdir()}
+        expected = load_capture(self.baseline, 'short-system')['payload']
+        expected['system'] = SHORT_DECISION_PROMPT
+        report = execute(self.output, self.baseline, True, self.factory, experiment='short-system')
+        generated = [p for e, p in self.calls if e == 'generate']
+        self.assertEqual(generated, [expected])
+        self.assertNotIn('format', generated[0])
+        self.assertEqual(report['protocol'], 'decision-system-ablation-v1')
+        self.assertEqual(report['changed_fields'], ['system: shortened'])
+        self.assertEqual(report['generation_requests'], 1)
+        self.assertEqual(before, {p.name: p.read_bytes() for p in self.baseline.iterdir()})
+
+    def test_short_system_rejects_schema_baseline_before_provider(self):
+        with self.assertRaises(ValueError):
+            execute(self.output, self.baseline, True, self.factory, experiment='short-system')
+        self.assertEqual(self.calls, [])
+        self.assertFalse(self.output.exists())
+
+    def test_short_system_runtime_drift_stops_before_generation(self):
+        self.no_format_baseline()
+        self.version = 'changed'
+        with self.assertRaisesRegex(ValueError, 'runtime_version_differs_from_baseline'):
+            execute(self.output, self.baseline, True, self.factory, experiment='short-system')
+        self.assertFalse(any(e == 'generate' for e, _ in self.calls))

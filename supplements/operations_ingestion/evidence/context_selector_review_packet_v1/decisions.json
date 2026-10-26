@@ -1,0 +1,615 @@
+{
+  "packet_sha256": "c4069b31e21f947c12fdd1fd91485143c8da5219fe2db4106afe057878f3814d",
+  "reviewer": "",
+  "reviewer_kind": "",
+  "units": [
+    {
+      "unit_id": "review-001",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-002",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-003",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-004",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-005",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-006",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-007",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-008",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-009",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-010",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-011",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-012",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-013",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-014",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-015",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-016",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-017",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-018",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-019",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-020",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-021",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-022",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-023",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-024",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-025",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-026",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-027",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-028",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-029",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-030",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-031",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    },
+    {
+      "unit_id": "review-032",
+      "answerability": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "evidence_relevance": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "source_strength": {
+        "rating": "pending",
+        "rationale": ""
+      },
+      "action_boundary": {
+        "rating": "pending",
+        "rationale": ""
+      }
+    }
+  ]
+}

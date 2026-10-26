@@ -1,7 +1,9 @@
 # Context selector design before implementation
 
 Status: **implemented as an opt-in experiment; not enabled in the original protocol**.
-Live comparison is pending. Decision prompt tuning is paused. See the
+The first development comparison is B=11/16, C=14/16; human review and prospective
+validation are pending. The [candidate review](RAG_CANDIDATE_REVIEW.md) freezes v1
+without further routing/prompt changes. Decision prompt tuning is paused. See the
 [paired-run guide](RAG_CONTEXT_SELECTOR_GUIDE.md) and the [evidence synthesis](RAG_FINDINGS_TH.md) for why an oracle-assisted
 reduction cannot be deployed as a retriever or counted as an end-to-end gain.
 
@@ -157,6 +159,7 @@ facts, negation, conflicting notes and cross-order requests. Freeze the selector
 before inspecting these results and keep human semantic review separate from
 reference checks. Deterministic repeated observations are not independent samples.
 
-The selector, label-free runtime and paired evaluator are now implemented in
-separate modules without modifying the original inference path. No live comparison,
-model change or promotion to main has occurred in this implementation milestone.
+The selector, label-free runtime and paired evaluator are implemented separately
+from the original inference path. The first supplied live development comparison
+has been verified and replayed offline. No model change or promotion to main has
+occurred; candidate v1 is frozen for review and prospective validation.

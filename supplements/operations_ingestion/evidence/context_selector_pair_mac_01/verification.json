@@ -1,0 +1,68 @@
+{
+  "status": "offline_replay_verified",
+  "source_zip_sha256": "96a94272bb59979d4045093483aea50a24d3d0883ad161b941de0c5559a5e743",
+  "source_file_sha256": {
+    "report.json": "92519f52e9c3dd8b4c4342e4aca95b57009cc49c48811919a94d37a3649c1f71",
+    "events.jsonl": "4afccf20abcc455ea3389d2944a5c0b29c4931eeda1d1437ccdc782cd87b7496",
+    "status.json": "da38b907d1410b13d69e99ac0fb4b35310c535598dfe56735f85e0d978580bc6",
+    "runtime.json": "d8ae501c802de281e2cfb73003f08e7df465aa0cef0ec5ba45dd13b8114b01d4",
+    "runtime_after.json": "3216db12f2ff0fac3012896f902e0cc5dbe3133f3dd0439c0ef819d92f2e352d",
+    "model_inventory_after.json": "031a0b081e766946b716a7d1f93c9019b0614825b8e195423f13d62fd6e5bc24"
+  },
+  "replayed_inference_requests": 54,
+  "source_request_counts": {
+    "embedding": 15,
+    "decision": 30,
+    "selection": 9
+  },
+  "verified_arms": {
+    "B": {
+      "case_count": 16,
+      "reference_checks_passed": 11,
+      "answerable_count": 8,
+      "answerable_reference_passed": 3,
+      "answerable_decision_supported": 3,
+      "false_abstentions": 5,
+      "exact_required_ids_passed": 3,
+      "model_abstention_count": 7,
+      "model_abstention_decision_requests": 7,
+      "model_abstention_insufficient_decisions": 7,
+      "model_abstention_reference_passed": 7,
+      "false_support": 0,
+      "application_gate_count": 1,
+      "application_gate_passed": 1,
+      "failures_by_stage": {},
+      "errors": {},
+      "decision_requests": 15,
+      "selection_requests": 3,
+      "extra_selected_ids": 0,
+      "human_review": "pending"
+    },
+    "C": {
+      "case_count": 16,
+      "reference_checks_passed": 14,
+      "answerable_count": 8,
+      "answerable_reference_passed": 6,
+      "answerable_decision_supported": 6,
+      "false_abstentions": 2,
+      "exact_required_ids_passed": 6,
+      "model_abstention_count": 7,
+      "model_abstention_decision_requests": 7,
+      "model_abstention_insufficient_decisions": 7,
+      "model_abstention_reference_passed": 7,
+      "false_support": 0,
+      "application_gate_count": 1,
+      "application_gate_passed": 1,
+      "failures_by_stage": {},
+      "errors": {},
+      "decision_requests": 15,
+      "selection_requests": 6,
+      "extra_selected_ids": 0,
+      "human_review": "pending"
+    }
+  },
+  "live_model_calls": 0,
+  "independent_new_observations": 0,
+  "comparison": "All inference payloads exact; rankings/results rescored; cosine floats rounded to 12 decimal places; latency and live_execution provenance excluded (replay is not live)",
+  "scope": "Reproduction of the captured development run, not a new evaluation"
+}

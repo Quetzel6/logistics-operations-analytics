@@ -1,0 +1,89 @@
+{
+  "manifest_sha256": "548f2244201965dcf302f7f9efa18037ff6420639563db2565d4cb3419f3f543",
+  "reviewer": "",
+  "reviewer_kind": "",
+  "human_reference_review": "pending",
+  "instructions": "Check that each expected status and required ID follows from source records, without model outputs. Enter reviewer_kind human or ai accurately; AI review does not complete human review. Do not silently edit frozen labels; version any correction before model execution.",
+  "cases": [
+    {
+      "case": "P01",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P02",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P03",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P04",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P05",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P06",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P07",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P08",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P09",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P10",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P11",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P12",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P13",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P14",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P15",
+      "rating": "pending",
+      "rationale": ""
+    },
+    {
+      "case": "P16",
+      "rating": "pending",
+      "rationale": ""
+    }
+  ]
+}

@@ -102,8 +102,16 @@ No automatic adoption or merge is performed; first inspect per-case regressions,
 negative false support, gate behavior and invalid outputs. General-quality claims
 need independent examples frozen before inspecting results.
 
+The first supplied development comparison has now been verified: B passed 11/16,
+C passed 14/16, with 7/7 model abstentions and 1/1 application gate in both. C gained
+three reference checks and introduced no B-pass/C-fail regression in that run.
+Full details, remaining failures, the frozen candidate and pending review packet
+are in [RAG_CANDIDATE_REVIEW.md](RAG_CANDIDATE_REVIEW.md). Do not rerun to obtain a
+different score; preserve this capture as the versioned development observation.
+
 Software verification covers runtime dependency isolation, source/ID preservation,
 grammar fallbacks, untrusted notes, strict response/ID validation, shared ranking,
 both 16-case arms, worst-case counts, interruption, model drift and read-only
 databases. All model behavior in these tests is simulated. No cloud live generation
-was performed; the actual paired Mac result is pending.
+was performed by the cloud assistant; offline replay uses stored responses and
+does not create new independent model observations.

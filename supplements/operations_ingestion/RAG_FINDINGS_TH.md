@@ -38,6 +38,8 @@ Captures เป็นหลักฐานจาก HTTP client จริงท�
 
 ## การเปลี่ยนถัดไป
 
+ผลครบเส้นทางที่ส่งมาต่อมาภายใต้ prompt เดียวกันคือ B=11/16 และ C=14/16 reference checks: C ช่วยเพิ่มสามเคส ไม่มี B-pass/C-fail regression ในรอบนี้ ทั้งสองยังงดตอบถูก 7/7 และ gate ผ่าน 1/1 ใช้ 15 embeddings กับ 39 generation calls ผลนี้ตรวจซ้ำด้วย offline replay แล้ว โดยไม่เรียกโมเดลใหม่ ดู [รายงานตรึง candidate และ review](RAG_CANDIDATE_REVIEW.md) ซึ่งยังคง human review pending และไม่เปลี่ยนผลเก่า 13/16
+
 หยุดปรับ decision prompt ที่ได้ผลไปก่อน เก็บ SHORT_DECISION_PROMPT เป็นค่าคงที่ แล้วแยก **การออกแบบ context selector** ออกจากผลที่วัดด้วย oracle ดู [RAG_CONTEXT_SELECTION_DESIGN.md](RAG_CONTEXT_SELECTION_DESIGN.md)
 
 ตัวเลือกแรกที่เสนออย่างระมัดระวังคือ route เฉพาะคำถาม single-field ที่อยู่ใน schema ของ order ไปยัง order record เดิม และคง retrieval เดิมสำหรับคำถามที่ยังจำแนกไม่แน่ชัด ไม่พยายามเลียนแบบ note:TARGET จากชื่อ ID หรือ reference labels ปัจจุบันทำเป็น candidate แบบ opt-in แล้วตาม [คู่มือประเมิน](RAG_CONTEXT_SELECTOR_GUIDE.md) แต่ยังไม่มีผล live แบบครบเส้นทาง และยังไม่อ้างว่าจะซ่อม receiving_window ได้

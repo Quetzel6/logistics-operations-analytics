@@ -40,7 +40,7 @@ Captures เป็นหลักฐานจาก HTTP client จริงท�
 
 หยุดปรับ decision prompt ที่ได้ผลไปก่อน เก็บ SHORT_DECISION_PROMPT เป็นค่าคงที่ แล้วแยก **การออกแบบ context selector** ออกจากผลที่วัดด้วย oracle ดู [RAG_CONTEXT_SELECTION_DESIGN.md](RAG_CONTEXT_SELECTION_DESIGN.md)
 
-ตัวเลือกแรกที่เสนออย่างระมัดระวังคือ route เฉพาะคำถาม single-field ที่อยู่ใน schema ของ order ไปยัง order record เดิม และคง retrieval เดิมสำหรับคำถามที่ยังจำแนกไม่แน่ชัด ไม่พยายามเลียนแบบ note:TARGET จากชื่อ ID หรือ reference labels ข้อนี้ยังไม่ใช่ implementation และยังไม่อ้างว่าจะซ่อม receiving_window ได้
+ตัวเลือกแรกที่เสนออย่างระมัดระวังคือ route เฉพาะคำถาม single-field ที่อยู่ใน schema ของ order ไปยัง order record เดิม และคง retrieval เดิมสำหรับคำถามที่ยังจำแนกไม่แน่ชัด ไม่พยายามเลียนแบบ note:TARGET จากชื่อ ID หรือ reference labels ปัจจุบันทำเป็น candidate แบบ opt-in แล้วตาม [คู่มือประเมิน](RAG_CONTEXT_SELECTOR_GUIDE.md) แต่ยังไม่มีผล live แบบครบเส้นทาง และยังไม่อ้างว่าจะซ่อม receiving_window ได้
 
 ก่อนรับ candidate ต้องมีการทดลองครบเส้นทางแบบ version ใหม่ เทียบกับ short-prompt baseline ร่วมสมัยที่ใช้ retrieval เดิม เพื่อแยกผลของ context selector โดยทั้งสองใช้ prompt/schema/options เดียวกัน เก็บ source/digest/requests/counters ครบ แยก 8 answerable, 7 model-abstention และ 1 application gate และเตรียมชุดประเมินที่ยังไม่ถูกใช้ปรับกฎสำหรับข้อสรุปทั่วไป
 

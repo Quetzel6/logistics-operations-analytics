@@ -6,8 +6,9 @@ Working supplement staged for the existing analytics portfolio, not an employer 
 
 The [consolidated findings](RAG_FINDINGS_TH.md) summarize six captured Mac
 experiments without replacing the historical score. The
-[context-selection design](RAG_CONTEXT_SELECTION_DESIGN.md) proposes a non-oracle
-selector and a paired full-path evaluation plan; it is not implemented or enabled.
+[context-selection design](RAG_CONTEXT_SELECTION_DESIGN.md) specifies a non-oracle
+selector, now implemented as an [opt-in paired full-path experiment](RAG_CONTEXT_SELECTOR_GUIDE.md).
+It is not enabled in the original protocol and has no live comparison result yet.
 
 For new experiments use the [durable synthetic runner](RAG_DURABLE_GUIDE.md), which saves each request/response and completed observation before the final report. The [PR #5 audit](evidence/pr5_audit_35468f2/REPORT_TH.md) and reproduction files are preserved here. Original evaluators and raw Mac reports remain unchanged.
 

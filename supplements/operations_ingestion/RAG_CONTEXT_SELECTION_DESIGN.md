@@ -1,7 +1,8 @@
 # Context selector design before implementation
 
-Status: **proposed design, not implemented or enabled**. Decision prompt tuning
-is paused. See the [evidence synthesis](RAG_FINDINGS_TH.md) for why an oracle-assisted
+Status: **implemented as an opt-in experiment; not enabled in the original protocol**.
+Live comparison is pending. Decision prompt tuning is paused. See the
+[paired-run guide](RAG_CONTEXT_SELECTOR_GUIDE.md) and the [evidence synthesis](RAG_FINDINGS_TH.md) for why an oracle-assisted
 reduction cannot be deployed as a retriever or counted as an end-to-end gain.
 
 ## Objective and boundaries
@@ -89,7 +90,8 @@ oracle-driven fallback is added in v1.
 - Frozen full-context and historical reports remain byte-identical. Failures and
   interrupted runs preserve requests, responses and observations without retries.
 
-These are prospective tests, not checks that have already passed for this design.
+The implementation now has software coverage for these checks; simulated providers
+do not establish model semantics. See the paired-run guide for validation scope.
 
 ## Full-path comparison plan
 
@@ -114,8 +116,12 @@ selected records, scores, routing reasons and per-stage counters. Verify model
 identity before/after and preserve failures. Effective runtime defaults remain a
 stated limitation; a stable model tag is not sufficient identity proof.
 
-Use at most 15 embedding calls shared by arms, 30 decision calls and 16 selection
-calls (46 generation calls maximum), plus metadata calls. The unknown-order case
+Use at most 15 embedding calls shared by arms, 30 decision calls and 30 selection
+calls (60 generation calls maximum), plus metadata calls. The earlier design's
+46-call figure assumed only answerable cases reached selection; false support
+on negative cases can also start selection and must be counted. If all references
+are decided correctly, there are 16 selection calls and 46 generation calls.
+The unknown-order case
 has zero provider calls. Failure handling must distinguish embedding, decision,
 selection and validation stages rather than counting errors as abstentions.
 
@@ -151,7 +157,6 @@ facts, negation, conflicting notes and cross-order requests. Freeze the selector
 before inspecting these results and keep human semantic review separate from
 reference checks. Deterministic repeated observations are not independent samples.
 
-No implementation, live comparison, model change or promotion to main occurs in
-this design milestone. The next engineering step is a separate selector module
-and the tests above, followed by the paired full-path runner; no additional model
-run is needed to review this plan.
+The selector, label-free runtime and paired evaluator are now implemented in
+separate modules without modifying the original inference path. No live comparison,
+model change or promotion to main has occurred in this implementation milestone.

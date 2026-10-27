@@ -42,4 +42,37 @@ class MetricsTests(unittest.TestCase):
         c.executemany('INSERT INTO trips VALUES(?,?,?,?,?)',trips);c.executemany('INSERT INTO orders VALUES(?,?,?,?,?,?,?)',orders)
         r=analyze(c);self.assertEqual(sum(x['due_orders'] for x in r['cohorts']),r['totals']['due_orders'])
         self.assertTrue(all(0<=x['otif_rate']<=1 and 0<=x['trip_capacity_utilization']<=1 for x in r['cohorts']))
+
+class TraceTests(unittest.TestCase):
+    def test_trace_reconciles_and_demo_rejects_duplicate(self):
+        from trace_demo import demo
+        result=demo()
+        self.assertIn('duplicate',result['rejection'])
+        self.assertTrue(result['rejection_unchanged'])
+        self.assertTrue(result['repeat_equal'])
+        self.assertEqual((result['before']['otif_rate'],result['before']['unit_fill_rate']),(.5,.75))
+        self.assertEqual((result['after']['otif_rate'],result['after']['unit_fill_rate']),(1,1))
+        self.assertEqual(result['before']['exceptions'][0]['flags'],['Overdue open','Short shipment'])
+        self.assertEqual(result['after']['exceptions'],[])
+        for phase in ('before','after'):
+            rows=result[phase]['trace']
+            self.assertEqual(sum(r['otif'] for r in rows)/len(rows),result[phase]['otif_rate'])
+            self.assertEqual(sum(r['shipped_units'] for r in rows)/sum(r['ordered_units'] for r in rows),result[phase]['unit_fill_rate'])
+
+    def test_generated_trace_reconciles_each_cohort(self):
+        trips, orders = generate()
+        c=sqlite3.connect(':memory:'); c.executescript(SCHEMA)
+        c.executemany('INSERT INTO trips VALUES(?,?,?,?,?)',trips)
+        c.executemany('INSERT INTO orders VALUES(?,?,?,?,?,?,?)',orders)
+        c.execute("INSERT INTO orders VALUES('FUTURE','T0001','2026-10-20','2026-10-21',1,0,'None')")
+        report=analyze(c)
+        self.assertNotIn('FUTURE',{r['order_id'] for r in report['kpi_trace']})
+        for cohort in report['cohorts']:
+            rows=[r for r in report['kpi_trace'] if (r['warehouse'],r['route']) == (cohort['warehouse'],cohort['route'])]
+            self.assertEqual(len(rows),cohort['due_orders'])
+            self.assertEqual(sum(r['otif'] for r in rows),cohort['otif_orders'])
+            self.assertEqual(sum(r['shipped_units'] for r in rows),cohort['shipped_units'])
+            self.assertEqual(sum(r['ordered_units'] for r in rows),cohort['ordered_units'])
+            self.assertEqual({r['order_id'] for r in rows if r['flags']}, {r['order_id'] for r in report['exceptions'] if (r['warehouse'],r['route']) == (cohort['warehouse'],cohort['route'])})
+
 if __name__=='__main__':unittest.main()

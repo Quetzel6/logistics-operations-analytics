@@ -79,7 +79,7 @@ def detail_report(conn, as_of):
     for r in due:
         d=days.setdefault((r['due_date'],r['warehouse'],r['route']),{'due_date':r['due_date'],'warehouse':r['warehouse'],'route':r['route'],'due_orders':0,'on_time_orders':0,'otif_orders':0,'overdue_open':0})
         d['due_orders']+=1;d['on_time_orders']+=int(r['on_time']);d['otif_orders']+=int(r['otif']);d['overdue_open']+=int(r['delivered_date'] is None)
-    return {'exceptions':sorted([r for r in due if r['flags']],key=lambda r:(-r['late_days'],r['order_id'])),'daily':list(days.values())}
+    return {'exceptions':sorted([r for r in due if r['flags']],key=lambda r:(-r['late_days'],r['order_id'])),'daily':list(days.values()), 'kpi_trace':due}
 
 def capacity_scenarios(conn, as_of):
     """Static per-trip upper bounds; no re-routing, delivery-time or cost inference."""
@@ -200,7 +200,7 @@ def main():
     for name,header,data in [('trips',['trip_id','warehouse','route','dispatch_date','capacity_units'],trips),('orders',['order_id','trip_id','due_date','delivered_date','ordered_units','shipped_units','issue'],orders)]:
         with (args.output/(name+'.csv')).open('w',newline='') as f:
             writer=csv.writer(f,lineterminator="\n");writer.writerow(header);writer.writerows(data)
-    for name in ('exceptions','daily','capacity_scenarios','capacity_stress'):
+    for name in ('exceptions','daily','capacity_scenarios','capacity_stress','kpi_trace'):
         data=report[name]
         with (args.output/(name+'.csv')).open('w',newline='') as f:
             if data:

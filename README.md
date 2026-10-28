@@ -66,6 +66,8 @@ This is a working prototype, not a completed operational platform. It does not y
 
 ## Metric contract
 
+For an order-level KPI audit, see [KPI trace guide](TRACE_GUIDE.md): run a synthetic duplicate/correction example and reconcile `kpi_trace.csv` with OTIF, unit fill and exception records.
+
 | Metric | Formula / denominator |
 |---|---|
 | Due orders | Due date on or before 2026-10-19 |
